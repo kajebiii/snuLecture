@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/csehome/qja0950/finalProject/digitalWatch.ncd
+OUTFILE=/csehome/qja0950/finalProject/digitalWatch.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50an-4tqg144
+WORKINGDIR=/csehome/qja0950/finalProject
+LICENSE=WebPack
+USER_INFO=211016637_0_0_814

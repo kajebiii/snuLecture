@@ -1,0 +1,20 @@
+4
+Room 1: 3
+A, Male
+B, Male
+C, Female
+Room 2: 4
+D, Female
+E, Female
+F, Female
+G, Female
+Room 3: 2
+H, Male
+I, Male
+Room 4: 4
+aa, Male
+bb, Female
+cc, Female
+dd, Female
+Room 5: 1
+JJ, Male

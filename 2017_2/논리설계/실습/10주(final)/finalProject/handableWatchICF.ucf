@@ -1,0 +1,76 @@
+NET "clk_50MHz" LOC=P57;
+
+NET "u_mode" LOC=P47;
+NET "u_set" LOC=P48;
+NET "u_op1" LOC=P49;
+NET "u_op2" LOC=P50;
+NET "u_free" LOC=P51;
+NET "reset" LOC=P54;
+
+NET "isWatch" LOC=P87;
+NET "isAlarm" LOC=P88;
+NET "isStop" LOC=P90;
+NET "isAPmode" LOC=P91;
+NET "isSETmode" LOC=P92;
+NET "isAlarmSet" LOC=P93;
+
+
+//NET "dip[9]" LOC=P30;
+//NET "dip[8]" LOC=P31;
+//NET "dip[7]" LOC=P32;
+//NET "dip[6]" LOC=P33;
+//NET "dip[5]" LOC=P41;
+//NET "dip[4]" LOC=P42;
+//NET "dip[3]" LOC=P43;
+//NET "dip[2]" LOC=P44;
+//NET "dip[1]" LOC=P45;
+//NET "dip[0]" LOC=P46;
+
+NET "display[41]" LOC=P3;
+NET "display[40]" LOC=P4;
+NET "display[39]" LOC=P5;
+NET "display[38]" LOC=P6;
+NET "display[37]" LOC=P7;
+NET "display[36]" LOC=P8;
+NET "display[35]" LOC=P10;
+
+NET "display[34]" LOC=P11;
+NET "display[33]" LOC=P12;
+NET "display[32]" LOC=P13;
+NET "display[31]" LOC=P15;
+NET "display[30]" LOC=P16;
+NET "display[29]" LOC=P18;
+NET "display[28]" LOC=P19;
+
+NET "display[27]" LOC=P20;
+NET "display[26]" LOC=P21;
+NET "display[25]" LOC=P24;
+NET "display[24]" LOC=P25;
+NET "display[23]" LOC=P27;
+NET "display[22]" LOC=P28;
+NET "display[21]" LOC=P29;
+
+NET "display[20]" LOC=P55;
+NET "display[19]" LOC=P58;
+NET "display[18]" LOC=P59;
+NET "display[17]" LOC=P60;
+NET "display[16]" LOC=P62;
+NET "display[15]" LOC=P63;
+NET "display[14]" LOC=P64;
+
+NET "display[13]" LOC=P68;
+NET "display[12]" LOC=P69;
+NET "display[11]" LOC=P70;
+NET "display[10]" LOC=P71;
+NET "display[9]" LOC=P72;
+NET "display[8]" LOC=P75;
+NET "display[7]" LOC=P76;
+
+NET "display[6]" LOC=P77;
+NET "display[5]" LOC=P78;
+NET "display[4]" LOC=P79;
+NET "display[3]" LOC=P82;
+NET "display[2]" LOC=P83;
+NET "display[1]" LOC=P84;
+NET "display[0]" LOC=P85;
+

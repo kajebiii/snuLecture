@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/csehome/qja0950/finalProject/impact.xsl
+OUTFILE=/csehome/qja0950/finalProject/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/csehome/qja0950/finalProject
+LICENSE=iMPACT
+USER_INFO=iMPACT

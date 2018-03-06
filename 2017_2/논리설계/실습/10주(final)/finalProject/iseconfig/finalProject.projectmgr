@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="finalProject" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Clicker |csehome|qja0950|Lab10|Clicker.v/count - Counter4Bit</ClosedNode>
+         <ClosedNode>/ProgrammableWatch |csehome|qja0950|finalProject|ProgrammableWatch.v/dw - digitalWatch</ClosedNode>
+         <ClosedNode>/ProgrammableWatch |csehome|qja0950|finalProject|ProgrammableWatch.v/dw - digitalWatch/ad - alarmDisplay</ClosedNode>
+         <ClosedNode>/ProgrammableWatch |csehome|qja0950|finalProject|ProgrammableWatch.v/dw - digitalWatch/sd - stopDisplay</ClosedNode>
+         <ClosedNode>/ProgrammableWatch |csehome|qja0950|finalProject|ProgrammableWatch.v/dw - digitalWatch/wd - watchDisplay</ClosedNode>
+         <ClosedNode>/ProgrammableWatch |csehome|qja0950|finalProject|ProgrammableWatch.v/tpi - toPulseInput</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/count0 - Counter4Bit</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/count1 - Counter4Bit</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/count2 - Counter4Bit</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/count3 - Counter4Bit</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/count4 - Counter4Bit</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/showHMS - showHMStime</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/tpi - toPulseInput</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/wd - watchDisplay/showHMS - showHMStime</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/wd - watchDisplay/wsd - settingDisplay/showHMS - showHMStime</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/wd - watchDisplay/wsd - testDisplay</ClosedNode>
+         <ClosedNode>/digitalWatch |csehome|qja0950|finalProject|digitalWatch.v/wd - watchDisplay/wtd - watchTimeDisPlay/showHMS - showHMStime</ClosedNode>
+         <ClosedNode>/handableWatch |csehome|qja0950|finalProject|handableWatch.v/dw - digitalWatch/tpi - toPulseInput</ClosedNode>
+         <ClosedNode>/settingDisplay |csehome|qja0950|finalProject|settingDisplay.v/showHMS - showHMStime</ClosedNode>
+         <ClosedNode>/testDisplay |csehome|qja0950|finalProject|testDisplay.v</ClosedNode>
+         <ClosedNode>/watchTimeDisPlay |csehome|qja0950|finalProject|watchTimeDisPlay.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>tpi - toPulseInput (/csehome/qja0950/finalProject/toPulseInput.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000209000000020000000000000000000000000200000064ffffffff000000810000000300000002000002090000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>tpi - toPulseInput (/csehome/qja0950/finalProject/toPulseInput.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000229000000010000000100000000000000000000000064ffffffff000000810000000000000001000002290000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000318000000040101000100000000000000000000000064ffffffff0000008100000000000000040000005100000001000000000000002b00000001000000000000007200000001000000000000022a0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>alarmDisplay.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000120000000010001000100000000000000000000000064ffffffff000000810000000000000001000001200000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Clicker |csehome|qja0950|Lab10|Clicker.v</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch/ad - alarmDisplay</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch/sd - stopDisplay</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch/tpi - toPulseInput</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch/wd - watchDisplay/wsd - settingDisplay</ClosedNode>
+         <ClosedNode>/digitalWatchTest |csehome|qja0950|finalProject|digitalWatchTest.v/uut - digitalWatch/wd - watchDisplay/wtd - watchTimeDisPlay</ClosedNode>
+         <ClosedNode>/handableWatch |csehome|qja0950|finalProject|handableWatch.v/dw - digitalWatch</ClosedNode>
+         <ClosedNode>/handableWatch |csehome|qja0950|finalProject|handableWatch.v/tpi - toPulseInput</ClosedNode>
+         <ClosedNode>/programTest |csehome|qja0950|finalProject|programTest.v/uut - ProgrammableWatch/dw - digitalWatch</ClosedNode>
+         <ClosedNode>/settingDisplayTest |csehome|qja0950|finalProject|settingDisplayTest.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>xc3s50an-4tqg144</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001cb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001cb0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>xc3s50an-4tqg144</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000173000000010000000100000000000000000000000064ffffffff000000810000000000000001000001730000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000229000000010000000100000000000000000000000064ffffffff000000810000000000000001000002290000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001430000011d01000000060100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000229000000010000000100000000000000000000000064ffffffff000000810000000000000001000002290000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000173000000010000000100000000000000000000000064ffffffff000000810000000000000001000001730000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+</Project>

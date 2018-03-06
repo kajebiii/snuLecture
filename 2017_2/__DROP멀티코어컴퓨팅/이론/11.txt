@@ -1,0 +1,8 @@
+work-group끼리 barrier
+
+
+barrier(CLK_GLOBAL_MEM_FENCE)
+=> 글로벌 값
+
+로컬이면 GLOBAL -> LOCAL로 변경
+
