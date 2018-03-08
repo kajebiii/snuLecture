@@ -6,7 +6,7 @@
 - [선형및비선형계산모델](http://3map.snu.ac.kr/courses/2018/appmath/main.html)
 - [자료구조](https://soar.snu.ac.kr/course/ds/20181/)
 - [집학과수리논리](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/index.html)
-- 하드웨어시스템설계]
+- 하드웨어시스템설계
 - 현대대수학1
 
 
