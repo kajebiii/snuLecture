@@ -5,7 +5,7 @@
 - [운영체제](https://github.com/swsnu/osspr2018/)
 - [선형및비선형계산모델](http://3map.snu.ac.kr/courses/2018/appmath/main.html)
 - [자료구조](https://soar.snu.ac.kr/course/ds/20181/)
-- [집학과수리논리](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/index.html)
+- [집합과수리논리](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/index.html)
 - 하드웨어시스템설계
 - 현대대수학1
 
@@ -26,6 +26,7 @@
 - 04/18-12:29:59 [set 2](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
 - 05/16-12:59:59 [set 3](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
 - 06/11-12:29:59 [set 4](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
+- 03/30-16:59:59 [aa 1](http://etl.snu.ac.kr/mod/ubboard/article.php?id=664040&bwid=1418645)
 
 
 # Quiz List
