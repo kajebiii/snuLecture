@@ -1,0 +1,560 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.r
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage[hangul]{kotex}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsthm,amsmath}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{verbatim} % Required for multiple comment
+\usepackage{amsmath} % Required for use \therefore \because and others..
+\usepackage{amssymb} % Required for use \therefore \because and others..
+\usepackage{algorithm, algpseudocode}
+\usepackage{verbatim} % for commment, verbatim environment
+\usepackage{spverbatim} % automatic linebreak verbatim environment
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{datetime} % Used for showing version as last modified time
+\yyyymmdddate
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage{xcolor}
+
+
+
+
+% Margins
+\linespread{1.25} % Line spacing
+\usepackage[a4paper,top=2cm,bottom=1cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{titlesec,sectsty}
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\sectionfont{\fontsize{12}{10}\selectfont}
+\subsectionfont{\fontsize{10}{10}\selectfont}
+\titlespacing{\subsection}{0pt}{-\parskip}{-\parskip}
+\usepackage{multicol}
+\usepackage{cuted}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+
+% mathematics
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel} % cancelation of terms
+\usepackage{nicefrac} % certain fraction styles
+\newcommand*\diff{\mathop{}\!\mathrm{d}} % differential
+\DeclareMathOperator{\arsinh}{arsinh}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{JongBeom Kim}
+\chead{집합과 수리 논리 HW 1} % Top center head
+\rhead{2018 Spring} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+
+\renewcommand\headrule
+{
+	\begin{minipage}{1\textwidth}
+		\hrule width \hsize height 1pt \kern 1.5pt \hrule width \hsize height 0.5pt  
+	\end{minipage}\par
+}%
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-10pt} %set spacing for itemize
+\setitemize{itemsep=3pt}
+\setlist[enumerate]{topsep=-10pt} %set spacing for itemize
+\setenumerate{itemsep=3pt}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+\twocolumn
+
+
+
+\section{Homework 1}
+
+\subsection{1.1.8.}
+
+어떤 양수 $e > 0$에 대해서는 임의의 자연수 $N$에 대하여 $n \geq N \rightarrow \frac{1}{n} < e$가 성립하지 않는다.
+
+즉, 어떤 양수 $e > 0$에 대해서는, 임의의 자연수 $N$에 대하여, 어떤 $n \geq N$이 존재하여 $\frac{1}{n} \geq e$를 만족한다.
+
+\subsection{1.1.12.}
+
+\begin{align*}
+\left(\bigcup_{i \in I} A_i \right) \cap \left(\bigcup_{j \in J} B_j \right) 
+=
+ \bigcup_{(i, j) \in I \times J} (A_i \cap B_j)
+\end{align*}
+
+
+\subsubsection{1. $\left(\bigcup_{i \in I} A_i \right) \cap \left(\bigcup_{j \in J} B_j \right) \subset \bigcup_{(i, j) \in I \times J} (A_i \cap B_j)$}
+\begin{align*}
+&x \in \left(\bigcup_{i \in I} A_i \right) \cap \left(\bigcup_{j \in J} B_j \right)
+\\ \Rightarrow& \exists a \in I | x \in A_a
+\\ & \exists b \in J | x \in B_b
+\\ \Rightarrow& x \in A_a \cap B_b
+\\ \Rightarrow& x \in \bigcup_{(i, j) \in I \times J} (A_i \cap B_j)
+\end{align*}
+
+\subsubsection{2. $\left(\bigcup_{i \in I} A_i \right) \cap \left(\bigcup_{j \in J} B_j \right) \supset \bigcup_{(i, j) \in I \times J} (A_i \cap B_j)$}
+\begin{align*}
+&x \in \bigcup_{(i, j) \in I \times J} (A_i \cap B_j) 
+\\ \Rightarrow& \exists a \in I, \exists b \in J | x \in A_a \cap B_b 
+\\ \Rightarrow&x \in A_a, x \in B_b 
+\\ \Rightarrow&x \in \left(\bigcup_{i \in I} A_i \right), x \in \left(\bigcup_{j \in J} B_j \right)
+\\ \Rightarrow&x \in \left(\bigcup_{i \in I} A_i \right) \cap \left(\bigcup_{j \in J} B_j \right)
+\end{align*}
+
+\begin{align*}
+\left(\bigcap_{i \in I} A_i \right) \cup \left(\bigcap_{j \in J} B_j \right) 
+= 
+\bigcap_{(i, j) \in I \times J} (A_i \cup B_j)
+\end{align*}
+
+\subsubsection{1. $\left(\bigcap_{i \in I} A_i \right) \cup \left(\bigcap_{j \in J} B_j \right) \subset \bigcap_{(i, j) \in I \times J} (A_i \cup B_j)$}
+\begin{align*}
+&x \in \left(\bigcap_{i \in I} A_i \right) \cup \left(\bigcap_{j \in J} B_j \right) 
+\\ \Rightarrow& x \in \left(\bigcap_{i \in I} A_i \right) \text{또는 }   x \in \left(\bigcap_{j \in J} B_j \right)
+\\ \Rightarrow& x \forall i \in I, \forall j \in J | x \in A_i \cup B_j
+\\ \Rightarrow& x x \in \bigcap_{(i, j) \in I \times J} (A_i \cup B_j)
+\end{align*}
+
+
+\subsubsection{2. $\left(\bigcap_{i \in I} A_i \right) \cup \left(\bigcap_{j \in J} B_j \right) \supset \bigcap_{(i, j) \in I \times J} (A_i \cup B_j)$}
+\begin{align*}
+&x \in \bigcap_{(i, j) \in I \times J} (A_i \cup B_j)
+\\ \Rightarrow&\forall i \in I, \forall j \in J | x \in A_i \cup B_j
+\intertext{만약, }
+& x \notin \left(\bigcap_{i \in I} A_i \right)\text{라면}
+\\ \Rightarrow& \exists a \in I, x \notin A_a
+\\ \Rightarrow& \forall j \in J | x \in A_a \cup B_j
+\\ \Rightarrow&x \in \left(\bigcap_{j \in J} B_j \right) \text{이다.}
+\intertext{비슷하게} &x \notin \left(\bigcap_{j \in J} B_j \right) 
+\Rightarrow x \in \left(\bigcap_{i \in I} A_i \right) 
+\\ \therefore &x \in \left(\bigcap_{i \in I} A_i \right) \cup \left(\bigcap_{j \in J} B_j \right) 
+\end{align*}
+
+
+\subsection{1.2.4.}
+\subsubsection{(가)}
+
+\begin{align*}
+g(f(x_1)) &= g(f(x_2)) 
+\intertext{라고 한다면 함수 g가 단사이므로, }
+f(x_1) &= f(x_2)  
+\intertext{또한 함수 f가 단사이므로, }
+x_1 &= x_2
+\intertext{따라서, g $\circ$ f는 단사이다.}
+\end{align*}
+\begin{align*}
+f(x_1)) &= f(x_2) 
+\intertext{라고 한다면 양번에 함수 g를 취하면, }
+(g\circ f)(x_1) &= (g \circ f)(x_2)  
+\intertext{함수 g $\circ$ f가 단사이므로, }
+x_1 &= x_2
+\intertext{따라서 f는 단사함수이다.}
+\end{align*}
+
+
+\subsubsection{(나)}
+
+\begin{align*}
+g(f(x)) &=z, (\forall z \in Z)
+\intertext{에서 $x \in X$가 존재하는지 확인해보자. 함수 $g$가 전사이므로}
+g(y) &= z  
+\intertext{인 $y \in Y$가 존재한다. 마찬가지로 함수 $f$가 전사이므로 }
+f(x) &= y 
+\intertext{인 $x \in X$가 존재한다. 따라서 함수 $g \circ f$는 전사함수이다. }
+\end{align*}
+\begin{align*}
+g(y) &=z, (\forall z \in Z)
+\intertext{에서 $y \in Y$가 존재하는지 확인해보자. 함수 $g \circ f$가 전사이므로}
+(g\circ f)(x) &= z  
+\intertext{인 $x \in X$가 존재한다. 이제 $y$를 }
+y &= f(x)
+\intertext{로 잡으면 $g(y) = z$을 만족하는 것을 알 수 있다. 따라서 함수 $g$는 전사이다.}
+\end{align*}
+
+\subsubsection{(다)}
+\begin{align*}
+\intertext{$f$와 $g$가 전사이고, 단사이므로 (가), (나)에 의해서 $g \circ f$가 전단사함수임을 알 수 있다.}
+\end{align*}
+\begin{align*}
+&(g \circ f) \circ (f^{-1} \circ g ^{-1})\\
+=&g \circ (f \circ f^{-1}) \circ g ^{-1}\\
+=&g \circ 1_{Y}\circ g ^{-1}\\
+=&g \circ g ^{-1}\\
+=&1_{Z}\\
+\intertext{또한,}
+&(f^{-1} \circ g ^{-1}) \circ (g \circ f)\\
+=&f^{-1} \circ (g ^{-1} \circ g) \circ f\\
+=&f^{-1} \circ 1_{Y} \circ f\\
+=&f^{-1} \circ f\\
+=&1_{X}\\
+\intertext{따라서 $(g \circ f)^{-1} = f ^ {-1} \circ g ^ {-1}$임을 알 수 있다.}
+\end{align*}
+
+\subsection{1.2.11.}
+$\exists f : X \rightarrow 2^X$가 전사함수라고 가정하자.
+
+집합 $Y \in 2^X$를 다음과 같이 정의하자. $Y = \left\{ x \in X \mid x \notin f(x) \right\}$
+
+그러면 $f(a) = Y$를 만족하는 $a \in X$가 존재하지 않는다.
+
+\textbf{pf. 귀류법} $\exists a \in X \mid f(a) = Y$라 하자.
+
+그러면 $Y$의 정의에 따라 $a \in f(a)=Y \iff a \notin f(a)=Y$이므로 모순이다. \qed
+
+따라서, $X$에서 $2^X$로 가는 전사함수는 존재하지 않는다.
+
+\subsection{1.2.12.}
+\subsubsection{1)}
+모든 $A \in 2^X$에 대해 생각해보자.
+
+먼저, $x \in f^{-1}(f(A)) \iff f(x) \in f(A)$ 이다. 
+
+$x \in A \Rightarrow f(x) \in f(A) \iff x \in f^{-1}(f(A))$ 이므로
+\begin{align*}
+&\therefore f^{-1}(f(A)) \supset A & (1)
+\end{align*}
+는 항상 성립한다.
+\begin{align*}
+& x_1, x_2 \in X \mid f(x_1) = f(x_2) \Rightarrow x_1 = x_2
+\\ \iff& \left[f(x) \in f(A) \Rightarrow x \in A \right]
+\\ \iff& \left[x \in f^{-1}(f(A)) \Rightarrow x \in A \right]
+\\ \iff& f^{-1}(f(A)) \subset A & (2)
+\end{align*}
+
+
+\textbf{결론} (1)과 (2)에 의해 함수 $f$가 단사일 필요충분조건은 
+\begin{align*}
+&f^{-1}(f(A)) = A &A \in 2^X
+\end{align*}이다.
+
+\subsubsection{2)}
+모든 $B \in 2^Y$에 대해 생각해보자.
+
+먼저, $y \in f(f^{-1}(B)) \iff [\exists x \in f^{-1}(B) \mid f(x) = y] $이다.
+
+\begin{align*}
+y \in f(f^{-1}(B)) &\Rightarrow [\exists x \in f^{-1}(B) \mid f(x) = y] 
+\\ &\Rightarrow [y = f(x) \in B]
+\end{align*}
+이므로, 
+\begin{align*}
+&\therefore f(f^{-1}(B)) \subset B & (1)
+\end{align*}
+는 항상 성립한다.
+\begin{align*}
+& \forall y \in Y, \exists x \in X \mid f(x) = y
+\\ \iff& \left[y \in B \Rightarrow [\exists x \in f^{-1}(B) \mid f(x) = y]  \right]
+\\ \iff& \left[y \in B \Rightarrow y \in f(f^{-1}(B)) \right]
+\\ \iff& f(f^{-1}(B)) \supset B & (2)
+\end{align*}
+
+
+\textbf{결론} (1)과 (2)에 의해 함수 $f$가 전사일 필요충분조건은 
+\begin{align*}
+&f(f^{-1}(B)) = B &B \in 2^Y
+\end{align*}이다.
+
+\subsection{1.2.15.}
+
+\begin{align*}f^{-1}\left(\bigcup_{i \in I} B_i\right) = \bigcup_{i \in I} f^{-1}(B_i)\end{align*}
+\textbf{pf.}
+\begin{align*}
+&x \in f^{-1}\left(\bigcup_{i \in I} B_i\right)
+\\ \iff& f(x) \in \bigcup_{i \in I} B_i
+\\ \iff& \exists i \in I \mid f(x) \in B_i
+\\ \iff& \exists i \in I \mid x \in f^{-1}(B_i)
+\\ \iff& x \in \bigcup_{i \in I} f^{-1}(B_i)
+\end{align*} \qed
+\begin{align*}f^{-1}\left(\bigcap_{i \in I} B_i\right) = \bigcap_{i \in I} f^{-1}(B_i)\end{align*}
+\textbf{pf.}
+\begin{align*}
+&x \in f^{-1}\left(\bigcap_{i \in I} B_i\right)
+\\ \iff& f(x) \in \bigcap_{i \in I} B_i
+\\ \iff& \forall i \in I \mid f(x) \in B_i
+\\ \iff& \forall i \in I \mid x \in f^{-1}(B_i)
+\\ \iff& x \in \bigcap_{i \in I} f^{-1}(B_i) 
+\end{align*} \qed
+
+\begin{align*}f\left(\bigcup_{i \in I} A_i\right) = \bigcup_{i \in I} f(A_i)\end{align*}
+\textbf{pf.}
+\begin{align*}
+&y \in f\left(\bigcup_{i \in I} A_i\right)
+\\ \iff& \exists x \in \bigcup_{i \in I} A_i \mid f(x) = y
+\\ \iff& \exists i \in I \mid \left[\exists x \in A_i \mid f(x) = y\right]
+\\ \iff& \bigcup_{i \in I} f(A_i)
+\end{align*} \qed
+
+\begin{align*}&f\left(\bigcap_{i \in I} A_i\right) \subset \bigcap_{i \in I} f(A_i) &(1)\end{align*}
+\textbf{pf.} 네번째 줄로 넘어갈 때 $\iff$가 아닌 $\Rightarrow$임에 유의하라.
+\begin{align*}
+&y \in f\left(\bigcap_{i \in I} A_i\right)
+\\ \iff& \exists x \in \bigcap_{i \in I} A_i \mid f(x) = y
+\\ \iff& \left[\exists x \mid \forall i\in I, x \in A_i  \right] \mid  f(x) = y 
+\\ \Rightarrow& \forall i \in I \mid \left[\exists x \in A_i \mid f(x) = y\right]
+\\ \iff& \bigcap_{i \in I} f(A_i)
+\end{align*} \qed
+
+\begin{align*}f\left(\bigcap_{i \in I} A_i\right) = \bigcap_{i \in I} f(A_i)\end{align*}
+의 필요충분조건을 찾는 것은
+\begin{align*}f\left(\bigcap_{i \in I} A_i\right) \supset \bigcap_{i \in I} f(A_i)\end{align*}
+의 필요충분조건을 찾는 것과 같다. ($\therefore$ 식 (1))
+\begin{align*}
+&f\left(\bigcap_{i \in I} A_i\right) \supset \bigcap_{i \in I} f(A_i)
+\\ \iff & \forall i \in I \mid \left[\exists x \in A_i \mid f(x) = y\right] 
+\\ &\Rightarrow \left[\exists x \mid \forall i\in I, x \in A_i  \right] \mid  f(x) = y  
+\\ \iff & \left[ f(x_1) = f(x_2) \iff x_1 = x_2 \right]
+\end{align*}
+이므로, 
+\begin{align*}
+f\left(\bigcap_{i \in I} A_i\right) = \bigcap_{i \in I} f(A_i) \iff \left[ f(x_1) = f(x_2) \iff x_1 = x_2 \right]
+\end{align*}
+즉, 함수 $f$가 단사인 것과 필요충분조건이다.
+
+\subsection{1.3.1.}
+\subsubsection{(1) $\wedge$ (2) $\wedge$ $\lnot$(3)}
+$R = \left\{(a, a), (b, b), (c, c), (a, b), (b, a), (b, c), (c, b) \right\}$
+\\$(a, b) \in R$ $(b, c) \in R$이지만 $(a, c) \notin R$이다.
+
+\subsubsection{$\lnot$(1) $\wedge$ (2) $\wedge$ (3)}
+$R = \left\{(c, c) \right\}$
+\\$(a, a) \notin R$이다.
+
+\subsubsection{(1) $\wedge$ $\lnot$(2) $\wedge$ (3)}
+$R = \left\{(a, a), (b, b), (c, c), (a, b), (b, c), (a, c) \right\}$
+\\$(a, b) \in$이지만 $(b, a) \notin R$이다.
+
+\subsection{1.3.2.}
+\begin{align*}
+\exists (x, y) \in R \Rightarrow (y, x) \in R
+\\ (x, y) \in R, (y, x) \in R \Rightarrow (x, x) \in R
+\end{align*}
+주장은 위와 같다. 하지만 결국 $(x, x) \in R$이 만족하기 위해서는 $(x, y) \in R$이어야 한다.
+즉, $R$에서 $(x, y)$꼴의 원소가 없다면 $(x, x)$가 $R$의 원소일 보장은 없다.
+
+예를 들어, 원소 세 개인 집합 $X = \left\{a, b, c \right\}$에서 $R = \left\{ (c, c) \right\}$인 경우가 있다.
+ 
+\subsection{1.3.7.}
+\begin{align*}
+k \in \mathbb{N}, m \sim n \iff k \mid m - n
+\end{align*}
+\subsubsection{1)}
+\begin{align*}
+&\forall x \in \mathbb{Z}, k \mid x - x
+\\ \Rightarrow& \forall x \in \mathbb{Z}, x \sim x
+\end{align*}
+
+\subsubsection{2)}
+\begin{align*}
+x \sim y \Rightarrow& k \mid x - y
+\\ \Rightarrow& k \mid -(x - y)
+\\ \Rightarrow& k \mid y - x
+\\ \Rightarrow& y \sim x
+\end{align*}
+
+\subsubsection{3)}
+\begin{align*}
+x \sim y, y \sim z \Rightarrow& k \mid x - y, k \mid y - z
+\\ \Rightarrow& k \mid (x - y) + (y - z)
+\\ \Rightarrow& k \mid x - z
+\\ \Rightarrow& x \sim z
+\end{align*}
+\textbf{결론} 따라서 $\sim$은 동치관계이다.
+\begin{align*}
+\mathbb{Z} / \sim =& \left\{\left[m \right] \mid m \in \mathbb{Z} \right\}
+\\ =& \left\{\left[0 \right], \left[1 \right], \cdots, \left[k-1 \right] \right\}
+\end{align*}
+
+\subsection{1.3.12.}
+\subsubsection{1)}
+$x, y \in V/W \Rightarrow x + y \in V/W$이고, 
+\\$x \in V/W, a \in \mathbb{R} \Rightarrow ax \in V/W$ 이므로
+$V/W$는 벡터공간이다.
+
+\subsubsection{2)}
+$\phi, \widetilde{\phi}$는 선형사상이다.
+
+$\phi : V \rightarrow Z$에 대하여 $\widetilde{\phi} \circ q = \phi$를 만족하는 $\widetilde{\phi} : V/W \rightarrow Z$가 존재 할 필요충분조건은
+\begin{align*}
+x \sim_{W} y \Rightarrow \phi(x) = \phi(y)
+\end{align*}
+이다. 한편,
+\begin{align*}
+&x \sim_{W} y \iff x - y \in W & (1)
+\end{align*}
+\begin{align*}
+\phi(x) = \phi(y) \iff& \phi(x) - \phi(y) = 0 &
+\\ \iff& \phi(x - y) = 0 &\text{($\because \phi$는 선형사상)}
+\\ \therefore \phi(x) = \phi(y) \iff& \phi(x - y) = 0& (2)
+\end{align*}
+인 것을 확인할 수 있다. 이를 이용하면, 
+\begin{align*}
+&\left[ x \sim_{W} y \Rightarrow \phi(x) = \phi(y) \right] &
+\\ \iff &\left[ x - y \in W \Rightarrow \phi(x - y) = 0 \right] &(\because (1), (2))
+\\ \iff &\left[ x \in W \Rightarrow \phi(x) = 0 \right] &
+\end{align*}
+따라서, $ x \in W \Rightarrow \phi(x) = 0$은 필요충분조건이다.
+
+\subsection{1.4.1.}
+집합 $X = \left\{a, b, c\right\}$에 대해 관계 $R \subset X \times X$를 생각하자.
+\subsubsection{(1) $\wedge$ (2) $\wedge$ $\lnot$(3)}
+$R = \left\{(a, a), (b, b), (c, c), (a, b), (b, c) \right\}$
+\\$(a, b) \in R$ $(b, c) \in R$이지만 $(a, c) \notin R$이다.
+
+\subsubsection{$\lnot$(1) $\wedge$ (2) $\wedge$ (3)}
+$R = \left\{(c, c) \right\}$
+\\$(a, a) \notin R$이다.
+
+\subsubsection{(1) $\wedge$ $\lnot$(2) $\wedge$ (3)}
+$R = \left\{ (a, a), (b, b), (c, c), (a, b), (b, a) \right\}$
+\\$(a, b) \in R$ $(b, a) \in R$이지만 $a \neq b$이다.
+
+
+
+\subsection{1.4.5.}
+\begin{align*}
+\forall A \in \mathbb{A} \Rightarrow \bigcap \mathbb{A} \subset A
+\end{align*}
+이므로, $\bigcap \mathbb{A}$는 $\mathbb{A}$의 하계이다.
+\\ 만약 $I \in 2^{X}$가 $\mathbb{A}$의 하계라면, $\forall A \in \mathbb{A}, I \subset A$이므로,
+\begin{align*}
+x \in I \Rightarrow& \forall A \in \mathbb{A}, x \in A
+\\ \Rightarrow& x \in \bigcap \mathbb{A}
+\\ \therefore I \subset& \bigcap \mathbb{A}
+\end{align*}
+따라서, $\text{inf} \mathbb{A} = \bigcap \mathbb{A}$
+
+
+\subsection{1.4.7.}
+\begin{align*}
+\forall c \in \mathbb{F}(C), c \subset C
+\end{align*}이고,
+\begin{align*}
+&\exists S \in \mathbb{F}(C) \mid \forall c \in \mathbb{F}(C), c \subset S
+\\ \iff& C \subset S
+\end{align*}이므로,
+\begin{align*}
+\text{sup} \mathbb{F}(C) = C
+\end{align*}
+
+\begin{align*}
+\forall c \in \mathbb{F}(C), c \supset \varnothing
+\end{align*}이고,
+\begin{align*}
+&\exists I \in \mathbb{F}(C) \mid \forall c \in \mathbb{F}(C), c \supset I
+\\ \iff&  \varnothing \supset I
+\end{align*}이므로,
+\begin{align*}
+\text{inf} \mathbb{F}(C) = \varnothing
+\end{align*}
+
+\subsection{1.4.9.}
+\begin{align*}
+F \vee G = \text{sup}\left\{F, G\right\} =  F \cup G
+\\ F \wedge G = \text{inf}\left\{F, G\right\}  = F \cap G
+\end{align*}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
