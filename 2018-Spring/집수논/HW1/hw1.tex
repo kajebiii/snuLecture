@@ -428,9 +428,18 @@ x \sim y, y \sim z \Rightarrow& k \mid x - y, k \mid y - z
 
 \subsection{1.3.12.}
 \subsubsection{1)}
-$x, y \in V/W \Rightarrow x + y \in V/W$이고, 
-\\$x \in V/W, a \in \mathbb{R} \Rightarrow ax \in V/W$ 이므로
-$V/W$는 벡터공간이다.
+$x, y \in V/W, c, c_1, c_2 \in \mathbb{R}$에 대해 다음 8가지를 만족한다.
+\begin{align*}
+1. & x + y = y + x
+\\ 2. & x + (y + z) = (x + y) + z
+\\ 3. & \text{유일한 항등원 $\bar{0}$(영 벡터)가 존재하여} \mid  x + \bar{0} = x
+\\ 4. & \text{각 원소에 대해 유일한 역원 $-x$가 존재하여} \mid x + (-x) = \bar{0}
+\\ 5. & 1x = x
+\\ 6. & (c_1 c_2)x = c_1 (c_2 x)
+\\ 7. & c(x+y) = cx + cy
+\\ 8. & (c_1 + c_2)x = c_1 x + c_2 x
+\end{align*}
+따라서, $V/W$는 벡터공간이다.
 
 \subsubsection{2)}
 $\phi, \widetilde{\phi}$는 선형사상이다.
@@ -487,33 +496,46 @@ x \in I \Rightarrow& \forall A \in \mathbb{A}, x \in A
 
 
 \subsection{1.4.7.}
-\begin{align*}
-\forall c \in \mathbb{F}(C), c \subset C
-\end{align*}이고,
-\begin{align*}
-&\exists S \in \mathbb{F}(C) \mid \forall c \in \mathbb{F}(C), c \subset S
-\\ \iff& C \subset S
-\end{align*}이므로,
-\begin{align*}
-\text{sup} \mathbb{F}(C) = C
-\end{align*}
+증명전에, 면들의 교집합은 정의에 의해 면이 된다는 것을 상기하라.
 
+$\mathbb{F}(C)$의 모든 상계들의 집합을 $\mathbb{S}$라 하자. $C \in S$이므로, $S$는 공집합이 아니다.
+\\ 이제 $S = \bigcap \mathbb{S}$가 $\mathbb{F}(C)$의 상한임을 보이겠다.
 \begin{align*}
-\forall c \in \mathbb{F}(C), c \supset \varnothing
-\end{align*}이고,
-\begin{align*}
-&\exists I \in \mathbb{F}(C) \mid \forall c \in \mathbb{F}(C), c \supset I
-\\ \iff&  \varnothing \supset I
+\forall s \in \mathbb{S}, \forall c \in \mathbb{F}(C), c \subset s
 \end{align*}이므로,
 \begin{align*}
-\text{inf} \mathbb{F}(C) = \varnothing
-\end{align*}
+\forall c \in \mathbb{F}(C), c \subset \bigcap \mathbb{S}
+\end{align*}이다. 또한, 
+\begin{align*}
+\forall s \in \mathbb{S}, \text{  } \bigcap \mathbb{S} \subset s
+\end{align*}이므로, $S = \bigcap \mathbb{S}$은 상한의 두가지 성질을 만족한다.
+
+$I = \bigcap \mathbb{F}(C)$가 $\mathbb{F}(C)$의 하한임을 보이겠다.
+\begin{align*}
+\forall c \in \mathbb{F}(C), I \subset c
+\end{align*}이므로, $I$는 하계이다. 또한,
+\begin{align*}
+\forall i \in \text{$\mathbb{F}(C)$의 하계집합},  i \subset I
+\\ \text{$\because$아니라면, $i$가 하계인 것에 모순이 된다.}
+\end{align*}이므로, $I = \bigcap \mathbb{F}(C)$은 하한의 두가지 성질을 만족한다.
+
 
 \subsection{1.4.9.}
+1.4.7.에 의하면 상한은 상계들의 교집합이고, 하한은 두 면의 교집합이다.
 \begin{align*}
-F \vee G = \text{sup}\left\{F, G\right\} =  F \cup G
-\\ F \wedge G = \text{inf}\left\{F, G\right\}  = F \cap G
+F \vee G = \text{sup}\left\{F, G\right\} &=  \text{$\left\{F, G\right\}$의 상계들의 교집합}
+\\ F \wedge G = \text{inf}\left\{F, G\right\}  &= F \cap G
 \end{align*}
+
+보기 1.4.5.의 경우에는, 면들의 집합은 원소 네 개인 집합 $X = \left\{a, b, c, d\right\}$에 의해 정의된 $2^X$와 같은 순서집합이다. 함수 $f : \mathbb{F}(C) \rightarrow 2^X$가 면들의 집합에서 $2^X$로 가는 매칭하는 함수라고 하자. 이 함수는 자연스럽게 역함수 $f^{-1}$을 가진다. 
+
+즉, 보기 1.4.5.의 경우의 $\vee$와 $\wedge$는 다음과 같이 정의 할 수 있다.
+\begin{align*}
+F \vee G = \text{sup}\left\{F, G\right\} &=  f^{-1}(f(F) \cup f(G))
+\\ F \wedge G = \text{inf}\left\{F, G\right\}  &= f^{-1}(f(F) \cap f(G))
+\end{align*}
+일반적인 면들에 대해서는 성립하지 않음에 유의하라.
+
 
 \end{document}
 
