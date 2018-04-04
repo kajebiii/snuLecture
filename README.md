@@ -16,8 +16,9 @@
 - ~~03/09-23:59:59 [swpp 1-1](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-1.md)~~
 - ~~03/12-23:59:59 [swpp 1-2](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-2.md)~~
 - 04/08-23:59:59 [swpp 2](https://github.com/snu-sf-class/swpp201801/issues/13)
-- ~~03/14-21:59:59 [os 0](https://github.com/swsnu/osspr2018/blob/master/doc/Project0.md)~~
-- ~~03/25-21:59:59 [os 1](https://github.com/swsnu/osspr2018/blob/master/doc/Project1.md)~~
+- ~~03/14-20:59:59 [os 0](https://github.com/swsnu/osspr2018/blob/master/doc/Project0.md)~~
+- ~~03/25-20:59:59 [os 1](https://github.com/swsnu/osspr2018/blob/master/doc/Project1.md)~~
+- 04/17-20:59:59 [os 2](https://github.com/swsnu/osspr2018/blob/master/doc/Project2.md)
 - ~~04/02-21:59:59 [ds 1](https://soar.snu.ac.kr/course/ds/assignment/1/)~~
 - 04/16-21:59:59 [ds 2](https://soar.snu.ac.kr/course/ds/assignment/2/)
 - 04/30-21:59:59 [ds 3](https://soar.snu.ac.kr/course/ds/assignment/3/)
@@ -34,12 +35,14 @@
 # Quiz List
 - ~~03/15 SWPP-Quiz1~~
 - ~~03/17 LN-Quiz1~~
-- 04/09~04/14 LN-Quiz2
+- 04/14 LN-Quiz2 (1 hour)
 - 05/07~05/12 LN-Quiz3
 - 05/21~05/26 LN-Quiz4
 
 # Exam List
 - 04/16~04/21 LN-Midterm
+- 04/23 DS-Midterm
+- 04/25 OS-Midterm
 - 06/18~06/21 LN-Final
 - 04/18 set-Midterm
 - 06/11 set-Midterm
