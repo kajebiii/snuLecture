@@ -1,0 +1,30 @@
+Build
+$> make
+
+generator
+
+Simple random floating point generator
+prints 32 random floating point number.
+final value is calculated result.
+
+to print result to input_float.txt, use like this.
+$> ./generator > input_float.txt
+
+converter
+
+Simple floating point converter
+reads 32 floating point number from stdin
+and prints it to stdout
+
+Final value is calculated result
+
+to convert input_float.txt and print to input_hex.txt, use like this.
+$> ./converter <input_float.txt > input_hex.txt
+
+To generate only Hex value,
+
+$> ./generator | ./converter > input_hex.txt
+
+Some result value may be different from Xilinx IP result by precision lost.
+In that case, please re-generate numbers.
+TA assures that given samples work correctly at Xilinx IP

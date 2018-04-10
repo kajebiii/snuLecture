@@ -1,0 +1,2 @@
+system Bus : Fast
+Peripheral Bus : Slow
