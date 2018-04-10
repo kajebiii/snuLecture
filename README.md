@@ -43,9 +43,9 @@
 
 # Exam List
 - 04/16~04/21 LN-Midterm
-- 04/19 AA-Midterm ({x는 자연수 | 1 <= x <= 15} \ {12})
+- 04/19 AA-Midterm (25-105, 1~15 / 12제외)
 - 04/23 DS-Midterm
 - 04/25 OS-Midterm
 - 06/18~06/21 LN-Final
-- 04/18 set-Midterm
-- 06/11 set-Midterm
+- 04/18 set-Midterm (12:30~, 43-101)
+- 06/11 set-Midterm (12:30~, 43-101)
