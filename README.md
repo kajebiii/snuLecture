@@ -44,7 +44,7 @@
 # Exam List
 - 04/23~04/25 LN-Midterm
 - 04/19 AA-Midterm (25-105, 1~15 / 12제외)
-- 04/26 HSD-Midterm (19:00~)
+- 04/26 HSD-Midterm (19:00~21:00)
 - 04/23 DS-Midterm
 - 04/25 OS-Midterm
 - 06/18~06/21 LN-Final
