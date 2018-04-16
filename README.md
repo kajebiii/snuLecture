@@ -42,7 +42,7 @@
 - 05/21~05/26 LN-Quiz4
 
 # Exam List
-- 04/23~04/25 LN-Midterm
+- 04/25 LN-Midterm
 - 04/19 AA-Midterm (25-105, 1~15 / 12제외)
 - 04/26 HSD-Midterm (19:00~21:00)
 - 04/23 DS-Midterm
