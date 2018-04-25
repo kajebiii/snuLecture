@@ -1,2 +1,19 @@
 system Bus : Fast
 Peripheral Bus : Slow
+
+7.80 
+
+1 / 100, 10 / 1000, 0.1 / 10
+10 / 1000이 1/100보다 좋은거
+한번에 몰려오는거 감당가능.
+나쁜거
+딜레이가 길수있음.
+
+
+7.53
+
+위에가 master로 ready신호 보내고
+2cycle후에 slave(아래)가 데이터 보냄.
+
+axi_awready 같은건 한pulse를 만든다(?)
+
