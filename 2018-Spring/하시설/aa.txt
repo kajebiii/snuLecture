@@ -1,3 +1,12 @@
+8-27 (8/35 => 8/45)
+
+
+
+
+
+-----------
+
+
 system Bus : Fast
 Peripheral Bus : Slow
 

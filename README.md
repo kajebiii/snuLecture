@@ -2,6 +2,7 @@
 
 # Course
 - [소프트웨어개발의원리와실제](https://github.com/snu-sf-class/swpp201801/)
+  - [CoSNU](https://github.com/cubelover/CoSNU)
 - [운영체제](https://github.com/swsnu/osspr2018/)
   - [OS Team 7](https://github.com/swsnu/os-team7/)
 - [선형및비선형계산모델](http://3map.snu.ac.kr/courses/2018/appmath/main.html)
