@@ -49,7 +49,7 @@
 
 # Exam List
 - 06/07 AA-Final
-- 06/18~06/21 LN-Final
+- 06/20 LN-Final
 - 06/11 set-Final (12:30~, 43-101)
 - ~~04/23 DS-Midterm~~
 - ~~04/25 LN-Midterm~~
