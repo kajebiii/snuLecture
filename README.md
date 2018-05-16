@@ -14,8 +14,6 @@
 
 # Assignment List
 
-- 05/14-21:59:59 [ds 4](https://soar.snu.ac.kr/course/ds/assignment/4/)
-- 05/16-12:59:59 [set 3](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
 - 05/20-20:59:59 [os 3](https://github.com/swsnu/osspr2018/blob/master/doc/Project3.md)
 - 05/28-21:59:59 [ds 5](https://soar.snu.ac.kr/course/ds/assignment/5/)
 - 06/11-12:29:59 [set 4](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
@@ -33,8 +31,10 @@
 - ~~04/02-21:59:59 [ds 1](https://soar.snu.ac.kr/course/ds/assignment/1/)~~
 - ~~04/16-21:59:59 [ds 2](https://soar.snu.ac.kr/course/ds/assignment/2/)~~
 - ~~04/30-21:59:59 [ds 3](https://soar.snu.ac.kr/course/ds/assignment/3/)~~
+- ~~05/14-21:59:59 [ds 4](https://soar.snu.ac.kr/course/ds/assignment/4/)~~
 - ~~04/02-12:59:59 [set 1](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)~~
 - ~~04/18-12:29:59 [set 2](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)~~
+- ~~05/16-12:59:59 [set 3](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)~~
 - ~~03/30-16:59:59 [aa 1](http://etl.snu.ac.kr/mod/ubboard/article.php?id=664040&bwid=1418645)~~
 - ~~04/17-16:59:59 [aa 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=664040&bwid=1442174)~~
 - ~~04/24-23:59:59 [hsd 7](http://etl.snu.ac.kr/mod/assign/view.php?id=706373)~~
@@ -48,6 +48,7 @@
 - ~~04/14 LN-Quiz2 (1 hour)~~
 
 # Exam List
+- 06/04 DS-Final
 - 06/07 AA-Final
 - 06/20 LN-Final
 - 06/11 set-Final (12:30~, 43-101)
