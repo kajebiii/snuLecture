@@ -14,10 +14,14 @@
 
 # Assignment List
 
-- 05/20-20:59:59 [os 3](https://github.com/swsnu/osspr2018/blob/master/doc/Project3.md)
 - 05/28-21:59:59 [ds 5](https://soar.snu.ac.kr/course/ds/assignment/5/)
+- 05/28-23:59:59 [swpp 3rd iter](https://github.com/snu-sf-class/swpp201801/issues/21)
+- 06/04-12:59:59 [aa 3](http://etl.snu.ac.kr/mod/ubboard/article.php?id=664040&bwid=1479937)
+- 06/04-20:59:59 [os 3-design](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
 - 06/11-12:29:59 [set 4](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
 - 06/11-21:59:59 [ds 6](https://soar.snu.ac.kr/course/ds/assignment/6/)
+- 06/11-23:59:59 [swpp 4th iter](https://github.com/snu-sf-class/swpp201801/issues/21)
+- 06/12-20:59:59 [os 3](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
 - ~~03/09-23:59:59 [swpp 1-1](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-1.md)~~
 - ~~03/12-23:59:59 [swpp 1-2](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-2.md)~~
 - ~~04/08-23:59:59 [swpp 2](https://github.com/snu-sf-class/swpp201801/issues/13)~~
@@ -28,6 +32,7 @@
 - ~~03/25-20:59:59 [os 1](https://github.com/swsnu/osspr2018/blob/master/doc/Project1.md)~~
 - ~~04/17-20:59:59 [os 2](https://github.com/swsnu/osspr2018/blob/master/doc/Project2.md)~~
 - ~~05/08-20:59:59 [os 3-design](https://github.com/swsnu/osspr2018/blob/master/doc/Project3.md)~~
+- ~~05/20-20:59:59 [os 3](https://github.com/swsnu/osspr2018/blob/master/doc/Project3.md)~~
 - ~~04/02-21:59:59 [ds 1](https://soar.snu.ac.kr/course/ds/assignment/1/)~~
 - ~~04/16-21:59:59 [ds 2](https://soar.snu.ac.kr/course/ds/assignment/2/)~~
 - ~~04/30-21:59:59 [ds 3](https://soar.snu.ac.kr/course/ds/assignment/3/)~~
