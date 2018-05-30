@@ -46,11 +46,11 @@
 
 
 # Quiz List
-- 05/07~05/12 LN-Quiz3
-- 05/21~05/26 LN-Quiz4
+- 06/11 LN-Quiz4
 - ~~03/15 SWPP-Quiz1~~
 - ~~03/17 LN-Quiz1~~
 - ~~04/14 LN-Quiz2 (1 hour)~~
+- ~~05/07~05/12 LN-Quiz3~~
 
 # Exam List
 - 06/04 DS-Final
