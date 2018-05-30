@@ -17,11 +17,11 @@
 - 05/28-21:59:59 [ds 5](https://soar.snu.ac.kr/course/ds/assignment/5/)
 - 05/28-23:59:59 [swpp 3rd iter](https://github.com/snu-sf-class/swpp201801/issues/21)
 - 06/04-12:59:59 [aa 3](http://etl.snu.ac.kr/mod/ubboard/article.php?id=664040&bwid=1479937)
-- 06/04-20:59:59 [os 3-design](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
+- 06/04-20:59:59 [os 4-design](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
 - 06/11-12:29:59 [set 4](http://www.math.snu.ac.kr/~kye/lecture/18_1_set/18_1_set_hw.html)
 - 06/11-21:59:59 [ds 6](https://soar.snu.ac.kr/course/ds/assignment/6/)
 - 06/11-23:59:59 [swpp 4th iter](https://github.com/snu-sf-class/swpp201801/issues/21)
-- 06/12-20:59:59 [os 3](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
+- 06/12-20:59:59 [os 4](https://github.com/swsnu/osspr2018/blob/master/doc/Project4.md)
 - ~~03/09-23:59:59 [swpp 1-1](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-1.md)~~
 - ~~03/12-23:59:59 [swpp 1-2](https://github.com/snu-sf-class/swpp201801/blob/master/assignments/assignment_1-2.md)~~
 - ~~04/08-23:59:59 [swpp 2](https://github.com/snu-sf-class/swpp201801/issues/13)~~
@@ -55,8 +55,11 @@
 # Exam List
 - 06/04 DS-Final
 - 06/07 AA-Final
-- 06/20 LN-Final
 - 06/11 set-Final (12:30~, 43-101)
+- 06/14 HSD-Final (Night)
+- 06/18 OS-Final
+- 06/19 SWPP-Poster
+- 06/20 LN-Final
 - ~~04/23 DS-Midterm~~
 - ~~04/25 LN-Midterm~~
 - ~~04/25 OS-Midterm~~
