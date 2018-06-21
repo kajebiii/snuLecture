@@ -1,0 +1,38 @@
+mount -o loop -t ext2 /root/proj4.fs /root/proj4
+
+umount -dl /root/proj4
+
+BOARD$ ../file_loc snu301
+latitude:       37.450005
+longitude:      126.952366
+accuracy:       50(m)
+
+BOARD$ ../file_loc snu25
+latitude:       37.458773
+longitude:      126.949533
+accuracy:       50(m)
+
+root:~/proj4> ../file_loc Nakseongdae
+latitude:       37.477184
+longitude:      126.962739
+accuracy:       64(m)
+
+root:~/proj4/USA> ../../file_loc whitehouse
+latitude:       38.897680
+longitude:      -77.038718
+accuracy:       73(m)
+
+
+os-tas@spl.snu.ac.kr 
+
+[OS-Proj2] Team7 slides&demo submission
+
+안녕하세요. OS Team7 입니다.
+
+OS-Proj2 슬라이드와 데모를 제출합니다.
+
+영상은 https://www.youtube.com/watch?v=27RSyZNVPqU 에서도 확인하실 수 있습니다.
+
+감사합니다.
+
+김종범 드림.
