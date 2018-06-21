@@ -2,6 +2,7 @@
 
 ## 2018-Spring
 * [Specific Detail](https://github.com/kajebiii/snuLecture/blob/master/2018-Spring/README.md)
+
 |과목명|교과구분|학점|성적|평점|
 |:--:|:--:|:--:|:--:|:--:|
 |운영체제|전선|3|A+|4.3|
