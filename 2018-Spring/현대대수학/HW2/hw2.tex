@@ -1,0 +1,617 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.r
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage[hangul]{kotex}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsthm,amsmath}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{verbatim} % Required for multiple comment
+%\usepackage{MnSymbol} % cupdot
+\usepackage{amsmath} % Required for use \therefore \because and others..
+\usepackage{amssymb} % Required for use \therefore \because and others..
+\usepackage{algorithm, algpseudocode}
+\usepackage{verbatim} % for commment, verbatim environment
+\usepackage{spverbatim} % automatic linebreak verbatim environment
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{datetime} % Used for showing version as last modified time
+\yyyymmdddate
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage{xcolor}
+
+
+
+
+% Margins
+\linespread{1.25} % Line spacing
+\usepackage[a4paper,top=2cm,bottom=1cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{titlesec,sectsty}
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\sectionfont{\fontsize{12}{10}\selectfont}
+\subsectionfont{\fontsize{10}{10}\selectfont}
+\titlespacing{\subsection}{0pt}{-\parskip}{-\parskip}
+\usepackage{multicol}
+\usepackage{cuted}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+
+% mathematics
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel} % cancelation of terms
+\usepackage{nicefrac} % certain fraction styles
+\newcommand*\diff{\mathop{}\!\mathrm{d}} % differential
+\DeclareMathOperator{\arsinh}{arsinh}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{JongBeom Kim}
+\chead{현대대수학 HW 2} % Top center head
+\rhead{2018 Spring} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+
+\renewcommand\headrule
+{
+	\begin{minipage}{1\textwidth}
+		\hrule width \hsize height 1pt \kern 1.5pt \hrule width \hsize height 0.5pt  
+	\end{minipage}\par
+}%
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-10pt} %set spacing for itemize
+\setitemize{itemsep=3pt}
+\setlist[enumerate]{topsep=-10pt} %set spacing for itemize
+\setenumerate{itemsep=3pt}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+\twocolumn
+
+
+
+\chapter{Homework 2}
+
+\section{9.34.}
+$\sigma$가 홀수 길이($=2k+1$)의 순환치환
+\begin{align*}
+\sigma = \left( a_0, a_1, \cdots, a_{2k-1}, a_{2k} \right)
+\end{align*}
+라 하자. 그러면 $\sigma ^ 2$는 다음과 같다.
+\begin{align*}
+\sigma^2 \left(a_i \right) = a_{i + 2} \tag{여기서, $+ = +_{2k+1}$}
+\end{align*} 이를 이용하여 $a_0$를 포함하는 궤도를 찾으면,
+\begin{align*}
+a_0 \overset{\sigma ^ 2}{\rightarrow} a_2 \overset{\sigma ^ 2}{\rightarrow} a_4 \overset{\sigma ^ 2}{\rightarrow} \cdots \overset{\sigma ^ 2}{\rightarrow} a_{2k} \overset{\sigma ^ 2}{\rightarrow} a_{1} \overset{\sigma ^ 2}{\rightarrow} a_{3} \overset{\sigma ^ 2}{\rightarrow} \cdots \overset{\sigma ^ 2}{\rightarrow} a_{2k-1} \overset{\sigma ^ 2}{\rightarrow} a_0
+\end{align*}이므로,
+\begin{align*}
+\sigma^2 = \left( a_0, a_2, \cdots, a_{2k}, a_1, \cdots a_{2k} \right)
+\end{align*}이고, 이는 두 원소 이상을 포함하는 궤도가 많아야 하나 뿐이므로 순환치환이다.
+
+\section{10.40.}
+임의의 원소 $a \in G$에 대해서 $G$의 부분순환군 $\langle a \rangle$을 생각하자. $\left|\langle a \rangle\right| = k$라 하면, 순환군의 성질에 의해 $a^k = e$라는 것을 안다. 여기서 $\left|G \right| < \infty$이고, $\langle a \rangle \le G$이므로 Lagrange 정리를 이용하면,
+\begin{align*}
+\left| \langle a \rangle \right| \bigg| \left|G\right| \iff& k \mid n
+\\ \iff& \exists q \in \mathbb{Z} \mid \left(n = kq\right)
+\end{align*}인 것을 알 수 있다. 따라서,
+\begin{align*}
+a^n = a^{kq} = \left(a^k\right)^q = e^q = e
+\end{align*}이다.
+
+\textbf{결론.} 모든 $a \in G$에 대해서 
+\begin{align*}
+a^n = e
+\end{align*}임을 알 수 있다.
+
+\section{10.45.}
+먼저 위수가 $n$인 유한순환군을 $G$라고 하면, $\exists a \in G \mid \langle a \rangle = G$이다. $G$의 항등원은 $e$라고 하자. 그러면, $a^k=e$를 만족하는 가장 작은 양의 자연수 $k$는 $n$이다. 이를 이용하면
+\begin{align*}
+G = \left\{a^0 = e, a^1, \cdots, a^{n-1} \right\}
+\end{align*}임을 알 수 있다.
+
+이제 다음 두 명제를 증명하자.
+\subsection{1. $n$의 각 약수 $d$를 위수로 갖는 부분군이 존재한다.}
+$k = \frac{n}{d}$라 하면,
+\begin{align*}
+k = \frac{n}{d} \implies k \mid n
+\end{align*}이다. 이를 이용하여 $\langle a^k \rangle$의 위수를 생각해보면,
+\begin{align*}
+\left|\langle a^k \rangle\right| = \frac{n}{\texttt{gcd}(n, k)} = \frac{n}{k} = d
+\end{align*}인 것을 확인 할 수 있다.
+
+따라서, 모든 $n$의 약수 $d$에 대해, $d$를 위수로 갖는 부분군은 
+\begin{align*}
+\langle a^{\frac{n}{d}} \rangle
+\end{align*}로 존재한다. \qed
+
+예시로 $d = n$인 경우에는 $\langle a^{\frac{n}{n}} \rangle = \langle a \rangle = G$를 생각할 수 있고, $d = 1$인 경우에는 $\langle a^{\frac{n}{1}} \rangle = \langle e \rangle = \left\{e\right\}$를 생각할 수 있다.
+
+
+\subsection{2. 위 부분군들이 모든 부분군이다.}
+$G$의 임의의 부분군 $H$이 모두 1.의 부분군꼴로 표현됨을 보이자. 
+
+\textbf{먼저 $H$가 순환군임을 보이자.}
+\\$H$가 부분군이므로 $e \in H$이고, 이제 $H$의 위수에 따라서 Case를 나누어서 생각하겠다.
+\subsubsection{Case 1. $\left|H \right| = 1$}
+\begin{align*}
+H = \left\{ e \right\} = \langle e \rangle = \langle a^0 \rangle
+\end{align*}이므로, $H$는 순환군이다.
+
+\subsubsection{Case 2. $\left|H \right| > 1$}
+$\left|H \right| > 1$이므로 $\left|H \right| \ \left\{e\right\} \ge 1$이다. 따라서, 
+\begin{align*}
+\exists m \in \mathbb{N} \mid a^m \in H, m<n
+\end{align*}이다.
+따라서 $a^m \in H$를 만족하는 가장 작은 자연수 $m$을 $p$를 생각할 수 있다. 그러면 $a^1, a^2, \cdots, a^{p-1} \notin H$이고 $a^p \in H$이다. 먼저 $H \supset \langle a^p \rangle$이다.
+
+이제 임의의 $k \in \mathbb{Z} \mid a^k \in H$를 생각하자. 나눗셈 알고리즘을 이용하여 $k$를 $p$로 나누면
+\begin{align*}
+k = pq + r \tag{$0 \le r < p$}
+\end{align*}이다. 그러므로
+\begin{align*}
+a^r = a^{pq - k} = (a^p)^q (a^k)^{-1} \in H
+\end{align*}이고, $a^r \in H, 0 \le r < p$ 이고 $p$가 $a^m \in H$를 만족하는 가장 작은 자연수 $m$이므로 $r = 0$이다. 즉, 임의의 $k \in \mathbb{Z} \mid a^k \in H$를 만족하는 $k$에 대해
+\begin{align*}
+k = pq \iff p \mid k
+\end{align*}이다. 그러므로, $H \supset \langle a^p \rangle$이다.
+
+따라서, $H = \langle a^p \rangle$이므로, $H$은 순환군이다.
+
+\textbf{결론.} Case 1, Case 2인 경우 모두에 대해 $H$는 순환군이므로, 순환군 $G$의 임의의 부분군 $H$는 순환군이다. \qed
+
+$G$의 임의의 부분군 $H$는 순환군이므로
+\begin{align*}
+H = \langle a^s \rangle
+\end{align*}꼴로 나타낼 수 있음을 안다. 이제 $d =  \left|H \right|$라 하면,
+\begin{align*}
+d = \left|H \right| = \left| \langle a^s \rangle \right| = \frac{n}{\texttt{gcd}(n, s)}
+\end{align*}이다. 여기서 자연스럽게 $d \mid n$을 알 수 있고, $k = \frac{n}{d}$라 하면
+\begin{align*}
+\texttt{gcd}(n, s) = \frac{n}{d} \iff&  \texttt{gcd}(n, s) = \texttt{gcd}(n, k)
+\\ \iff& \langle a^s \rangle  = \langle a^k \rangle
+\end{align*}이므로, 1.의 부분군 꼴로 나타낼 수 있다. 따라서 $\left|H \right|$가 $d$인 부분군을 유일하게 존재한다.
+
+위에서 $d \mid n$인 $d$에 대해서 $\left|H \right| = d$를 만족하는 부분군 $H$가 유일하게 존재하는 것을 증명하였으며, $d \nmid n$인 경우에는 Lagrange 정리에 의해서 $\left|H \right| = d$를 만족하는 부분군 $H$가 존재하지 않음을 안다. 따라서, $G$가 갖는 부분군들은 $n$의 각 약수 $d$를 갖는 유일한 부분군들 뿐임을 알 수 있다.
+
+
+\section{10.46.}
+10.45.와 비슷하게 시작하겠다. 
+\\먼저 위수가 $n$인 유한순환군을 $G$라고 하면, $\exists a \in G \mid \langle a \rangle = G$이다. $G$의 항등원은 $e$라고 하자. 그러면, $a^k=e$를 만족하는 가장 작은 양의 자연수 $k$는 $n$이다. 이를 이용하면
+\begin{align*}
+G =& \left\{a^0 = e, a^1, \cdots, a^{n-1} \right\}
+\\ =& \left\{a^1, \cdots, a^{n-1}, a^n = e \right\}
+\end{align*}임을 알 수 있다.
+
+이제 $G$의 각각의 원소 $a^i \: (1 \le i \le n)$가 생성하는 부분군을 생각해보자.
+\begin{align*}
+d = \texttt{gcd}(n, i)
+\end{align*}라고 하면,
+\begin{align*}
+\texttt{gcd}(n, i) = d \iff& \texttt{gcd}(n, \frac{n}{d})
+\\ \iff& \langle a^i \rangle = \langle a^{\frac{n}{d}} \rangle
+\end{align*}이므로, $a^i$가 10.45.에서 보인 위수가 $d$인 유일하게 존재하는 부분군의 생성원임을 알 수 있다. 즉,  $a^i \: (1 \le i \le n)$는 $\langle a^{\frac{n}{\texttt{gcd}(n, i)}} \rangle$의 생성원이다.
+
+이제 세는 입장을 바꾸자. $G$의 모든 부분군들의 생성원의 개수는 $n = \left|G\right|$일 것이다. 10.45.에서 보인 위수가 $d$인 유일하게 존재하는 부분군을$\langle a^{\frac{n}{d}} \rangle$라고 하였으므로,
+\begin{align*}
+n =& \sum_{d \mid n}^{} \left( \langle a^{\frac{n}{d}} \rangle \text{의 생성원의 개수} \right)
+\end{align*}이다. $\langle a^{\frac{n}{d}} \rangle \sim \mathbb{Z}_d$이고 $\mathbb{Z}_d$의 생성원의 개수는 $\phi (d)$로 알려져 있으므로,
+\begin{align*}
+\left( \langle a^{\frac{n}{d}} \rangle \text{의 생성원의 개수} \right) =& \left( \mathbb{Z}_d \text{의 생성원의 개수} \right)
+\\ =& \phi(d) 
+\end{align*}이다. 이를 이용하면
+\begin{align*}
+n =& \sum_{d \mid n}^{} \left( \langle a^{\frac{n}{d}} \rangle \text{의 생성원의 개수} \right)
+\\ =& \sum_{d \mid n}^{} \phi(d)
+\end{align*}이다.
+
+
+\section{11.6.}
+$\mathbb{Z}_n$에서 $m$의 위수는 $\frac{n}{\texttt{gcd}(n, m)}$이다. 그러므로, $\mathbb{Z}_4$에서 $3$의 위수는 $4$, $\mathbb{Z}_{12}$에서 $10$의 위수는 $6$, $\mathbb{Z}_{15}$에서 $9$의 위수는 $5$이다.
+
+$(a_1, a_2, \cdots, a_n) \in \prod_{i=1}{n} G_i$이고, $r_i$가 $G_i$에서 $a_i$의 위수라고 하면, $\prod_{i=1}{n} G_i$에서 $(a_1, a_2, \cdots, a_n)$의 위수는 모든 $r_i$의 최소공배수이므로, 
+\begin{align*}
+\mathbb{Z}_3 \times \mathbb{Z}_{12} \times \mathbb{Z}_{15} \text{에서} (3, 10, 9) \text{의 위수} = \texttt{lcm}(4, 6, 9) = 36
+\end{align*}이다.
+
+\section{11.11.}
+$\mathbb{Z}_2 \times \mathbb{Z}_4$에서 위수가 $4$인 원소를 찾으면,
+\begin{align*}
+(0, 1), (0, 3), (1, 1), (1, 3)
+\end{align*}이다. 이들로 생성된 부분군들이 위수가 $4$인 모든 부분군이므로,
+\begin{align*}
+\langle (0, 1) \rangle = \langle (0, 3) \rangle = \left\{0\right\} \times \mathbb{Z}_4
+\\ \langle (1, 1) \rangle = \langle (1, 3) \rangle = \left\{ (0, 0), (1, 1), (0, 2), (1, 3) \right\}
+\end{align*}이다.
+
+\section{11.50.}
+\subsubsection{a.}
+$G$의 임의의 원소 $(a, b) \in G$를 생각해보자.
+\begin{align*}
+\exists (a, e_K) \in& H \times \left\{ e \right\},  (e_H, b) \in {e} \times K,  
+\\ (a, b) =& (h e_H, e_K k)
+\\ =& (a, e_K) \times (e_H, b) 
+\end{align*}이므로, 적당한 $h \in H, k \in K$에 대해 $(a, b) = hk$로 나타내진다.
+
+\subsubsection{b.}
+임의의 원소 $h = (a, e_K) \in H, k = (e_H, b) \in K$에 대해서
+\begin{align*}
+hk =& (a, e_K)(e_H, b) = (e_H a, b e_K) = (e_H, b)(a, e_K) = kh
+\end{align*}가 성립함을 알 수 있다.
+
+\subsubsection{c.}
+$\alpha : G \rightarrow H, \alpha\left( (a, b) \right) = a$라 하고, $\beta : G \rightarrow K, \beta \left( (a, b) \right) = b$라 하자.
+\begin{align*}
+x \in H \cap K \iff& x \in H \text{ and } x \in K
+\\ \iff& \beta(x) = e_K \text{ and } \alpha(x) = e_H
+\\ \iff& x = (e_H, e_K) = e
+\end{align*}이므로 성립한다.
+
+\section{11.52.}
+먼저 유한가환군은 유한개의 원소를 가지므로, 유한 생성된다고 할 수 있다. 즉, 유한가환군 $G$에 대해서 유한생성가환군의 기본정리를 사용하면,
+\begin{align*}
+G \simeq \mathbb{Z}_{ \left(p_1\right)^{r_1}} \times \mathbb{Z}_{ \left(p_2\right)^{r_2}} \times \cdots \times \mathbb{Z}_{ \left(p_n\right)^{r_n}} \times \mathbb{Z} \times \mathbb{Z} \times \cdots \times \mathbb{Z}
+\end{align*}의 형태로 순환군의 직접곱과 동형이다. 여기서 $p_i$는 소수이지만 서로 다를 필요는 없고, $r_i$들은 양의 정수이다. 그 직접곱은 인수들의 가능한 재배열을 제외하면 유일하다. 여기서 $G$는 유한군이므로, 인수 $\mathbb{Z}$의 개수는 0개일 것이다. 즉, 유한가환군은 
+\begin{align*}
+G = \prod_{i=1}^{n}\mathbb{Z}_{ \left(p_i\right)^{r_i}} \tag{$p_i$는 소수, $r_i$는 양의 정수}
+\end{align*}의 형태로 나타낼 수 있다.
+
+\textbf{본 문제의 증명} $G$가 유한 가환군일 때,
+\begin{align*}
+G\text{가 순환군이 아니다.} \iff \exists p, \exists H \le G \mid H \simeq \mathbb{Z}_p \times \mathbb{Z}_p
+\end{align*}를 보이는 것은 
+\begin{align*}
+G\text{가 순환군이다.} \iff \forall p, \forall H \le G \mid H \nsim \mathbb{Z}_p \times \mathbb{Z}_p
+\\ \tag{$\nsim$은 "동형이 아니다"를 의미한다.}
+\end{align*}이다. 따라서 이를 증명해보자.
+
+\textbf{($\implies$)} $G$가 유한 가환군이고 순환군이므로, 
+\begin{align*}
+\forall H \le G \mid H \text{는 순환군}
+\end{align*}이다. (10.45.에서 증명하였고, 책에서도 증명되어있다.)
+
+그러나 $\mathbb{Z}_p \times \mathbb{Z}_p$은 순환군이 아니다.
+
+\textbf{pf. [귀류법]} 만약 $\mathbb{Z}_p \times \mathbb{Z}_p$가 순환군이라고 가정하면,
+\begin{align*}
+\mathbb{Z}_p \times \mathbb{Z}_p = \langle (a, b) \rangle
+\end{align*}이고, $\left|\mathbb{Z}_p \times \mathbb{Z}_p\right| = p^2$이므로,
+\begin{align*}
+k(a, b) = (0, 0)
+\end{align*}을 만족하는 최소의 양의 정수 $k$는 $p^2$이어야 한다. 그러나
+\begin{align*}
+p(a, b) = (pa, pb) = (0, 0)
+\end{align*}이므로 모순이다. 따라서, $\mathbb{Z}_p \times \mathbb{Z}_p$은 순환군이 아니다. \qed
+
+따라서 $G$의 임의의 부분군 $H$는 순환적이므로 순환군이 아닌 $\mathbb{Z}_p \times \mathbb{Z}_p$와는 동형일 수 없다.
+
+\textbf{($\impliedby$)} $G$가 유한 가환군이므로,
+\begin{align*}
+G \simeq \prod_{i=1}^{n}\mathbb{Z}_{ \left(p_i\right)^{r_i}} \tag{$p_i$는 소수, $r_i$는 양의 정수}
+\end{align*}꼴로 나타낼 수 있다. 
+
+먼저 $i \neq j \implies p_i \neq p_j$임을 보이자.
+
+\textbf{pf. [귀류법]} 만약 $i \neq j, p_i = p_j$인 $i, j$가 존재한다고 가정하자. 일반성을 잃지않고, $i=1, j=2$라고 생각하고, $p_1 = p_2 = p$라 하면,
+\begin{align}
+G \simeq \mathbb{Z}_{ \left(p\right)^{r_1}} \times \mathbb{Z}_{ \left(p\right)^{r_2}} \times \cdots \times \mathbb{Z}_{ \left(p_n\right)^{r_n}}
+\end{align}이므로, $\mathbb{Z}_{ \left(p\right)^{r_1}}$의 부분군 $\langle p^{r_1 - 1} \rangle \simeq \mathbb{Z}_p$와 $\mathbb{Z}_{ \left(p\right)^{r_2}}$의 부분군 $\langle p^{r_2 - 1} \rangle \simeq \mathbb{Z}_p$   다음 부분군 $H$을 생각하면, 
+\begin{align*}
+H = \langle p^{r_1 - 1} \rangle \times \langle p^{r_2 - 1} \rangle \times \langle 0 \rangle \times \langle 0 \rangle \times \cdots \times \langle 0 \rangle
+\end{align*} $H \simeq \mathbb{Z}_p \times \mathbb{Z}_p$임을 알 수 있다. 이를 만족하는 부분군 $H$가 존재하지 않는다는 것에 모순되므로, $i \neq j, p_i\neq p_j$이다.  \qed
+
+그러면 $G$는 서로 다른 소수 $p_1, p_2, \cdots, p_n$에 대해
+\begin{align*}
+G \simeq \prod_{i=1}^{n}\mathbb{Z}_{ \left(p_i\right)^{r_i}} \tag{$r_i$는 양의 정수}
+\end{align*}꼴로 나타낼 수 있고, $i \neq j \implies \texttt{gcd}((p_i)^{r_i}, (p_j)^{r_j}) = 1$이므로, 11.6. 따름정리에의해,
+\begin{align*}
+G \simeq \prod_{i=1}^{n}\mathbb{Z}_{ \left(p_i\right)^{r_i}} = \mathbb{Z}_{X} \tag{$X = {\prod_{i=1}^{n}\left(p_i\right)^{r_i}}$}
+\end{align*}이다. 여기서 $G \simeq \mathbb{Z}_X$은 순환군이다.
+
+
+\section{13.44.}
+$\left|G\right| < \infty$일 때,
+\begin{align*}
+\phi[G] = \left\{\phi(g) \mid g \in G \right\}
+\end{align*}라 하면, $\phi : G \rightarrow \phi[G]$는 onto 함수이므로,  $\left|\phi[G]\right| \le \left|G\right| < \infty$이므로 $\left|\phi[G]\right|$는 유한이다. 
+
+$$H = \text{Ker}(\phi)$$
+라 하자. 일단 $\left|H\right| < \infty$이다.
+\begin{align*}
+\forall g \in G, gH = \left\{x \in G \mid \phi(x) = \phi(g) \right\}
+\end{align*}이다.
+\begin{align*}
+\forall g \in G, \left|H\right| = \left|gH\right| \tag{1}
+\end{align*}
+임을 보이겠다.
+
+\textbf{pf.} 함수 $\mu : H \rightarrow gH$를 생각하면, 임의의 $gh_1 , gh_2 \in gH$에 대해
+$$gh_1 = gh_2 \iff h_1 = h_2$$이므로 1-1함수 이고, 임의의 $z \in gH$에 대해
+$$\mu(g^{-1}z) = z$$이므로 onto이다. 즉, $\mu$는 일대일 대응이다. 따라서, $\left|H\right| = \left|gH\right|$라 할 수 있다.\qed
+$$S = \left\{aH \mid a \in G \right\}$$
+를 생각하면, (1)을 이용하여 
+$$ \left|G\right| = \left|S\right| \left|H\right| $$
+이므로,
+\begin{align*}
+\left|S\right| \bigg| \left|G\right| \tag{2}
+\end{align*}
+이다. 이제 $\alpha : S \rightarrow \phi[G]$, $\alpha(gH) = \phi(g)$로 정의하고, $\alpha$가 Well-Defined이고 일대일대응임을 보이자.
+
+위에서 $gH = \left\{x \in G \mid \phi(g) = \phi(x) \right\}$이므로, 임의의 $a, b \in gH$에 대해 $\phi(a) = \phi(b) = \phi(x)$이므로 대표값으로 $\phi(g)$을 사용해도 문제가 없다. 즉, Well-Defined이다.
+
+$\forall \phi(x), \phi(y) \in \phi[G]$에 대해
+\begin{align*}
+\phi(x) = \phi(y) \iff& \phi^{-1}[\left\{ \phi(x)\right\}] = \phi^{-1}[\left\{\phi(y)\right\}]
+\\ \iff& xH = yH
+\end{align*}이므로 1-1이고, $\forall \phi(x) \in \phi[G]$에 대해
+\begin{align*}
+\alpha(xH) = \phi(x)
+\end{align*}이므로 onto이다. 따라서 $\alpha$는 일대일 대응이다.
+
+따라서, 
+\begin{align*}
+\left|S\right| = \left|\phi[G] \right| \tag{3}
+\end{align*}이다.
+
+(2), (3)에 의해서 
+$$\left|\phi[G] \right| \bigg| \left|G\right|$$이다.
+
+\section{13.45.}
+$\phi : G \rightarrow G'$이 군의 준동형사상이므로, $G$가 군일때 $\phi(G) \subset G'$도 군이다. 그러므로, $\phi(G) \le G'$이고, $\left|G'\right| < \infty$이므로 Lagrange 정리에 의해서 
+\begin{align*}
+\left|\phi(G) \right| \bigg| \left|   G'\right|, \left|\phi(G) \right| < \infty
+\end{align*}임을 알 수 있다.
+
+\section{13.47.}
+준동형사상 $\phi : G \rightarrow G'$에 대해
+\begin{align*}
+H = \texttt{Ker}(\phi)
+\end{align*}라 하면, $H \le G$이다. $\left| G \right| = p < \infty$이므로, Lagrange 정리에 의해서
+\begin{align*}
+\left|H\right| \bigg| \left|G\right| = p \tag{$p$는 소수}
+\end{align*}이므로, $\left|H\right| = 1 \text{ or } p$이다. $p>1$이므로 다음 두 Case 중 하나이다.
+
+\textbf{Case 1. $\left|H\right| = p$}
+\begin{align*}
+\left|H\right| = \left|G\right| = p, H \le G \implies H = G
+\end{align*}이다. 따라서 모든 $g \in G$에 대해,
+\begin{align*}
+\phi(g) = e'
+\end{align*}이므로 $\phi$는 자명 준동형사상이다. 이 때, $\left|G\right| > 1$이므로 서로 다른 임의의 원소 $a, b \in G$에 대해 $\phi(a) = \phi(b) = e$이므로 $\phi$는 일대일함수가 아니다.
+
+\textbf{Case 2. $\left|H\right| = 1$}
+
+$e \in H$인 것을 상기하면, $H = \left\{e\right\}$이다. 이제 임의의 원소 $g \in G$에 대해 $\phi(g)$에 대응하는 원소는 오직 좌잉여류
+\begin{align*}
+a\left\{e\right\} = \left\{a\right\}
+\end{align*}이다. 따라서, $\phi$는 일대일 준동형사상이다. 이 때, $\left|G\right| > 1$이므로 $e$가 아닌 원소 $a \in G$가 존재하여 $\phi(a) \neq \phi(e) = e'$이므로 $\phi$는 자명 준동형사상이 아니다.
+
+따라서, $\left|G\right|$가 소수이면, 준동형사상 $\phi : G \rightarrow G'$은 자명 준동형사상이거나 일대일 사상 중의 하나이다.
+
+\section{14.8.}
+$\left|\langle (1, 1) \rangle\right|$은 순환군이므로,
+\begin{align*}
+\left|\langle (1, 1) \rangle\right|\text{은 } k(1, 1) = (0, 0)\text{을 만족하는 최소 자연수}
+\end{align*}이다. $k(1, 1) = (0, 0)$일 $k$의 조건을 찾아보자. 첫 번째 원소가 $0$이 되기 위해서는 $1 \in \mathbb{Z}_{11}$을 $11$의 배수만큼 더해야한다. 즉, $11 \mid k$이다. 비슷하게 두 번째 원소가 $0$이 될 조건은 $1 \in \mathbb{Z}_{15}$을 $15$의 배수만큼 더해야한다. 따라서 $15 \mid k$이다. 따라서, $165 \mid k$이고 이 조건을 만족하는 최소 자연수 $k$은 165이다. 따라서,
+\begin{align*}
+\left|\langle (1, 1) \rangle\right| = 165
+\end{align*}이다. 
+
+그러면 $\left|\langle (1, 1) \rangle\right| = \left|\mathbb{Z}_{11} \times \mathbb{Z}_{15}\right| = 165$이고,
+\begin{align*}
+\langle (1, 1) \rangle \le \mathbb{Z}_{11} \times \mathbb{Z}_{15}
+\end{align*}이므로,
+\begin{align*}
+\langle (1, 1) \rangle = \mathbb{Z}_{11} \times \mathbb{Z}_{15}
+\end{align*}이다. 따라서, $\mathbb{Z}_{11} \times \mathbb{Z}_{15} / \langle (1, 1) \rangle \simeq \left\{e\right\}$이고,
+\begin{align*}
+\left| \mathbb{Z}_{11} \times \mathbb{Z}_{15} / \langle (1, 1) \rangle \right| = 1
+\end{align*}이다.
+
+\section{14.34.}
+주어진 위수 $n$에 대해 유일한 부분군 $H$를 생각하자.
+
+\textbf{$\forall g \in G, gHg^{-1}$는 군이며, $\left|gHg^{-1}\right| = \left|H\right|$이다.}
+
+\textbf{0. 닫힘} 임의의 $gag^{-1}, gbg^{-1} \in gHg^{-1}$에 대해
+\begin{align*}
+(gag^{-1})(gbg^{-1}) =& gag^{-1}gbg^{-1}
+\\ =& gabg^{-1} \in gHg^{-1} \tag{$ab \in H$}
+\end{align*}이므로 연산이 $gHg^{-1}$안에 닫혀있다.
+
+\textbf{1. 결합법칙} 임의의 $gag^{-1}, gbg^{-1}, gcg^{-1} \in gHg^{-1}$에 대해
+\begin{align*}
+(gag^{-1} gbg^{-1}) gcg^{-1} =& (gabg^{-1}) gcg^{-1}
+\\ =& gabcg^{-1}
+\\ =& gag^{-1} (gbcg^{-1})
+\\ =& gag^{-1} (gbg^{-1} gcg^{-1})
+\end{align*}이므로, 결합법칙이 성립한다.
+
+\textbf{2. 항등원} $e \in H$이므로, $e = geg^{-1} \in gHg^{-1}$이다. $e$는 $G$의 항등원이므로, $gHg^{-1}$에서도 항등원의 역할을 한다.
+
+\textbf{3. 역원} 임의의 $gxg^{-1} \in gHg^{-1}$에 대해
+\begin{align*}
+gxg^{-1} g(x^-1)g^{-1} = e = g(x^{-1})g^{-1} gxg^{-1}
+\end{align*}이므로, 역원인 $g(x^{-1})g^{-1} \in gHg^{-1}$가 존재한다. ($\because x^{-1} \in H$)
+
+따라서, $gHg^{-1}$는 군이다.
+
+$\phi : H \rightarrow gHg^{-1}$인 $\phi(x) = gx g^{-1}$를 생각하면,
+\\ 임의의 $gag^{-1}, gbg^{-1} \in gHg^{-1}$에 대해
+\begin{align*}
+gag^{-1} = gbg^{-1} \iff ga = gb  \iff a = b
+\end{align*}이므로 1-1이고, 임의의 $a \in gHg^{-1}$에 대해
+\begin{align*}
+\exists b = g^{-1}ag \in H, \phi(b) = g (g^{-1} a g) g^{-1} = a
+\end{align*}이므로 onto이다. 따라서 $\phi$는 일대일대응 함수이고 이는
+\begin{align*}
+\left|H\right| = \left|gHg^{-1}\right|
+\end{align*} 를 의미한다.
+
+$n = \left|H\right| = \left|gHg^{-1}\right|$이고 위수가 $n$인 부분군은 $H$로 유일하므로,
+\begin{align*}
+\forall g \in G \mid gHg^{-1} = H
+\end{align*}이다. 따라서 $H$는 $G$의 정규부분군이다.
+
+\section{15.12.}
+$N = \langle (3, 3, 3) \rangle$라 하면, 임의의 $(x, y, z) \in \mathbb{Z} \times \mathbb{Z} \times \mathbb{Z}$에 대해
+\begin{align*}
+(0, a, b) + N \text{ or } (1, a, b) + N \text{ or } (2, a, b) + N \tag{$a, b \in \mathbb{Z}$}
+\end{align*}중 하나로 표현 가능하다. 또한
+\begin{align*}
+(\left\{0\right\} \times \mathbb{Z} \times \mathbb{Z}  + N) \dot{\bigcup} (\left\{1\right\} \times \mathbb{Z} \times \mathbb{Z}  + N) \dot{\bigcup} (\left\{2\right\} \times \mathbb{Z} \times \mathbb{Z}  + N) 
+\\= \mathbb{Z} \times \mathbb{Z} \times \mathbb{Z}
+\end{align*}이므로
+\begin{align*}
+\mathbb{Z} \times \mathbb{Z} \times \mathbb{Z} / \langle (3, 3, 3) \rangle \simeq \mathbb{Z}_3 \times \mathbb{Z} \times \mathbb{Z}
+\end{align*}이다.
+
+\section{15.14.}
+\textbf{중심}
+
+$\mathbb{Z}_3$은 가환군이므로, $\mathbb{Z}_3$의 중심은 $\mathbb{Z}_3$이다.
+
+$S_3$의 원소는 다음 $6$개이다. 
+\begin{align*}
+\rho_0 = \begin{pmatrix}
+1&2  &3 \\ 
+1& 2 & 3
+\end{pmatrix}, \rho_1 = (1, 2, 3), \rho_2 = (1, 3, 2)
+\\ \mu_1 = (2, 3), \mu_2 = (3, 1), \mu_3 = (1, 2)
+\end{align*}
+
+$S$의 중심을 $Z(S)$라 하면,  $\rho_0 \in Z(S)$이고, (항등원)
+\begin{align*}
+\left\{\begin{matrix}
+\rho_1 \mu_1 = \mu_3
+\\ \mu_1 \rho_1 = \mu_2
+\end{matrix}\right.
+\left\{\begin{matrix}
+\rho_2 \mu_2 = \mu_3
+\\ \mu_2 \rho_2 = \mu_1
+\end{matrix}\right.
+\left\{\begin{matrix}
+\mu_2 \mu_3 = \rho_1
+\\ \mu_3 \mu_2 = \rho_2
+\end{matrix}\right.
+\end{align*}이므로, $\rho_1, \rho_2, \mu_1, \mu_2, \mu_3 \notin Z(S)$이다. 따라서
+\begin{align*}
+Z(S) = \left\{\rho_0 \right\}
+\end{align*} 이다.
+
+직접곱의 연산은 각각의 군의 연산들로 이루어져 있으므로, 
+\\$\mathbb{Z}_3 \times S_3$의 중심은
+$$\mathbb{Z}_3 \times \left\{\rho_0 \right\}$$
+이다.
+
+\textbf{교환자부분군}
+\\$\mathbb{Z}_3$은 가환군이므로, $\mathbb{Z}_3$의 교환자부분군은 $\left\{0\right\}$이다.
+
+$S_3$의 교환자부분군을 $C(S_3)$라 하자, $\rho_2 \mu_1 \rho_2 ^{-1} \mu_1 ^{-1} = \phi_1$이므로 $C(S_3) \ge A_3$이다. 또한, $S_3 / A_3$은 가환이므로 $C \le A_3$이다.
+
+따라서 $C(S_3) = A_3$이다.
+
+직접곱의 연산은 각각의 군의 연산들로 이루어져 있으므로, 
+\\$\mathbb{Z}_3 \times S_3$의 교환자부분군은
+$$ \left\{0 \right\} \times A_3$$
+이다.
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

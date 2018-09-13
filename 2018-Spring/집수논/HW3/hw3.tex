@@ -1,0 +1,544 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.r
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass{article}
+\usepackage[hangul]{kotex}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsthm,amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{verbatim} % Required for multiple comment
+\usepackage{amsmath} % Required for use \therefore \because and others..
+\usepackage{amssymb} % Required for use \therefore \because and others..
+\usepackage{algorithm, algpseudocode}
+\usepackage{verbatim} % for commment, verbatim environment
+\usepackage{spverbatim} % automatic linebreak verbatim environment
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{datetime} % Used for showing version as last modified time
+\yyyymmdddate
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{xcolor}
+
+% Margins
+\linespread{1.25} % Line spacing
+\usepackage[a4paper,top=2cm,bottom=1cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{titlesec,sectsty}
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\sectionfont{\fontsize{12}{10}\selectfont}
+\subsectionfont{\fontsize{10}{10}\selectfont}
+\titlespacing{\subsection}{0pt}{-\parskip}{-\parskip}
+\usepackage{multicol}
+\usepackage{cuted}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+% mathematics
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel} % cancelation of terms
+\usepackage{nicefrac} % certain fraction styles
+\newcommand*\diff{\mathop{}\!\mathrm{d}} % differential
+\DeclareMathOperator{\arsinh}{arsinh}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{JongBeom Kim}
+\chead{집합과 수리 논리 HW 3} % Top center head
+\rhead{2018 Spring} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%	CODE INCLUSION CONFIGURATION
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+\renewcommand\headrule
+{
+	\begin{minipage}{1\textwidth}
+		\hrule width \hsize height 1pt \kern 1.5pt \hrule width \hsize height 0.5pt  
+	\end{minipage}\par
+}%
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-10pt} %set spacing for itemize
+\setitemize{itemsep=3pt}
+\setlist[enumerate]{topsep=-10pt} %set spacing for itemize
+\setenumerate{itemsep=3pt}
+
+%	TITLE PAGE
+
+\begin{document}
+\twocolumn
+
+\chapter{Homework 3}
+
+\section{2.4.2.}
+\subsection{동치류 연산의 Well Defined}
+두 실수 $[\alpha], [\beta] \in \mathbb{R}$에 대해
+$$[\alpha] < [\beta]$$
+라고 하자.
+
+위의 식이 잘 정의됨을 보이는 것이 목표이므로,
+$$\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta \bigg| [\alpha_1] < [\beta_1]$$
+을 보이자.
+
+\textbf{pf.} $[\alpha] < [\beta]$ 에서,
+\begin{align*}
+\exists N_0 \in \mathbb{N}, \exists D \in P_\mathbb{Q} \bigg| i \ge N_0 \implies \alpha(i) - \beta(i) > D \tag{1}
+\end{align*}
+$\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta$ 에서, $e = \dfrac{D}{3}$에 대해 자연수 $N_1, N_2$이 존재해
+\begin{align*}
+e = \frac{D}{3} \in P_\mathbb{Q}, \exists N_1 \in \mathbb{N} \bigg| i \ge N_1 \implies \left| \alpha_1 (i) - \alpha(i)  \right| < e \tag{2}\\
+e = \frac{D}{3} \in P_\mathbb{Q}, \exists N_2 \in \mathbb{N} \bigg| i \ge N_2 \implies \left| \beta_1 (i) - \beta(i)  \right| < e \tag{3}
+\end{align*}이다. 여기서 $N = \text{sup}\left\{N_0, N_1, N_2\right\}$라 두면, $\forall i \ge N$에 대해서
+$$(\alpha(i) - \beta(i) > D )\wedge( \left| \alpha_1 (i) - \alpha(i)  \right| < e )\wedge( \left| \beta_1 (i) - \beta(i)  \right| < e) $$
+$$\implies$$
+$$(\alpha(i) - \beta(i) > D )\wedge( \alpha_1 (i) - \alpha(i) > -e )\wedge( \beta (i) - \beta_1(i)  > -e) \\$$
+$$\implies$$
+$$(\alpha(i) - \beta(i)) + (\alpha_1 (i) - \alpha(i)) + (\beta (i) - \beta_1(i))  > (D) + (-e) + (-e) \\$$
+$$\implies$$
+$$\alpha_1 (i) - \beta_1(i)  > \frac{D}{3} \\$$
+임을 알 수 있다. 따라서,
+$$\exists N \in \mathbb{N}, \exists \frac{D}{3} \in P_\mathbb{Q} \bigg| i \ge N \implies \alpha_1(i) - \beta_1(i) > \frac{D}{3}$$
+이므로, $[\alpha_1] < [\beta_1]$이다. 이 결과로,
+$$\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta \bigg| [\alpha_1] < [\beta_1]$$
+임을 알 수 있다. \qed
+
+\subsection{$[\alpha] = [\beta]$인 경우}
+위에서 동치류의 어떤 원소를 뽑아도 잘 정의됨을 안다. 두 집합이 같으니, 각각의 동치류에서 $\alpha$를 골라도 무방하다.
+
+그러면, $$\forall d \in P_\mathbb{Q} \bigg| i \in \mathbb{N} \implies \alpha(i) - \alpha(i) = 0 <= d$$
+이므로, $$[\alpha] < [\alpha]$$를 만족하지 않는다.
+
+\subsection{$(\neg [\alpha] < [\beta]) \wedge (\neg [\beta] < [\alpha])$인 경우}
+책의 정리 2.4.2. 의해 임의의 실수 $[\alpha], [\beta] \in \mathbb{R}$에 대해
+$$([\alpha] < [\beta]) \vee ([\beta] < [\alpha]) \vee ([\alpha] = [\beta])$$
+이므로,
+$$(\neg [\alpha] < [\beta]) \wedge (\neg [\beta] < [\alpha]) \implies ([\alpha] = [\beta])$$
+이다.
+
+\subsection{$[\alpha] < [\beta], [\beta] < [\gamma]$인 경우}
+$[\alpha] < [\beta]$ 에서,
+\begin{align*}
+\exists N_0 \in \mathbb{N}, \exists D_0 \in P_\mathbb{Q} \bigg| i \ge N_0 \implies \alpha(i) - \beta(i) > D_0 \tag{1}
+\end{align*}이고,
+$[\beta] < [\gamma]$ 에서,
+\begin{align*}
+\exists N_1 \in \mathbb{N}, \exists D_1 \in P_\mathbb{Q} \bigg| i \ge N_1 \implies \beta(i) - \gamma(i) > D_1 \tag{2}
+\end{align*}이다.
+
+여기서 $N = \text{sup} \left\{N_0, N_1\right\}$라 두면, (1)와 (2)에 의해
+$$\exists N \in \mathbb{N}, \exists D_0 + D_1 \in P_\mathbb{Q} \bigg| i \ge N_1 \implies \alpha(i) - \gamma(i) > D_0 + D_1$$이다. 따라서, $$[\alpha] < [\gamma]$$이다.
+
+\textbf{결론.} 따라서, 
+$$[\alpha] = [\beta] \implies \neg ([\alpha] < [\beta])$$
+이고,
+$$(\neg [\alpha] < [\beta]) \wedge (\neg [\beta] < [\alpha]) \implies \alpha = \beta$$
+이고,
+$$[\alpha] < [\beta], [\beta] < [\gamma] \implies [\alpha] < [\gamma]$$
+이므로, 위 관계는 잘 정의되었다.
+
+\section{2.4.3.}
+각각의 명제 $[\alpha] > [\beta], [\alpha] = [\beta], [\alpha] < [\beta]$는 다음을 의미한다.
+\begin{align*}
+\exists N_0 \in \mathbb{N}, \exists D_0 \in P_\mathbb{Q} \bigg|& i \ge N_0 \implies \alpha(i) - \beta(i) > D_0 \tag{1}\\
+\exists N_e \in \mathbb{N}, \forall e \in P_\mathbb{Q} \bigg|& i \ge N_e \implies \left|\alpha(i) - \beta(i)\right| < e \tag{2}\\
+\exists N_1 \in \mathbb{N}, \exists D_1 \in P_\mathbb{Q} \bigg|& i \ge N_1 \implies \beta(i) - \alpha(i) > D_1 \tag{3}
+\end{align*}
+식 (2)에서 $N_e$는 $e > 0$에 대해 정해지는 자연수라 생각하자.
+
+이제 두 명제가 성립하는 3가지 경우 모두 불가능함을 보이자.
+\subsection{Case 1. $([\alpha] > [\beta] )\wedge( [\alpha] = [\beta])$}
+\textbf{귀류법.} $([\alpha] > [\beta] )\wedge( [\alpha] = [\beta])$ 라 하고, 모순을 보이자.
+
+$e = \dfrac{D_0}{2}$라 하고, $N = \text{sup}\left\{N_0, N_e\right\}$라 두면, $\forall i \ge N$에 대해
+\begin{align*}
+&\left( \alpha(i) - \beta(i) > D_0 \right) \wedge \left( \left| \alpha(i) - \beta(i) \right| < \frac{D_0}{2}\right) \\
+\implies & D_0 < \alpha(i) - \beta(i) < \frac{D_0}{2}
+\end{align*}이므로 모순이다. \qed
+\subsection{Case 2. $([\alpha] < [\beta] )\wedge( [\alpha] = [\beta])$}
+\textbf{귀류법.} $([\alpha] < [\beta] )\wedge( [\alpha] = [\beta])$ 라 하고, 모순을 보이자.
+
+$e = \dfrac{D_1}{2}$라 하고, $N = \text{sup}\left\{N_1, N_e\right\}$라 두면, $\forall i \ge N$에 대해
+\begin{align*}
+&\left( \beta(i) - \alpha(i) > D_1 \right) \wedge \left( \left| \alpha(i) - \beta(i) \right| < \frac{D_1}{2}\right) \\
+\implies & D_1 < \beta(i) - \alpha(i) < \frac{D_1}{2}
+\end{align*}이므로 모순이다. \qed
+\subsection{Case 3. $([\alpha] > [\beta] )\wedge( [\alpha] < [\beta])$}
+\textbf{귀류법.} $([\alpha] > [\beta] )\wedge( [\alpha] < [\beta])$ 라 하고, 모순을 보이자.
+
+$N = \text{sup}\left\{N_0, N_1\right\}$라 두면, $\forall i \ge N$에 대해
+\begin{align*}
+&\left( \alpha(i) - \beta(i) > D_0 \right) \wedge \left( \beta(i) - \alpha(i) > D_1 \right) \\
+\implies & D_0 < \alpha(i) - \beta(i) < - D_1
+\end{align*}이므로 모순이다. \qed
+
+\textbf{결론.} 따라서, 두 명제가 동시에 성립할 수 없다.
+
+\section{2.4.4.}
+\subsection{Well Defined}
+두 실수 $[\alpha], [\beta] \in \mathbb{R}$에 대해
+$$[\alpha] + [\beta] = [\alpha + \beta]$$
+라고 하자.
+
+위의 식이 잘 정의됨을 보이는 것이 목표이므로,
+\begin{align*}
+&\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta \bigg| [\alpha_1 + \beta_1] = [\alpha + \beta]\\
+\iff &\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta \bigg| (\alpha_1 + \beta_1) \sim (\alpha + \beta)
+\end{align*}
+을 보이자.
+
+\textbf{pf.}
+$ \forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta$ 에서, 자연수 $N_1, N_2$이 존재해
+\begin{align*}
+\frac{e}{2} \in P_\mathbb{Q}, \exists N_1 \in \mathbb{N} \bigg| i \ge N_1 \implies \left| \alpha_1 (i) - \alpha(i)  \right| < \frac{e}{2} \tag{1}\\
+\frac{e}{2} \in P_\mathbb{Q}, \exists N_2 \in \mathbb{N} \bigg| i \ge N_2 \implies \left| \beta_1 (i) - \beta(i)  \right| < \frac{e}{2} \tag{2}
+\end{align*}이다. 여기서 $N = \text{sup}\left\{N_1, N_2\right\}$라 두면, $\forall i \ge N$에 대해서
+\begin{align*}
+\left| (\alpha_1+ \beta_1)(i) - (\alpha+\beta)(i) \right|  &= \left| \alpha_1(i) + \beta_1(i) - \alpha(i)  - \beta(i) \right| \\
+&= \left| \alpha_1(i) - \alpha(i) + \beta_1(i) - \beta(i) \right| \\
+&\le \left| \alpha_1(i) - \alpha(i) \right| + \left|\beta_1(i) - \beta(i) \right| \\
+&\le \frac{e}{2} + \frac{e}{2} = e
+\end{align*}이다. 이를 정리하면,
+$$i \le N \implies \left| (\alpha_1+ \beta_1)(i) - (\alpha+\beta)(i) \right| < e$$
+이고, 따라서 $(\alpha_1 + \beta_1) \sim (\alpha + \beta)$가 성립한다.
+
+따라서, $$\forall \alpha_1 \sim \alpha, \forall \beta_1 \sim \beta \bigg| (\alpha_1 + \beta_1) \sim (\alpha + \beta)$$이고, 이는 덧셈이 잘 정의됨을 의미한다.
+
+\subsection{Associative Law}
+코시수열 $\alpha, \beta, \gamma$에 대해 생각해보자.
+
+유리수의 결합법칙에 의해, $\forall i \in \mathbb{N}$에 대해
+$$ (\alpha(i) + \beta(i)) + \gamma(i) = \alpha(i) + (\beta(i) + \gamma(i)) $$
+이다. 이를 이용하면, 세 실수 $[\alpha], [\beta], [\gamma] \in \mathbb{R}$에 대해
+\begin{align*}
+[\alpha] + [\beta] + [\gamma] =& [\alpha + \beta] + [\gamma]
+= [(\alpha + \beta) + \gamma]\\
+=& [\alpha + (\beta + \gamma)]
+= [\alpha] + [\beta + \gamma]\\
+=& [\alpha] + [\beta] + [\gamma]
+\end{align*}
+이므로, 실수에서 결합법칙이 성립한다.
+
+\subsection{Commutative Law}
+코시수열 $\alpha, \beta$에 대해 생각해보자.
+
+유리수의 결합법칙에 의해, $\forall i \in \mathbb{N}$에 대해
+$$ \alpha(i) + \beta(i) = \beta(i) + \alpha(i) $$
+이다. 이를 이용하면, 세 실수 $[\alpha], [\beta] \in \mathbb{R}$에 대해
+\begin{align*}
+[\alpha] + [\beta] = & [\alpha + \beta] = [\beta + \alpha]\\
+=& [\beta] + [\alpha]
+\end{align*}
+이므로, 실수에서 결합법칙이 성립한다.
+
+
+\subsection{Additive Identity ($0^*$)}
+\begin{align*}
+[\alpha] + [0^*] = & [\alpha + 0^*] = [\alpha]\\
+=& [0^*+ \alpha] = [0^*] + [\alpha]
+\end{align*}
+이므로 $0^*$는 덧셈에 대한 항등원이다.
+
+\subsection{$-\alpha$ is Cauchy sequence}
+$\alpha$는 코시수열이므로,
+\begin{align*}
+\forall e \in P_\mathbb{Q}, \exists N_e \in \mathbb{N} \bigg| i, j \ge N_e \implies \left| \alpha(i) - \alpha(j)  \right| < e
+\end{align*}이다. 위 식의 $N_e$를 이용하면,
+\begin{align*}
+\forall e \in P_\mathbb{Q}, \exists N=N_e \in \mathbb{N} \bigg| i, j \ge N \implies \left| (-\alpha(i)) - (-\alpha(j))  \right| < e
+\end{align*}이므로, $-\alpha$도 코시수열이다.
+
+\subsection{Additive Inverse ($-\alpha$)}
+\begin{align*}
+[\alpha] + [-\alpha] = & [\alpha + (-\alpha) ] = [0^*]\\
+=& [(-\alpha) + \alpha] = [-\alpha] + [\alpha]
+\end{align*}
+이므로 $-\alpha$는 $\alpha$의 덧셈에 대한 역원이다.
+
+
+\section{2.5.2.}
+$\text{sup} S = \alpha, \text{sup} T = \beta$라 하자. \\
+먼저 $S, T \subset P_F$이므로, $\alpha > 0$, $\beta > 0$이다.
+
+이제
+$$\text{sup} (ST) = \alpha \beta$$임을 보이자.
+
+\textbf{pf.} 일단, $\forall s \in S, \forall t \in T$에 대해
+$$ st \le \alpha \beta$$이므로, $\alpha \beta$는 $ST$의 상계임을 알 수 있다.
+
+이제 $\alpha \beta$가 $ST$의 최소 상계임을 보이면 되는데, 이는 
+$$ \forall \gamma < \alpha \beta \implies \gamma\text{가 } ST\text{의 상계가 아니다.} $$
+를 보이면 된다.
+
+\textbf{pf.}
+$\epsilon = \alpha\beta - \gamma > 0$라 하자.
+$$x = \alpha - \frac{\epsilon}{2 \beta} < \alpha $$
+라 하면, $\alpha$가 $S$의 최소 상계이므로, 
+$$\exists s \in S \bigg| s > \alpha - \frac{\epsilon}{2 \beta}$$
+인 $s \in S$가 존재한다. 비슷하게
+$$t = \beta - \frac{\epsilon}{2 \alpha} < \beta$$
+라 하면, $\beta$가 $T$의 최소 상계이므로, 
+$$\exists t \in T \bigg| t > \beta - \frac{\epsilon}{2 \alpha}$$
+인 $t \in T$가 존재한다.
+
+여기서
+\begin{align*}
+\left(\alpha - \frac{\epsilon}{2 \beta} \right) \left(\beta - \frac{\epsilon}{2 \alpha} \right) =&
+\alpha \beta - \epsilon + \frac{\epsilon ^ 2}{4 \alpha \beta}\\
+>& \alpha \beta - \epsilon = \gamma
+\end{align*}
+이다. 이를 이용하면,
+$$\gamma = \alpha\beta - \epsilon < \left(\alpha - \frac{\epsilon}{2 \beta} \right) \left(\beta - \frac{\epsilon}{2 \alpha} \right) < st < \alpha \beta$$
+이므로, $\gamma$는 $ST$의 상계가 아니다. \qed
+
+
+\section{2.5.3.}
+$$\forall x, y \in F ,  f(xy) = f(x)f(y)$$임을 보이기 위해서 먼저
+$$\forall x, y \in P_F,  f(xy) = f(x)f(y)$$을 보이자.
+
+\subsection{1. $(x \in P_F \text{ and } y \in P_F)$인 경우}
+정리 2.5.3.의 증명과정의 notation을 그대로 따르겠다.
+$$B_x = A_x \cap P_G$$라 하자.
+정리 2.5.2.에 의해서 $0_G < \gamma(r) < x$를 만족하는 $r \in P_\mathbb{Q}$가 존재하므로, 
+$$(\delta(r) \in A_x) \wedge (\delta(r) \in P_G)  \implies B_x \neq \varnothing$$
+이다. 또한, 아르키메데스 법칙에의해 $n \cdot 1_F > x$인 $n \in \mathbb{N} \setminus \left\{0\right\}$을 잡으면 $\delta(n) = n \cdot 1_G$가 $B_x$의 상계가 된다.
+
+그러므로, $G$가 완비순서체이므로, $B_x$는 상한을 가지고 이는 $f(x)$와 같다는 것을 알 수 있다.
+
+이제 $B_{xy} = B_x B_y$임을 보이자.
+
+\textbf{pf.}
+\subsubsection{a. $B_{xy} \supset B_x B_y$}
+$\delta(r) \in B_x, \delta(s) \in B_y$라 하자. 그러면
+$\gamma(r) < x, \gamma(s) < y$이다. 따라서,
+$$ \delta(r) \delta(s) = \delta(rs), \gamma(rs) = \gamma(r) \gamma(s) < xy$$
+이므로, $\delta(r) \delta(s) \in B_{xy}$이다.
+\subsubsection{b. $B_{xy} \subset B_x B_y$}
+$\delta(t) \in B_{xy}$라 하자. 그러면 $\gamma(t) < xy$이다. 정리 2.5.2.를 이용하면
+$$ s \in P_\mathbb{Q} \bigg| \frac{\gamma(t)}{y} < \gamma(s) < x$$
+인 $s \in P_\mathbb{Q}$가 존재한다. 그러면,
+$$ \gamma(s) < x, \gamma\left(\frac{t}{s}\right) = \frac{\gamma(t)}{\gamma(s)} < y$$
+이므로, 
+$$\delta(t) = \delta(s) \delta\left(\frac{t}{s}\right) \in \left(B_x B_y\right)$$
+이다.
+
+\textbf{결론.} a., b. 에 의해 $B_{xy} = B_x B_y$이다.
+\qed
+
+이제 책의 식 (2.34)에 의해 (혹은 문제 2.5.2.의 결론에 의해)
+$$\text{sup} B_{xy} = \text{sup} B_x \text{sup} B_y$$이고, 이는
+$$f(xy) = f(x)f(y)$$를 의미한다.
+
+\subsection{2. $(x \in P_F \text{ and } y \in P_F)$가 아닌 경우}
+\subsubsection{a. $f(0_F) = 0_G$이다.}
+$\delta(r) \in A_{0_F}$라 하면, $(r \notin P_\mathbb{Q}) \wedge (r \neq 0)$이므로, $r < 0$이다.
+
+따라서, $\delta(r) < 0_G$이고 $0_G$가 $A_{0_F}$의 상계임을 알 수 있다.
+
+이제 $0_G$가 최소 상계임을 보이자. 
+$$\forall a \in G,  a < 0_G \implies (\exists r \in \mathbb{Q}\mid ( a < \delta(r) < 0_G) \wedge (\delta(r) \in A_{0_F}) )$$을 보이면 충분하다. 이는 정리 2.5.2.에 의해서 
+$$\exists r \in \mathbb{Q} \mid a < \delta(r) < 0_G$$인 $r$이 존재함을 알 수 있고, 
+$$r < 0 \implies \gamma(r) < 0_F \implies \delta(r) \in A_{0_F}$$이므로 성립한다. \qed
+
+\subsubsection{b. $\forall x \in P_\mathbb{Q},  f(-x) = -f(x)$이다.}
+$-f(x)$가 $A_{-x}$의 상계임을 보이자.
+\begin{align*}
+\delta(r) \in A_{-x} \implies& \gamma(r) < -x \implies -\gamma(r) > x\\
+\implies& \gamma(-r) > x \implies \delta(-r) \notin A_x\\
+\implies& \delta(-r) \ge f(x) \tag{1}\\
+\implies& -\delta(r) \ge f(x) \implies \delta(r) \le -f(x)
+\end{align*}
+이므로, $-f(x)$는 $A_{-x}$의 상계이다. 위 과정중 (1)의 증명은 아래와 같다.
+
+\textbf{pf. [귀류법]} 만약 $\delta(-r) < f(x)$라면, $\delta(-r)$은 $A_x$의 상한이 아니므로,
+$$ \exists \delta(s) \in A_x \bigg| \delta(-r) < \delta(s) < f(x)$$
+인 $s \in \mathbb{Q}$가 존재하고,
+$$\delta(s) \in A_x \implies \gamma(s) < x$$
+$$\delta(-r) < \delta(s) \implies -r < s \implies \gamma(-r) < \gamma(s) < x$$
+이므로, $\delta(-r) \in A_x$이고 이는 $ \delta(-r) \notin A_x$에 모순이다. \qed
+
+이제 $-f(x)$가 $A_{-x}$의 상한임을 보이자. 
+
+어떤 $t \in G \bigg| t < -f(x)$가 존재하면, $t < \delta(q) \in A_{-x}$를 만족하는 $q \in \mathbb{Q}$가 존재함을 보이면 충분하다.
+
+일단 $\exists q \in \mathbb{Q} \bigg| t < \delta(q) < -f(x)$인 $q$가 존재한다.\\
+ 이제 $\delta(q) \in A_{-x}$를 보이자.
+\begin{align*}
+\delta(q) < -f(x) \implies& -\delta(q) > f(x) \\
+\implies& \gamma(-q) > x \tag{2}\\
+\implies& -\gamma(q) > x \implies \gamma(q) < -x \\
+\implies& \delta(q) \in A_{-x}
+\end{align*}
+따라서, $-f(x)$은 $A_{-x}$의 상한이고, 
+$$-f(x) = f(-x)$$라 할 수 있다. 위의 과정중 (2)의 증명은 아래와 같다.
+
+\textbf{pf. [귀류법]} 만약 $\gamma(-q) \le x$라 하자.
+
+먼저 $\gamma(-q) = x$인 경우를 생각하면 $x = \gamma(-q) = (-q)_F$이고, $\delta(-q) = (-q)_G$이다. $A_x$의 정의에 의해서 $$A_x = \left\{\delta(r) \in G \bigg| r \in \mathbb{Q}, r < (-q) \right\}$$
+가 되므로, $f(x) = (-q)_G$가 되고, 이는 $\delta(q) < -f(x)$에 모순이다.
+
+$\gamma(-q) < x$인 경우는 $\delta(-q) \in A_x$가 되고, 상한의 정의에 의해 $\delta(-q) \le f(x)$가 되므로, 마찬가지로 $\delta(q) < -f(x)$에 모순이다. 
+
+따라서, $\gamma(-q) > x$일 수 밖에 없다. \qed
+
+\subsubsection{c. 결론}
+
+앞선 a., b.의 결과를 이용하면,
+$$
+f(xy) = 
+\left\{\begin{matrix}
+0_G = f(x)f(y),	\\ 
+( \text{when } x = 0_F \vee y = 0_F ) \\
+f(x)f(y)	\\ 
+( \text{when } x \in P_F  \wedge y \in P_F ) \\
+-f(x(-y)) = f(x)(-f(-y)) = f(x)f(y)	\\ 
+( \text{when } x \in P_F  \wedge y \in -P_F ) \\
+-f((-x)y) = (-f(-x))f(y) = f(x)f(y)	\\ 
+( \text{when } x \in -P_F  \wedge y \in P_F ) \\
+f((-x)(-y)=(-f(x))(-f(y))=f(x)f(y)\\
+( \text{when } x \in -P_F  \wedge y \in -P_F ) \\
+\end{matrix}\right. $$
+이므로, 
+$$ \forall x, y \in F, f(xy) = f(x)f(y)$$이다.
+
+
+\section{3.1.1.}
+\subsection{1. 순서집합 $X$의 최대원소는 극대원소가 된다.}
+$X$의 최대원소를 $M$이라 하자.
+$$\forall x \in X, x \le M$$
+이다. 이것을 이용하면,
+\begin{align*}
+\forall x \in X, x \ge M \implies& (x \le M) \wedge (x \ge M)\\
+\implies& x = M
+\end{align*}
+이다. 따라서 $M$은 극대원소이다.
+
+\subsection{2. 극대원소가 하나뿐이지만 이 원소가 최대원소가 아닌 순서집합}
+$$X = \mathbb{Z} \cup \left\{a\right\}$$ 
+라 하자. 여기서 $a \notin \mathbb{Z}$이다. 
+
+이 집합 관계를 정의할 것이다. 정수들 끼리에서는 $\mathbb{Z}$에서 순서관계를 포함하고, $a$와 $z \in \mathbb{Z}$, $z \in \mathbb{Z}$와 $a$의 관계는 포함하지 않을 것이다. $a$와 $a$은 이 관계에 포함할 것이다. 그러면 이 관계는 순서관계가 된다.
+
+여기서 $a$보다 크거나 같은 원소는 $a$ 뿐이므로 $a$는 극대원소이다.
+
+하지만 $\forall z \in \mathbb{Z}$인 $z$에 대해 $a$와 $z$, $z$와 $a$의 관계가 없으므로, $a$는 최대원소가 아니다.
+
+\section{3.1.2.}
+순서집합 $X$의 모든 사슬을 모은 집합을 $C(X)$라 하자. 
+
+먼저 $C(X) \subset 2^X$이다. 그리고, 다음 두 성질을 증명하겠다.
+\subsection{1. $A \in C(X), B \subset A \implies B \in C(X)$이다.}
+$A$가 $X$의 사슬이므로 $A$의 임의의 두 원소 $a, b$를 고르면 $(a \le b) \vee (b \le a)$이다.
+
+여기서, $x \in B \implies x \in A$이므로, $B$도 $X$의 사슬이다. 이를 이용하면,
+$B$의 임의의 두 원소 $c, d$를 고르면, $c, d \in A$이므로, $(c \le d) \vee (d \le c)$이다.
+
+따라서 $B \in C(X)$이다.
+
+\subsection{2. $K \in C(C(X)) \implies \bigcup K \in C(X)$이다.}
+임의의 $S, T \in \bigcup K$를 생각하자, 합집합의 정의에 의해 $K_0, K_1 \in K$가 존재하여, $S \in K_0$, $T \in K_1$이다.
+
+여기서 $K$가 사슬이므로, $(K_0 \subset K_1) \vee (K_1 \subset K_0)$이다. 
+
+$(K_0 \subset K_1)$라 하자. 그러면 $S, T \in K_1$이고, $K_1$도 사슬이므로 $(S \subset T) \vee (T \subset S)$이다. 비슷하게, $(K_1 \subset K_0)$일 때도 $(S \subset T) \vee (T \subset S)$임을 알 수 있다.
+
+따라서 $\bigcup K$의 임의의 두 원소 $S, T$에 대해 $(S \subset T) \vee (T \subset S)$가 성립하므로, $\bigcup K \in C(X)$은 사슬이다. 따라서,
+$$\bigcup K \in C(X)$$
+이다.
+
+위 두 성질 1., 2.를 만족하므로 도움정리 3.1.3.에 의해서 $C(X)$는 극대원소를 가진다. 이 원소를 $P \in C(X)$라고 하면, $P$보다 크거나 같은 원소 $Q \in C(X)$가 존재하면 $Q = P$이다. 따라서 $P$는 $X$의 극대 사슬이다.
+
+\section{3.1.3.}
+\subsection{1. $(A, G) \le (A, G)$}
+$$A \subset A, G \subset G, x \in A, y \in (A \setminus A) \implies (x, y) \in G$$
+를 보이면 된다. 첫 번째와 두 번째 명제는 자명히 성립하고, 세 번째 명제는 $\varnothing = A \setminus A$이므로 성립한다.
+\subsection{2. $\left((A, G) \le (B, H)\right) \wedge \left((B, H) \le (A, G)\right) \Rightarrow (A, G) = (B, H)$}
+가정에 의해 아래 두 명제가 성립한다.
+$$A \subset B, G \subset H, x \in A, y \in (B \setminus A) \implies (x, y) \in H$$
+$$B \subset A, H \subset G, x \in B, y \in (A \setminus B) \implies (x, y) \in G$$
+이다. $A \subset B \subset A, G \subset H \subset G$이므로, $A = B, G = H$이다. 따라서, 
+$$(A, G) = (B, H)$$이다.
+
+\subsection{3. $\left((A, G) \le (B, H)\right) \wedge \left((B, H) \le (C, I)\right) \Rightarrow (A, G) \le (C, I)$}
+가정에 의해 아래 두 명제가 성립한다.
+$$A \subset B, G \subset H, x \in A, y \in (B \setminus A) \implies (x, y) \in H$$
+$$B \subset C, H \subset I, x \in B, y \in (C \setminus B) \implies (x, y) \in I$$
+이다. 이를 이용하면
+$$A \subset B \subset C$$이고, $$G \subset H \subset I$$이다.
+이제 $$x \in A, y \in (C \setminus A) \implies (x, y) \subset I$$를 보이면 된다.
+\textbf{pf.} $C \setminus A = (C \setminus B) \cup (B \setminus A)$이므로, $(y \in C \setminus B) \vee (y \in B \setminus A)$이다.
+
+$y \in C \setminus B$이면, $x \in A \subset B$이므로 $(x, y) \in I$이다.
+
+$y \in B \setminus A$이면, $x \in A$이므로 $(x, y) \in H \subset I$이다. 즉, $(x, y) \in I$이다.
+
+따라서, $x \in A, y \in (C \setminus A) \implies (x, y) \subset I$이다. \qed
+
+위 세 조건을 만족하므로, $$(A, G) \le (C, I)$$이다.
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

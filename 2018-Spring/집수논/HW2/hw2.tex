@@ -1,0 +1,1068 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.r
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+\usepackage[hangul]{kotex}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsthm,amsmath}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{verbatim} % Required for multiple comment
+\usepackage{amsmath} % Required for use \therefore \because and others..
+\usepackage{amssymb} % Required for use \therefore \because and others..
+\usepackage{algorithm, algpseudocode}
+\usepackage{verbatim} % for commment, verbatim environment
+\usepackage{spverbatim} % automatic linebreak verbatim environment
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{datetime} % Used for showing version as last modified time
+\yyyymmdddate
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage{xcolor}
+
+
+
+
+% Margins
+\linespread{1.25} % Line spacing
+\usepackage[a4paper,top=2cm,bottom=1cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{titlesec,sectsty}
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\sectionfont{\fontsize{12}{10}\selectfont}
+\subsectionfont{\fontsize{10}{10}\selectfont}
+\titlespacing{\subsection}{0pt}{-\parskip}{-\parskip}
+\usepackage{multicol}
+\usepackage{cuted}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+
+% mathematics
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel} % cancelation of terms
+\usepackage{nicefrac} % certain fraction styles
+\newcommand*\diff{\mathop{}\!\mathrm{d}} % differential
+\DeclareMathOperator{\arsinh}{arsinh}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{JongBeom Kim}
+\chead{집합과 수리 논리 HW 2} % Top center head
+\rhead{2018 Spring} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+
+\renewcommand\headrule
+{
+	\begin{minipage}{1\textwidth}
+		\hrule width \hsize height 1pt \kern 1.5pt \hrule width \hsize height 0.5pt  
+	\end{minipage}\par
+}%
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-10pt} %set spacing for itemize
+\setitemize{itemsep=3pt}
+\setlist[enumerate]{topsep=-10pt} %set spacing for itemize
+\setenumerate{itemsep=3pt}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
+
+\begin{document}
+\twocolumn
+
+
+
+\chapter{Homework 2}
+
+\section{2.1.2.}
+\subsection{(가)}
+\begin{align*}
+0+n = \gamma_0(n) = n
+\end{align*}
+\textbf{pf.} $X = \left\{ n \in \mathbb{N} \mid \gamma_0(n) = n \right\}$라 하자.
+\begin{align*}
+\gamma_0(0) = 0
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+\gamma_0(n^+) = [\gamma_0(n)]^+ = [n]^+ = n^+
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+0 + n = n
+\end{align*}가 성립한다.
+
+\begin{align*}
+(m+n)+k = \gamma_{\gamma_{m}(n)}(k) = \gamma_{m}(\gamma_{n}(k))=m+(n+k)
+\end{align*}
+\textbf{pf.} $m, n$을 고정하고 $k \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{k\in \mathbb{N} \mid (m+n)+k = m+(n+k) \right\}$라 하자.
+\begin{align*}
+(m+n)+0 = \gamma_{m+n}(0) = m+n
+\\ m+(n+0) = \gamma_m(\gamma_n(0)) = \gamma_m(n) = m+n
+\end{align*}이므로 $0 \in X$이다. 이제 $k \in X$라고 가정하면,
+\begin{align*}
+(m+n)+k^+ =& \gamma_{m+n}(k^+) = [\gamma_{m+n}(k)]^+ = [(m+n)+k]^+
+\\=&[m+(n+k)]^+ = [\gamma_m(\gamma_n(k))]^+ 
+\\ =& \gamma_m([\gamma_n(k)]^+) = \gamma_{m}(\gamma_n(k^+))  = m+(n+k^+) 
+\end{align*}이므로 $k^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $k \in \mathbb{N}$에 대해
+\begin{align*}
+(m+n)+k = m+(n+k)
+\end{align*}가 성립한다. 
+
+
+\begin{align*}
+m+n = \gamma_m(n) = \gamma_n(m) = n+m
+\end{align*}
+\textbf{pf.} $m$을 고정하고 $n \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{n \in \mathbb{N} \mid m+n=n+m \right\}$라 하자.
+\begin{align*}
+m+0 = \gamma_m(0) = m = \gamma_0(m) = 0+m
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+m+n^+ =& \gamma_m(n^+) = [\gamma_m(n)]^+ = [\gamma_n(m)]^+ = \gamma_n(m^+)
+\\ =& \gamma_n(1+m) = n + (1+m) = (n+1)+m 
+\\ =& (n+0)^+ + m= n^+ + m
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+m+n = n+m
+\end{align*}가 성립한다. 
+
+\subsection{(나)}
+\begin{align*}
+0n = \delta_0(n) = 0
+\end{align*}
+\textbf{pf.} $X = \left\{ n \in \mathbb{N} \mid \delta_0(n) = 0 \right\}$라 하자.
+\begin{align*}
+\delta_0(0) = 0
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+\delta_0(n^+) = \delta_0(n)+0 = \delta_0(n) = 0n = 0
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+0n = 0
+\end{align*}가 성립한다.
+
+\begin{align*}
+1n = \delta_1(n) = 1
+\end{align*}
+\textbf{pf.} $X = \left\{ n \in \mathbb{N} \mid \delta_1(n) = n \right\}$라 하자.
+\begin{align*}
+\delta_1(0) = 0
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+\delta_1(n^+) = \delta_1(n)+1 = n+1 = n^+
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+1n = n
+\end{align*}가 성립한다.
+
+
+\textbf{Lemma 1.} $m(n+k) = mn + mk$이다.
+\textbf{pf.} $m, n$을 고정하고 $k \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{k\in \mathbb{N} \mid m(n+k) = mn+mk) \right\}$라 하자.
+\begin{align*}
+m(n+0) = mn
+\\ mn+m0 = mn+0 = mn
+\end{align*}이므로 $0 \in X$이다. 이제 $k \in X$라고 가정하면,
+\begin{align*}
+m(n+k^+) =& m[(n+k)^+] = m(n+k) + m
+\\ =& mn + mk + m = = mn + m(k^+)
+\end{align*}이므로 $k^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $k \in \mathbb{N}$에 대해
+\begin{align*}
+m(n+k) = mn+mk
+\end{align*}가 성립한다. 
+
+\begin{align*}
+(mn)k = \delta_{\delta_{m}(n)}(k) = \delta_{m}(\delta_{n}(k))=m(nk)
+\end{align*}
+\textbf{pf.} $m, n$을 고정하고 $k \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{k\in \mathbb{N} \mid (mn)k = m(nk) \right\}$라 하자.
+\begin{align*}
+(mn)0 = \delta_{mn}(0) = 0
+\\ m(n0) = \delta_m(\delta_n(0)) = \delta_m(0) = 0
+\end{align*}이므로 $0 \in X$이다. 이제 $k \in X$라고 가정하면,
+\begin{align*}
+(mn)k^+ =& mn(k^+) = mn(k) + mn = m(nk) + mn 
+\\ =& m(nk) + m(n) = m(nk + n) \tag{$\because$ Lemma 1.}
+\\ =&  m(nk + (0+n)) = m(nk + n(0^+))  
+\\ =& m(n(k+0^+)) = m[n(k^+)]
+\end{align*}이므로 $k^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $k \in \mathbb{N}$에 대해
+\begin{align*}
+(mn)k = m(nk)
+\end{align*}가 성립한다. 
+
+\textbf{Lemma 2.} $(m^+)n = mn + n$이다.
+\\ \textbf{pf.} $m$을 고정하고 $n \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{n \in \mathbb{N} \mid (m^+)n=mn + n \right\}$라 하자.
+\begin{align*}
+(m^+)(0) = 0 = m0 + 0
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+(m^+)(n^+) =& (m^+)(n) + m^+ = mn + n + m^+
+\\ =& mn + n + m + 1 = mn + m + n + 1
+\\ =& m(n^+) + n^+
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+(m^+)n = mn + n
+\end{align*}가 성립한다. 
+
+
+
+\begin{align*}
+mn = \delta_m(n) = \delta_n(m) = nm
+\end{align*}
+\textbf{pf.} $m$을 고정하고 $n \in \mathbb{N}$에 대해 증명해도 충분하다. 
+\\$X = \left\{n \in \mathbb{N} \mid mn=nm \right\}$라 하자.
+\begin{align*}
+m0 = \delta_m(0) = 0 = \delta_0(m) = 0m
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+m(n^+) =& mn + m = nm + m = nm + m 
+\\=& (n^+)m \tag{$\because$ Lemma 2.}
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+m+n = n+m
+\end{align*}가 성립한다. 
+
+
+\subsection{(다)}
+\begin{align*}
+m(n+k) = mn + mk
+\end{align*}
+\textbf{pf.} Lemma 1.과 같다. 위를 참고하라.
+
+\begin{align*}
+(n+k)m = nm + km
+\end{align*}
+\textbf{pf.} 지금까지 증명한 것을 이용하여 보일 수 있다.
+\begin{align*}
+(n+k)m = m(n+k) = mn + mk = nm + km
+\end{align*}이므로 성립한다.
+
+\section{2.1.6.}
+\begin{align*}
+n \in \mathbb{N} \implies n = 0 \text{ or } [\exists m \in \mathbb{N} \mid n = m^+]
+\end{align*}
+\textbf{pf.} $X = \left\{ n \in \mathbb{N} \mid n = 0 \text{ or } [\exists m \in \mathbb{N} \mid n = m^+] \right\}$라 하자.
+\begin{align*}
+0 = 0
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정할 때,
+\begin{align*}
+\exists m = n \in \mathbb{N} \mid n^+ = (m)^+
+\end{align*}은 가정에 관계없이 참이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+n = 0 \text{ or } [\exists m \in \mathbb{N} \mid n = m^+] 
+\end{align*}가 성립한다.
+
+
+\section{2.1.7.}
+\textbf{Lemma 1.} $m < n \iff m^+ \le n$이다.
+\\\textbf{pf.} ($\implies$)는 책의 (2.6)이다.
+\\($\impliedby$)
+\\ $m^+ \le n \iff m^+ = n \text{ or } m^+ \in n$이고, $m < n \iff m \in n$임을 상기하자.
+\begin{align*}
+&m^+ = n \implies n = m \cup \left\{m \right\} \implies m \in n \implies m < n
+\\&m^+ \in n \implies m^+ < n \implies m < m^+ < n \implies m < n
+\end{align*}이므로 성립한다. \qed
+
+\textbf{Lemma 2.} $m \le n \iff m^+ \le n^+$임을 보이자.
+\begin{align*}
+m^+ \in n^+ \iff& m^+ \in n \cup \left\{n \right\}
+\\ \iff& m^+ = n \text{ or } m^+ \in n
+\\ \iff& m^+ \le n
+\\ \iff& m < n  \tag{$\because$ Lemma 1.}
+\\ \iff& m \in n
+\end{align*}이고, 
+\begin{align*}
+m = n \iff m^+ = n^+
+\end{align*}이므로
+\begin{align*}
+[m = n \text{ or } m \in n] \iff [m^+ = n^+ \text{ or } m^+ \in n^+] 
+\\ m \le n \iff m^+ \le n^+
+\end{align*}이다. \qed
+
+\subsection{(가)}
+\begin{align*}
+m + k \le m + l \iff k \le l
+\end{align*}
+\textbf{pf.} $X = \left\{ m \in \mathbb{N} \mid m + k \le m + l \iff k \le l
+ \right\}$라 하자.
+\begin{align*}
+k = 0 + k \le 0 + l = l \iff k \le l
+\end{align*}이므로 $0 \in X$이다. 이제 $m \in X$라고 가정할 때,
+\begin{align*}
+m^+ + k \le m^+ + l \iff& m + 1 + k \le m + 1 + l
+\\ \iff& m + k + 1 \le m + l + 1
+\\ \iff& (m+k)^+ \le (m+l)^+
+\\ \iff& m+k \le m+l \tag{$\because$ Lemma 2.}
+\\ \iff& k \le l
+\end{align*}이므로 $m^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $m \in \mathbb{N}$에 대해
+\begin{align*}
+m + k \le m + l \iff k \le l
+\end{align*}가 성립한다.
+
+\subsection{(나)}
+\begin{align*}
+mk \le ml \iff k \le l \tag{단, $m \neq 0$}
+\end{align*}
+\textbf{pf.} $X = \left\{ k \in \mathbb{N} \mid m \neq 0,  mk \le ml \iff k \le l \right\}$라 하자.
+\begin{align*}
+0=0k \leq ml \iff 0=k \leq l
+\end{align*}는 모든 자연수가 $0$보다 크거나 같으므로 성립한다. 
+
+따라서, $0 \in X$이다. 이제 $k \in X$라고 가정할 때 $k^+ \in X$임을 보이자. 일단 $l \in \mathbb{N}$이므로 $\l = 0 \text{ or } l = p^+$이다.
+
+$l = 0$인 경우를 먼저 생각하자. 
+\begin{align*}
+n \le 0 \iff n = 0 \text{ or } n \in 0 = \varnothing \iff n = 0
+\end{align*}인 것을 알고있다. $m \neq 0$인 것을 참고하여,
+\begin{align*}
+mk \le m0 = 0 \iff& mk = 0
+\\ \iff& k = 0
+\\ \iff& k \le 0
+\end{align*}이므로, $l=0$인 경우에는 $mk \le ml \iff k \le l$가 성립한다.
+
+$l = p^+$인 경우를 생각해보자.
+\begin{align*}
+m(k^+) \le m(p^+) \iff& m(k+1) \le m(p+1)
+\\ \iff& mk + m \le mp + m
+\\ \iff& m + mk \le m + mp
+\\ \iff& mk \le mp \tag{$\because$ (가)}
+\\ \iff& k \le p
+\\ \iff& k^+ \le p^+ \tag{$\because$ Lemma 2.}
+\\ \iff& k^+ \le l
+\end{align*}이므로 $k^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $k \in \mathbb{N}$에 대해
+\begin{align*}
+m \neq 0 \text{인 경우,  }  mk \le ml \iff k \le l
+\end{align*}가 성립한다.
+
+
+\section{2.2.4.}
+\subsection{Well-defined}
+\begin{align*}
+[m, n] + [k, l] = [m+k, n+l]
+\end{align*}이 잘 정의되었는지 확인하자.
+\\$[m, n] = [m', n']$이고 $[k, l] = [k', l']$일 때
+\begin{align*}
+(m+k)+(n'+l') =& (m'+k')+(n'+l') 
+\\=& (m'+k')+(n+l) 
+\end{align*}이므로 $[m+n, k+l] = [m'+n', k'+l']$이다. 따라서,
+\begin{align*}
+[m, n]+[k, l] = [m', n'] + [k', l']
+\end{align*}이다. 따라서, (2. 12)의 연산은 잘 정의되었다.
+
+\subsection{결합법칙}
+\begin{align*}
+([a, b] + [c, d]) + [e, f] =& [a+c, b+d] + [e, f]
+\\ =& [a+c+e, b+d+f]
+\\ =& [a, b] + [c+e, d+f]
+\\ =& [a, b] + ([c, d] + [e, f])
+\end{align*}이므로 결합법칙이 성립한다.
+
+\subsection{교환법칙}
+\begin{align*}
+[a, b] + [c, d] =& [a+c, b+d]
+\\ =& [c+a, d+b]
+\\ =& [c, d] + [a, b]
+\end{align*}이므로 교환법칙이 성립한다.
+
+
+\section{2.2.6.}
+\begin{align*}
+[m, n] \cdot [k, l] = [0, 0] \iff& [mk + nl, ml + nk] = [0, 0]
+\\ \iff& mk+nl+0 = ml+nk+0
+\\ \iff& mk+nl = ml+nk
+\end{align*}
+여기서 $m = n$이면 $[m, n] = [0, 0]$인 경우이고,
+\begin{align*}
+mk+nl =& nk + nl
+\\ =& nk + ml
+\\ =& ml + nk
+\end{align*}이므로, $[m, n] \cdot [k, l] = [0, 0]$가 성립한다.
+
+이제, $m \neq n$인 경우를 생각하자.
+\\ \textbf{1. $m < n$인 경우}
+\\ $n = m + p$를 만족하는 $p \in \mathbb{N}$이 존재한다. 단, $m \neq n$이므로 $p \neq 0$이다.
+\begin{align*}
+mk+nl = ml+nk \iff& mk+(m+p)l = ml + (m+p)k
+\\ \iff& mk+ml+pl = ml+mk+pk
+\\ \iff& (mk+ml)+pl = (mk+ml)+pk
+\\ \iff& pl = pk \iff pl \le pk \text{ and } pk \le pl
+\\ \iff& l \le k \text{ and } k \le l \iff k = l
+\\ \iff& [k, l] = [0, 0]
+\end{align*}이므로, $[k, l] = [0, 0]$이다.
+
+\textbf{2. $n < m$인 경우}
+\\ 1.와 비슷하게 진행하면 된다. $m = n + p$를 만족하는 $p \in \mathbb{N}$이 존재한다. 단, $m \neq n$이므로 $p \neq 0$이다.
+\begin{align*}
+mk+nl = ml+nk \iff& (n+p)k+nl = (n+p)l + nk
+\\ \iff& nk+pk+nl = nl+pl+nk
+\\ \iff& (nk+nl)+pk = (nk+nl)+pl
+\\ \iff& pk = pl \iff pl \le pk \text{ and } pk \le pl
+\\ \iff& l \le k \text{ and } k \le l \iff k = l
+\\ \iff& [k, l] = [0, 0]
+\end{align*}이므로, $[k, l] = [0, 0]$이다.
+
+\textbf{결론} 
+\\$[m, n] \cdot [k, l] = [0, 0]$이면, $[m, n] = [0, 0] \text{ or } [k, l] = [0, 0]$이다.
+
+\section{2.2.8.}
+$a = [x, 0]\in P$이고, $b = [y, 0] \in P$라 하자.  가정에 의해, $x, y \in \mathbb{N}$이고, $x \neq 0, y \neq 0$이다.
+\begin{align*}
+x \neq 0 \text{ and } y \neq 0 \iff& 0 < x \text{ and } 0 < y
+\\ \iff& 0 < x \text{ and } x < x + y
+\\ \iff& 0 < x < x + y
+\\ \iff& 0 < x + y
+\end{align*}이다. 그러면,
+\begin{align*}
+a+b = [x, 0] + [y, 0] = [x+y, 0+0] = [x+y, 0]
+\end{align*}이고, $x+y \in \mathbb{N}, 0 < x+y$이므로, $a+b \in P$이다.
+
+\begin{align*}
+x \neq 0 \text{ and } y \neq 0 \iff& 0 < x \text{ and } 0 < y
+\\ \iff& 1 \le x \text{ and } 0 < y
+\\ \iff& y \le xy \text{ and } 1 \le y
+\\ \iff& 1 \le xy \iff 0 < xy
+\end{align*}이다. 그러면,
+\begin{align*}
+ab = [x, 0] \cdot [y, 0] = [xy+0, 0+0] = [xy, 0]
+\end{align*}이고, $xy \in \mathbb{N}, 0 < xy$이므로, $ab \in P$이다.
+
+
+\section{2.2.15.}
+임의의 $[a, b], [c, d] \in \mathbb{Q}$에 대하여
+\begin{align*}
+[a, b] \ge [c, d] \iff& [a, b] - [c, d] \in P_{\mathbb{Q}} \text{ or } [a, b] = [c, d]
+\end{align*}이다. 여기서 $[a, b] = [c, d]$의 동치관계는
+\begin{align*}
+[a, b] = [c, d] \iff& ad = cb
+\\ \iff& ad(bd) = cb(bd) \tag{$\because bd \neq 0$}
+\\ \iff& abd^2 = cdb^2
+\end{align*}인 것을 알 수 있다. 다음으로 $[a, b] - [c, d] \in P_{\mathbb{Q}}$의 동치관계는
+\begin{align*}
+[a, b] - [c, d] \in P_{\mathbb{Q}} \iff& [a, b] + (-[c, d]) \in P_{\mathbb{Q}}
+\\ \iff& [a, b] + [-c, d] \in P_{\mathbb{Q}}
+\\ \iff& [ad+(-c)b, bd] \in P_{\mathbb{Q}}
+\\ \iff& [ad-cb, bd] \in P_{\mathbb{Q}}
+\\ \iff& (ad-cb, bd) \in P_{\mathbb{Z}} \times P_{\mathbb{Z}}
+\\ \iff& ad-cb \in P_{\mathbb{Z}} \text{ and } bd \in P_{\mathbb{Z}}
+\\ \iff& 0 < ad-cb \text{ and } 0 < bd
+\\ \iff& ad < cb \text{ and } 0 < bd
+\\ \iff& ad(bd) < cb(bd)
+\\ \iff& abd^2 < cdb^2
+\end{align*}이다. 따라서, 
+\begin{align*}
+[a, b] \ge [c, d] \iff& [a, b] - [c, d] \in P_{\mathbb{Q}} \text{ or } [a, b] = [c, d]
+\\ \iff& abd^2 < cdb^2 \text{ or } abd^2 = cdb^2
+\\ \iff& abd^2 = cdb^2
+\end{align*}이다. 
+
+\section{2.3.1.}
+임의의 
+\begin{align*}
+r = \frac{a}{b} \in \mathbb{Q} \tag{$a \in \mathbb{Z}, b \in P_{\mathbb{Z}} $}
+\end{align*}
+에 대해
+\begin{align*}
+r^* = \left\{ p \in \mathbb{Q} \mid p < r \right\}
+\end{align*}가 절단임을 보이자.
+
+\textbf{(절 1)} $r-1 < r$이므로 $r-1 \in r^*$이고, $r+1 \ge r$이므로 $r+1 \notin r^*$이다.
+따라서 $r^* \neq \varnothing$, $r^* \neq \mathbb{Q}$이다.
+
+\textbf{(절 2)} $p \in r^*, q \in \mathbb{Q}, q < p$라고 하면,
+\begin{align*}
+p < r \text{ and } q < p \iff& q < p < r
+\\ \iff& q < r
+\\ \iff& q \in \mathbb{Q}
+\end{align*}이다.
+
+\textbf{(절 3)} 만약
+\begin{align*}
+p = \frac{c}{d} \in r^* \tag{$c \in \mathbb{Z}, d \in P_{\mathbb{Z}}$}
+\end{align*}라고 하면, 먼저 $p < r$임을 이용하여,
+\begin{align*}
+p < r \iff& \frac{c}{d} < \frac{a}{b}
+\\ \iff& 0 < \frac{a}{b} - \frac{c}{d}
+\\ \iff& 0 < \frac{ad+cb}{bd}
+\\ \iff& 0 < ad+cb \tag{$\because 0 < bd$}
+\end{align*}인 것을 알 수 있다.
+
+이제,
+\begin{align*}
+s = \frac{a+c}{b+d} \in \mathbb{Q}
+\end{align*}를 생각하면,
+\begin{align*}
+p < s \iff& \frac{c}{d} < \frac{a+c}{b+d}
+\\ \iff& 0 < \frac{a+c}{b+d} + (- \frac{c}{d})
+\\ \iff& 0 < \frac{a+c}{b+d} + \frac{-c}{d}
+\\ \iff& 0 < \frac{(a+c)d+(-c)(b+d)}{(b+d)d}
+\\ \iff& 0 < \frac{(ad+cd-bc-cd}{(b+d)d}
+\\ \iff& 0 < \frac{(ad-bc)}{(b+d)d}
+\\ \iff& 0 < ad-bc \tag{$0 < (b+d)d$}
+\end{align*}이므로, $p<s$는 성립한다. 또한,
+\begin{align*}
+s < r \iff& \frac{a+c}{b+d} < \frac{a}{b}
+\\ \iff& 0 < \frac{a}{b} + (-\frac{a+c}{b+d})
+\\ \iff& 0 < \frac{a}{b} + \frac{-a-c}{b+d}
+\\ \iff& 0 < \frac{a(b+d)+(-a-c)(b)}{d(b+d)}
+\\ \iff& 0 < \frac{ab+ad-ab-bc}{(b+d)d}
+\\ \iff& 0 < \frac{ad-bc}{(b+d)d}
+\\ \iff& 0 < ad-bc \tag{$0 < (b+d)d$}
+\end{align*}이므로, $s<r$ 또한 성립한다.
+
+따라서, $p<s$이고 $s \in r^*$인 $s$가 존재한다.
+
+\textbf{결론.} 임의의 $r \in \mathbb{Q}$에 대해 $r^*$가 절단이다.
+
+\section{2.3.3.}
+\textbf{결합법칙.} 임의의 $\alpha, \beta, \gamma \in \mathbb{R}$에 대해
+\begin{align*}
+(\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)
+\end{align*}가 성립한다. 
+\begin{align*}
+x \in (\alpha + \beta) + \gamma \iff& \exists n \in (\alpha + \beta), c \in \gamma \mid x = n + c
+\\ \iff& \exists a \in \alpha, b \in \beta, c \in \gamma \mid x = a + b + c
+\\ \iff& \exists a \in \alpha, m \in (\beta + \gamma) \mid x = a + m
+\\ \iff& x \in \alpha + (\beta + \gamma)
+\end{align*}이므로, $(\alpha + \beta) + \gamma = \alpha + (\beta + \gamma)$이다.
+
+\textbf{교환법칙.} 임의의 $\alpha, \beta \in \mathbb{R}$에 대해
+\begin{align*}
+\alpha + \beta = \beta + \alpha
+\end{align*}가 성립한다. 
+\begin{align*}
+x \in \alpha + \beta \iff& \exists a \in \alpha, b \in \beta \mid x = a + b
+\\ \iff&  \exists b \in \beta, \exists a \in \alpha \mid x = b + a
+\\ \iff& x \in \beta + \alpha
+\end{align*}이므로, $\alpha + \beta = \beta + \alpha$이다.
+
+\section{2.3.6.}
+\subsection{$\alpha 1^* = 1^* \alpha = \alpha$ 임을 보이자.}
+\textbf{교환법칙. ($P_{\mathbb{R}}$)} 임의의 $\alpha, \beta \in P_{\mathbb{R}}$에 대해
+\begin{align*}
+\alpha \beta = \beta \alpha
+\end{align*}가 성립한다. 
+\begin{align*}
+x \in \alpha \beta \iff& \exists a \in \alpha, b \in \beta \mid x \le ab
+\\ \iff&  \exists b \in \beta, \exists a \in \alpha \mid x = ba
+\\ \iff& x \in \beta \alpha
+\end{align*}이므로, $\alpha \beta = \beta \alpha$이다.
+
+\textbf{교환법칙. ($\mathbb{R}$)} 임의의 $\alpha, \beta \in \mathbb{R}$에 대해
+\begin{align*}
+\alpha \beta = 
+\left\{\begin{matrix}
+0* &=& 0* & \text{$\alpha = 0 \text{ or } \beta = 0$}
+\\ \alpha \beta &=&\beta \alpha & \text{$\alpha \in P_{\mathbb{R}}, \beta \in P_{\mathbb{R}}$}
+\\ -\alpha (-\beta) &=& -(-\beta) \alpha & \text{$\alpha \in P_{\mathbb{R}}, \beta \in -P_{\mathbb{R}}$}
+\\ -(-\alpha) \beta &=& -\beta (-\alpha) & \text{$\alpha \in -P_{\mathbb{R}}, \beta \in P_{\mathbb{R}}$}
+\\ (-\alpha) (-\beta) &=& (-\beta) (-\alpha) & \text{$\alpha \in -P_{\mathbb{R}}, \beta \in -P_{\mathbb{R}}$}
+\end{matrix}\right.
+\end{align*}이므로, $\alpha \beta = \beta \alpha$인 것을 알 수 있다.
+
+교환법칙에 의해서 
+\begin{align*}
+\alpha 1^* = 1^* \alpha \tag{1}
+\end{align*}임을 알 수 있다. 
+
+이제 임의의 실수 $\alpha \in \mathbb{R}$에 대해 $\alpha 1^* = \alpha$임을 보이자.
+
+\subsubsection{Case 1. $\alpha = 0^*$}
+\begin{align*}
+\alpha 1^* = 0^* 1^* = 0^* = \alpha
+\end{align*}이므로 성립한다.
+
+\subsubsection{Case 2. $\alpha \in P_{\mathbb{R}}$}
+\textbf{1. $\alpha \supset \alpha 1^*$ 이다.}
+\begin{align*}
+x \in \alpha 1^* \implies& \exists r \in \alpha \cap P_{\mathbb{R}}, \exists s \in 1^* \cap P_{\mathbb{R}} \mid x \le rs
+\\ \implies& \exists r \in \alpha \cap P_{\mathbb{R}}, \exists s \in 1^* \cap P_{\mathbb{R}} \mid  x \le rs < r
+\\ \implies& x \in \alpha \cap P_{\mathbb{R}}
+\\ \implies& x \in \alpha
+\end{align*}
+
+\textbf{2. $\alpha \subset \alpha 1^*$ 이다.}
+$p \in \alpha \implies \exists q \in \alpha \mid q > p$이다. 그러면,
+\begin{align*}
+\exists r=q \in \alpha \cap P_{\mathbb{R}}, \exists s=\frac{p}{r} \in 1^* \cap P_{\mathbb{R}} \mid x \le rs = q \left(\frac{p}{q} \right)
+\end{align*}이므로, $p \in \alpha 1^*$이다.
+
+1.와 2.에 의해서 
+\begin{align*}
+\alpha = \alpha 1^*
+\end{align*}이다.
+
+\subsubsection{Case 3. $\alpha \in -P_{\mathbb{R}}$}
+$a \in P_{\mathbb{R}}$인 경우에 $\alpha 1^* = \alpha$가 성립함을 이용하자.
+\begin{align*}
+\alpha 1^* = -(-\alpha) 1^* = -(-\alpha) = \alpha
+\end{align*}이므로, $\alpha \in -P_{\mathbb{R}}$인 경우에도
+\begin{align*}
+\alpha 1^* = \alpha
+\end{align*}가 성립한다.
+
+
+\textbf{결론.} 
+\\$x \in \mathbb{R}$이면,
+\begin{align*}
+\begin{matrix}
+x = 0^* & \text{ or } & x \in P_{\mathbb{R}} & \text{ or } & x \in -P_{\mathbb{R}}
+\end{matrix}
+\end{align*}이고, 각각의 경우 (Case 1, Case 2, Case 3)에 대해서 $x 1^* = x$ 가 성립하므로, 
+임의의 실수 $\alpha \in\mathbb{R}$에 대해서,
+\begin{align*}
+\alpha 1^* = \alpha \tag{2}
+\end{align*}가 성립함을 알 수 있다.
+
+(1), (2)에 의하여 임의의 실수 $\alpha \in \mathbb{R}$
+\begin{align*}
+\alpha 1^* = 1^* \alpha = \alpha
+\end{align*}이다. \qed
+
+\subsection{$0^* < 1^*$임을 보이자.}
+$\frac{1}{2} \notin 0^*$이고, $\frac{1}{2} \in 1^*$이므로,
+\begin{align*}
+0^* \neq 1^* \tag{1}
+\end{align*}이다.
+\begin{align*}
+x \in 0^* \iff& x \in \mathbb{Q}, x < 0
+\\ \implies& x \in \mathbb{Q}, x < 1
+\\ \implies& x \in 1^*
+\end{align*}이므로, 
+\begin{align*}
+0^* \subset 1^* \tag{2}
+\end{align*}이다.
+
+(1), (2)에 의해 $0^* \subsetneq 1^*$이고, 이는 
+\begin{align*}
+0^* < 1^*
+\end{align*}을 의미한다. \qed
+
+
+\section{2.3.7.}
+\begin{align*}
+\gamma = 0^* \cup \left\{0\right\} \cup \left\{q \in P_{\mathbb{Q}} \mid \left(\exists r \in P_{\mathbb{Q}} \mid r > q, \frac{1}{r} \notin \alpha \right) \right\}
+\end{align*}
+\subsection{$\gamma$는 절단이다.}
+\subsubsection{(절1)}
+\begin{align*}
+0 \in \gamma \implies \gamma \neq \varnothing \tag{(1)}
+\end{align*}이다. 또한,
+\begin{align*}
+\alpha \in P_{\mathbb{R}} \implies& 0 \in \alpha 
+\\ \implies& \exists x \in \alpha \mid x \in P_{\mathbb{Q}}
+\end{align*}이다. 
+
+$\frac{1}{x} \in \alpha \cap P_{\mathbb{Q}}$가 $\gamma$에 속하지 않는 것을 증명해보자.
+
+\textbf{pf. [귀류법]} $\frac{1}{x} \in \gamma$라 하자. 그러면,
+\begin{align*}
+x \in \gamma \iff& \exists r \in P_{\mathbb{Q}} \mid r > \frac{1}{x}, \frac{1}{r} \notin \alpha
+\end{align*}이다. 하지만,
+\begin{align*}
+r > \frac{1}{x} \implies \frac{1}{r} < x \implies \frac{1}{r} \in \alpha
+\end{align*}이므로, $\frac{1}{r} \in \alpha \text{ and } \frac{1}{r} \notin \alpha$이다. 따라서 모순이다.
+
+따라서, $\frac{1}{x} \notin \gamma$이다. \qed
+
+위를 이용하면
+\begin{align*}
+\frac{1}{x} \in P_{\mathbb{Q}}, \frac{1}{x} \notin \gamma \implies \gamma \neq \mathbb{Q} \tag{2}
+\end{align*}을 알 수 있다.
+
+(1), (2)에 의해 (절 1)은 성립한다.
+
+\subsubsection{(절2)}
+임의의 $p \in \gamma$를 생각해보자.
+
+\textbf{Case 1. $p \le 0$인 경우}
+$\gamma$의 정의에 의해 $p-1 < 0$이므로,
+\begin{align*}
+\exists q = p-1 < p \mid q \in \gamma
+\end{align*}이다.
+
+\textbf{Case 2. $p > 0$인 경우}
+$$p \in \gamma \setminus \left\{0\right\} \setminus 0^*$$
+이므로 성립함을 알 수 있다. 간략하게 적어보면,
+\begin{align*}
+p \in \gamma, p > q \implies & \left(\exists r \in P_{\mathbb{Q}} \mid r > p, \frac{1}{r} \notin \alpha \right), p > q
+\\ \implies & \exists r \in P_{\mathbb{Q}} \mid r > q, \frac{1}{r} \notin \alpha
+\\ \iff& q \in \gamma
+\end{align*}이므로 (절 2)는 성립한다.
+
+\subsubsection{(절3)}
+$\alpha \in P_\mathbb{R}$이므로, $\alpha > 0^* \iff \alpha \supset 0^*, \alpha \neq 0^*$이다. 또한 $\alpha \neq \mathbb{Q}$이므로,
+\begin{align*}
+\mathbb{Q} \setminus \alpha =& \mathbb{Q} \setminus \alpha \setminus 0^* \setminus
+\\ =& \mathbb{Q} \setminus \alpha \setminus 0^* \setminus \left\{0\right\} \tag{$0 \in \alpha$}
+\end{align*}이므로, $\exists x \in \mathbb{Q} \mid x \in (\mathbb{Q} \setminus \alpha)$가 존재한다. 이 $x$는 
+$$x > 0 \text{ and } x \notin \alpha$$이다. 이제 
+$$u = \frac{1}{x+1} > 0$$가 $\gamma$에 속함을 보이자.
+
+\textbf{pf.}
+\begin{align*}
+\frac{1}{x} > \frac{1}{x+1} = u \text{ and } x \notin \alpha \iff u \in \gamma \tag{1}
+\end{align*}
+ \qed
+
+이제 임의의 $p \in \gamma$에 대해 (절 3)을 만족하는지 확인해보자.
+
+\textbf{Case 1. $p \le 0$}
+\begin{align*}
+\exists q = u > p \mid u \in \gamma \tag{$\because$ (1)}
+\end{align*}
+ 
+\textbf{Case 2. $p > 0$}
+\begin{align*}
+p \in \gamma \implies \exists q \in P_{\mathbb{Q}} \mid q > p, \frac{1}{q} \notin \alpha
+\end{align*}이다. 이제
+\begin{align*}
+x = \frac{(p + q)}{2} 
+\end{align*}인 $ x \in P_{\mathbb{Q}}$ 생각하자. $p < x < q$는 만족한다는 것을 알 수 있다.
+\begin{align*}
+\frac{1}{q} \notin \alpha  \text{ and } x < q \implies& x \in \gamma
+\end{align*}이다. 
+
+따라서 $p \in \gamma \implies \left( \exists  x \in \gamma \mid x > p \right)$이므로 (절 3)을 만족한다.
+
+(절1), (절2), (절3)을 모두 만족하므로 $\gamma$는 절단이다. \qed
+
+
+
+\subsection{$\alpha \gamma = 1^*$이다.}
+\subsubsection{1. $\alpha \gamma \subset 1^*$이다.}
+\begin{align*}
+x \in \alpha \gamma \iff& \exists r \in \alpha \cap P_{\mathbb{Q}}, \exists s \in \gamma \cap P_{\mathbb{Q}} \mid x \le rs
+\end{align*}이다. 여기서 $s \in \gamma \cap P_{\mathbb{Q}}$이므로,
+\begin{align*}
+\exists k \in P_{\mathbb{Q}} \mid k > s, \frac{1}{k} \notin \alpha
+\end{align*}이고, 
+\begin{align*}
+\left( \frac{1}{k} \notin \alpha, r \in \alpha \right) \text{ and } s < k \implies r < \frac{1}{k} < \frac{1}{s}
+\end{align*}를 얻는다. 따라서,
+\begin{align*}
+x \in \alpha \gamma \iff& \exists r \in \alpha \cap P_{\mathbb{Q}}, \exists s \in \gamma \cap P_{\mathbb{Q}} \mid x \le rs
+\\ \implies & \exists r \in \alpha \cap P_{\mathbb{Q}}, \exists s \in \gamma \cap P_{\mathbb{Q}} \mid x < \left(\frac{1}{s} \right) s
+\\ \implies & \exists r \in \alpha \cap P_{\mathbb{Q}}, \exists s \in \gamma \cap P_{\mathbb{Q}} \mid x < 1
+\\ x \in 1^*
+\end{align*}이므로, $\alpha \gamma \subset 1^*$이다.
+
+\subsubsection{2. $\alpha \gamma \supset 1^*$이다.}
+
+$\alpha \in P_\mathbb{R}$이므로, $\alpha > 0^* \iff \alpha \supset 0^*, \alpha \neq 0^*$이다. 따라서, $$\exists x \in (\alpha \setminus  0^*) \implies x \ge 0$$
+이고, 만약 $x = 0$라면 절단의 성질에의해 $\exists y \in \alpha \mid y > x = 0$가 존재한다. 따라서 $\alpha$에서 양의 유리수 
+\begin{align*}
+\exists a > 0 \in \alpha \tag{1}
+\end{align*}가 존재한다고 할 수 있다.
+
+
+양의 실수($P_{\mathbb{R}}$)의 곱하기의 정의에 의해서 $\alpha \gamma \supset 0^* \cup \left\{0\right\}$이다. 
+
+그러므로, $\alpha \gamma \supset 1^* \setminus \left( 0^* \cup \left\{0\right\} \right)$을 보이면 충분하다. 여기서 
+\begin{align*}
+1^* \setminus \left( 0^* \cup \left\{0\right\} \right) =& \left\{p \in \mathbb{Q} \mid p < 1 \right\} \setminus \left( \left\{p \in \mathbb{Q} \mid p < 0 \right\} \cup \left\{0\right\} \right)
+\\ =& \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}
+\end{align*}이므로, $\alpha \gamma \supset \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$을 보이는 것과 동치이다.
+
+\textbf{$\alpha \gamma \supset \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$을 보이자.}
+\\ \textbf{pf.} $\forall s \in \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$에 대해 생각하자. 
+
+이제 임의의 원소 $0 < s < 1$에 대해
+$$ t = \frac{1-s}{2} a $$라고 하자. 그리고 집합 $A$를
+
+\begin{align*}
+A = \left\{n \in \mathbb{N} \mid nt \in \alpha  \right\}
+\end{align*}라고 정의하자. $A$가 최대 원소를 가진다는 것을 보이기 위해 다음 두가지를 증명하겠다.
+
+\textbf{1. $A$는 공집합이 아니다.}
+$a \in \alpha, a > 0 \implies 0 \in \alpha$이다. 그러면 
+$$ 0 = 0t \in \alpha \implies 0 \in A$$이다.
+따라서, $A$는 공집합이 아니다.
+
+\textbf{2. $A$는 위로 유계이다.}
+\\ \textbf{pf.[귀류법]} $A$가 위로 유계가 아니라고 가정하자. 
+
+유리수체는 아르키메데스 성질을 만족하므로, 임의의 유리수 $q \in \mathbb{Q}$에 대해,
+\begin{align*}
+\exists k \in \mathbb{N} \mid  q < kt
+\end{align*}인 $k$가 존재한다. 여기서 $A$는 상계를 가지지 않으므로 $k$는 상계가 아니므로
+\begin{align*}
+\exists n \in A \mid n > k 
+\end{align*}이고, 이를 이용하면
+\begin{align*}
+q < kt < nt \in \alpha
+\end{align*}이다. 따라서 $q \in \alpha$가 된다. 이 결과로 $\alpha = \mathbb{Q}$가 되며 이는 절단의 정의에 모순이다. 
+
+따라서 $A$는 위로 유계이다. \qed
+
+위 두 증명에 의해서 집합 $A$는 최대 원소를 가진다. 이 최대원소를 $n_0 \in \mathbb{N}$이라고 하자. 그러면
+\begin{align*}
+&{n_0}t \in \alpha \cap P_{\mathbb{Q}}
+\\ &{n_0 + 1}t \notin \alpha \cap P_{\mathbb{Q}}
+\\ &{n_0 + 2}t \notin \alpha \cap P_{\mathbb{Q}}
+\end{align*}이므로, 이를 이용하면
+\begin{align*}
+\frac{1}{(n_0 + 1)t} > \frac{1}{(n_0 + 2)t} \text{ and } 1 / \frac{1}{(n_0 + 1)t} = (n_0 + 1)t \notin \alpha
+\end{align*}이므로 
+\begin{align*}
+\frac{1}{(n_0 + 2)t} \in \gamma
+\end{align*}이다. 이제
+\begin{align*}
+&x = (n_0)t \in \alpha, y = \frac{1}{(n_0 + 2)t}  \in \gamma \text{이므로,}
+\\&s \le  xy = \frac{(n_0)t}{(n_0+2)t} = \frac{n_0}{n_0+2} \implies s \in \alpha \gamma
+\end{align*} 이므로, $$s \le \frac{n_0}{n_0+2}$$을 보이면 증명이 끝난다. 이를 보이자.
+\begin{align*}
+(n_0+2)t \notin \alpha, a \in \alpha \implies& a < (n_0+2)t
+\\ \implies& a < (n_0+2) \frac{1-s}{2} a
+\\ \implies& 1 < (n_0+2) \frac{1-s}{2} \tag{$a > 0$}
+\\ \implies& \frac{2}{n_0+2} < 1-s 
+\\ \implies& s < 1 -  \frac{2}{n_0+2}
+\\ \implies& s \le \frac{n_0}{n_0+2}
+\end{align*}이므로 $$s \le \frac{n_0}{n_0+2}$$는 성립한다.
+
+따라서, $s \in \alpha \gamma$이고 이는
+$$\alpha \gamma \supset 1^*$$을 의미한다. \qed
+
+
+
+
+
+\textbf{결론.} $\alpha \gamma \subset 1^*$이며 $\alpha \gamma \supset 1^*$이므로,
+\begin{align*}
+\alpha \gamma = 1^*
+\end{align*}이다.
+
+\end{document}
+
+
+
+
+
+\iffalse
+\textbf{Case 1. $q \in \gamma$ 인 경우}
+\\ $p \in \gamma \implies \left( \exists  q \in \gamma \mid q > p \right)$이므로 만족한다.
+
+\textbf{Case 2. $q \notin \gamma$인 경우}
+\begin{align*}
+q \notin \gamma \iff& \nexists r \in P_{\mathbb{Q}} \mid r > q \text{ and } \frac{1}{r} \notin \alpha
+\\ \iff& \forall r \in P_{\mathbb{Q}} \mid r \le q \text{ or } \frac{1}{r} \in \alpha
+\\ \iff& \forall q < r \in P_{\mathbb{Q}} \mid \frac{1}{r} \in \alpha
+\\ \iff&  \forall q < r \in P_{\mathbb{Q}} \mid \left( \frac{1}{r} < \frac{1}{q} \text{ and } 0 < r \mid \frac{1}{r} \in \alpha \right)
+\\ \iff& \alpha \supset \left\{ \frac{1}{r} \in P_{\mathbb{Q}} \mid \frac{1}{r} < \frac{1}{q} \right\}  \tag{1}
+\end{align*}이다. 또한, 가정에 의해 $\alpha \in P_{\mathbb{R}}$이므로,
+\begin{align*}
+\alpha \supset \left( 0^* \cup \left\{ 0 \right\} \right) \tag{2}
+\end{align*}이다. 또한, $\frac{1}{q} \notin \alpha$라는 가정을 이용하면,
+\begin{align*}
+\frac{1}{q} \notin \alpha, q \le \forall r \in P_{\mathbb{Q}} \implies& \frac{1}{q} \notin \alpha, \frac{1}{q} \le \frac{1}{r} \tag{$\because q \in P_{\mathbb{Q}}$}
+\\ \implies& \frac{1}{r} \notin \alpha
+\end{align*}를 알 수 있다. 이를 이용하면,
+\begin{align*}
+\alpha \cap \left\{ \frac{1}{r} \in P_{\mathbb{Q}} \mid \frac{1}{q} \le \frac{1}{r} \right\} = \varnothing \tag{3}
+\end{align*}를 얻는다.
+
+(1), (2), (3)에 의해 
+\begin{align*}
+\alpha = \left( \frac{1}{q} \right) ^ *
+\end{align*}임을 알 수 있다. 
+
+이제 
+
+
+
+
+\textbf{Claim. $\exists n \in \mathbb{N} \mid a^n > b \text{ }(a \in \left\{p \in \mathbb{Q} \mid p > 1 \right\}, b \in P_{\mathbb{Q}})$}
+
+
+
+먼저 유리수체는 아르키메데스 성질을 가짐을 상기하자.
+\begin{align*}
+a-1 > 0 \implies&  1 \le \exists x \in \mathbb{N} \mid (a-1) > \frac{1}{x}
+\\ \implies&  1 \le \exists x \in \mathbb{N} \mid a > 1 + \frac{1}{x} \tag{1}
+\end{align*}이므로, $a > 1 + \frac{1}{x}$을 만족하는 자연수 $x$가 존재한다. 또한,
+\begin{align*}
+\exists y \in \mathbb{N} \mid 1 + \frac{y}{x} > b
+\end{align*}을 만족하는 자연수 $y$가 존재한다. 그 이유는 $b \le 1$인 경우에는 $\exists y = 1$인 경우에 성립하고, $b > 1$인 경우에는 \begin{align*}
+b-1 > 0 \implies& 1 \le \exists y \in \mathbb{N} \mid y > x(b-1)
+\\ \implies& 1 \le \exists y \in \mathbb{N} \mid x + y > xb
+\\ \implies& 1 \le \exists y \in \mathbb{N} \mid 1 + \frac{y}{x} > b \tag{2}
+\end{align*}이기 때문이다.
+
+마지막으로,
+\begin{align*}
+\left(1 + \frac{1}{x} \right)^y \ge 1 + \frac{y}{x} \tag{$x \in \mathbb{N} \setminus \left\{0\right\}, y \in \mathbb{N}$}
+\end{align*}를 증명하자. $y$에 대한 수학적 귀납법으로 보일 것이다.
+\\\textbf{pf.} $X = \left\{ n \in \mathbb{N} \mid \left(1 + \frac{1}{x} \right)^n \ge 1 + \frac{n}{x} \right\}$라 하자.
+\begin{align*}
+\left(1 + \frac{1}{x} \right)^0 = 1 \ge 1 = 1 + \frac{0}{x}
+\end{align*}이므로 $0 \in X$이다. 이제 $n \in X$라고 가정하면,
+\begin{align*}
+\left(1 + \frac{1}{x} \right)^{n+1} =& \left(1 + \frac{1}{x} \right)^n \left(1 + \frac{1}{x} \right)
+\\ \ge& \left(1 + \frac{n}{x}\right) \left(1 + \frac{1}{x} \right)
+\\ =& \left(1 + \frac{1}{x} \right) + \left(\frac{n}{x} + \frac{n}{x^2} \right)
+\\ \ge& \left(1 + \frac{n+1}{x} \right)
+\end{align*}이므로 $n^+ \in X$이다. 따라서 수학적 귀납법에 의해 $X = \mathbb{N}$이고, 임의의 자연수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+\left(1 + \frac{1}{x} \right)^y \ge 1 + \frac{y}{x} \tag{3}
+\end{align*}가 성립한다. \qed
+
+이제 (1), (2), (3)을 이용하면, 자연수 $y \in \mathbb{N}$이 존재하여
+\begin{align*}
+a^y > \left(1 + \frac{1}{x} \right)^y \ge 1 + \frac{y}{x} > b
+\end{align*}를 만족한다. \qed
+
+이제
+\begin{align*}
+\alpha \gamma \supset 1^*
+\end{align*}을 증명해보자.
+
+양의 실수($P_{\mathbb{R}}$)의 곱하기의 정의에 의해서 $\alpha \gamma \supset 0^* \cup \left\{0\right\}$이다. 
+
+그러므로, $\alpha \gamma \supset 1^* \setminus \left( 0^* \cup \left\{0\right\} \right)$을 보이면 충분하다. 여기서 
+\begin{align*}
+1^* \setminus \left( 0^* \cup \left\{0\right\} \right) =& \left\{p \in \mathbb{Q} \mid p < 1 \right\} \setminus \left( \left\{p \in \mathbb{Q} \mid p < 0 \right\} \cup \left\{0\right\} \right)
+\\ =& \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}
+\end{align*}이므로, $\alpha \gamma \supset \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$을 보이는 것과 동치이다.
+
+\textbf{$\alpha \gamma \supset \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$을 보이자.}
+\\ \textbf{pf.} $\forall s \in \left\{p \in \mathbb{Q} \mid 0 < p < 1 \right\}$에 대해 생각하자. $t = s^{-2}$라 하고,
+\begin{align*}
+A = \left\{n \in \mathbb{Z} \mid t^n \in \alpha  \right\}
+\end{align*}라고 정의하자. $A$가 최대 원소를 가진다는 것을 보이기 위해 다음 두가지를 증명하겠다.
+
+\textbf{1. $A$는 공집합이 아니다.}
+\\ $\alpha \supset 0^*$이므로 $a \in \alpha \setminus 0^*$를 하나 고르자, 그러면
+\begin{align*}
+&\exists m \in \mathbb{N} \mid t^{m} > \frac{1}{a}  \tag{By Claim}
+\\ \iff &\exists m \in \mathbb{N} \mid t^{-m} < a
+\end{align*}이다. 
+
+따라서 $t^{-m} \in \alpha$이고, $-m \in A$이므로 $A$는 공집합이 아니다.
+
+\textbf{2. $A$는 위로 유계이다.}
+\\ \textbf{pf.[귀류법]} $A$가 위로 유계가 아니라고 가정하자. 
+
+그러면 임의의 유리수 $q \in \mathbb{Q}$에 대해
+\begin{align*}
+\exists k \in \mathbb{N} \mid  q < t^k \tag{By Claim / $\text{when }q \le 0\text{, choose } k = 0$ }
+\end{align*}인 $k$가 존재한다. 여기서 $A$는 상계를 가지지 않으므로 $k$는 상계가 아니므로
+\begin{align*}
+\exists k < n \in A 
+\end{align*}이고, 이를 이용하면
+\begin{align*}
+q < t^k < t^n \in \alpha
+\end{align*}이다. 따라서 $q \in \alpha$가 된다. 이 결과로 $\alpha = \mathbb{Q}$가 되며 이는 절단의 정의에 모순이다. 
+
+따라서 $A$는 위로 유계이다. \qed
+
+위 두 증명에 의해서 집합 $A$는 최대 원소를 가진다. 이 최대원소를 $n_0 \in \mathbb{N}$이라고 하자. 그러면
+\begin{align*}
+&t ^ {n_0} \in \alpha \cap P_{\mathbb{Q}}
+\\ &t ^ {n_0 + 1} \notin \alpha \cap P_{\mathbb{Q}}
+\\ &t ^ {n_0 + 2} \notin \alpha \cap P_{\mathbb{Q}}
+\end{align*}이므로, 이를 이용하면
+\begin{align*}
+\frac{1}{t ^ {n_0 + 1}} > \frac{1}{t ^ {n_0 + 2}} \text{ and } 1 / \frac{1}{t ^ {n_0 + 1}} = t ^ {n_0 + 1} \notin \alpha
+\end{align*}이므로 
+\begin{align*}
+\frac{1}{t ^ {n_0 + 2}} \in \gamma
+\end{align*}이다. 따라서,
+\begin{align*}
+&x = t ^ {n_0} \in \alpha, y = \frac{1}{t ^ {n_0 + 2}}  \in \gamma
+\\&s = t^{-2} = t ^ {n_0} \frac{1}{t ^ {n_0 + 2}} = x y
+\end{align*}이므로 $s \in \alpha \gamma$이다. 
+
+따라서, $\alpha \gamma \supset 1^*$이다. \qed
+\fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

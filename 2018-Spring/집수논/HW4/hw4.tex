@@ -1,0 +1,687 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming/Coding Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+% This template uses a Perl script as an example snippet of code, most other
+% languages are also usable. Configure them in the "CODE INCLUSION 
+% CONFIGURATION" section.r
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass{article}
+\usepackage[hangul]{kotex}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+\usepackage{courier} % Required for the courier font
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsthm,amsmath}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{verbatim} % Required for multiple comment
+\usepackage{amsmath} % Required for use \therefore \because and others..
+\usepackage{amssymb} % Required for use \therefore \because and others..
+\usepackage{algorithm, algpseudocode}
+\usepackage{verbatim} % for commment, verbatim environment
+\usepackage{spverbatim} % automatic linebreak verbatim environment
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{datetime} % Used for showing version as last modified time
+\yyyymmdddate
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{xcolor}
+
+% Margins
+\linespread{1.25} % Line spacing
+\usepackage[a4paper,top=2cm,bottom=1cm,left=1cm,right=1cm,marginparwidth=1.75cm]{geometry}
+\usepackage{titlesec,sectsty}
+\setlength\parindent{0pt}
+\setlength\parskip{10pt}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\sectionfont{\fontsize{12}{10}\selectfont}
+\subsectionfont{\fontsize{10}{10}\selectfont}
+\titlespacing{\subsection}{0pt}{-\parskip}{-\parskip}
+\usepackage{multicol}
+\usepackage{cuted}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+% mathematics
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel} % cancelation of terms
+\usepackage{nicefrac} % certain fraction styles
+\newcommand*\diff{\mathop{}\!\mathrm{d}} % differential
+\DeclareMathOperator{\arsinh}{arsinh}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{JongBeom Kim}
+\chead{집합과 수리 논리 HW 4} % Top center head
+\rhead{2018 Spring} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%	CODE INCLUSION CONFIGURATION
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+\renewcommand\headrule
+{
+	\begin{minipage}{1\textwidth}
+		\hrule width \hsize height 1pt \kern 1.5pt \hrule width \hsize height 0.5pt  
+	\end{minipage}\par
+}%
+
+% lists
+\usepackage{enumitem}
+\setlist[itemize]{topsep=-10pt} %set spacing for itemize
+\setitemize{itemsep=3pt}
+\setlist[enumerate]{topsep=-10pt} %set spacing for itemize
+\setenumerate{itemsep=3pt}
+
+%	TITLE PAGE
+
+\begin{document}
+\twocolumn
+
+\chapter{Homework 4}
+
+\section{3.3.2.}
+$$f : A \rightarrow B$$가 증가하는 전단사 함수이므로, 증가함수의 정의에 의해
+$$x \le y \implies f(x) \le f(y)$$
+임은 자명하다.
+
+여기서, $f$가 전단사함수이므로, 
+$$f(x) = f(y) \implies x = y$$이고, 이는
+\begin{align*}
+x < y \implies f(x) < f(y) \tag{1}
+\end{align*}
+이다.
+
+이제 $f(x) \le f(y) \implies x \le y$임을 보이자.
+
+\textbf{pf.} 대우명제인
+$$x > y \implies f(x) > f(y)$$를 보이는 것과 같은데,
+이는 $(1)$에 의해 성립함을 안다. \qed
+
+따라서, 
+$$x \le y \iff f(x) \le f(y)$$이다.
+
+\section{3.3.6.}
+\subsection{1. $\alpha \le \alpha$을 보이자}
+$$\alpha = \alpha$$이므로 성립한다.
+\subsection{2. $(\alpha \le \beta) \wedge (\beta \le \alpha)  \implies \alpha = \beta$을 보이자}
+\begin{align*}
+&(\alpha \le \beta) \wedge (\beta \le \alpha) 
+\\ \iff& ((\alpha < \beta) \vee (\alpha = \beta) ) \wedge ( (\beta < \alpha) \vee (\beta = \alpha))
+\end{align*}
+이다. 여기서, $\alpha < \beta,\quad \alpha = \beta,\quad \alpha > \beta$ 중에서 오직 하나만 성립한 사실을 알면,
+\begin{align*}
+((\alpha < \beta) \vee (\alpha = \beta) ) \wedge ( (\beta < \alpha) \vee (\beta = \alpha)) \iff & \alpha = \beta
+\end{align*}
+임을 안다.
+
+\subsection{3. $(\alpha \le \beta) \wedge (\beta \le \gamma)  \implies \alpha \le \gamma$을 보이자}
+$\alpha = \beta$이면, $\alpha = \beta \le \gamma$임을 알고,
+
+$\beta = \gamma$이면, $\alpha \le \beta = \gamma$임을 안다.
+
+따라서, $$(\alpha < \beta) \wedge (\beta < \gamma)  \implies \alpha \le \gamma$$을 보이면 충분하다.
+
+\textbf{pf.}
+$ord(A) = \alpha, \quad ord(B) = \beta, \quad ord(c) = \gamma$인 정렬집합 $A, B, C$를 생각하자.
+\begin{align*}
+&(\alpha < \beta) \wedge (\beta < \gamma) 
+\\ \implies & (A\text{가 } B\text{의 절편과 순서동형}) \wedge (B\text{가 } C\text{의 절편과 순서동형})
+\\ \implies & (A\text{가 } C\text{의 절편과 순서동형})
+\\ \implies & \alpha < \gamma  \implies  \alpha \le \gamma
+\end{align*}이므로 성립한다.
+
+\textbf{결론.} 1., 2., 3.이 성립하므로, 서수들 사이의 순서가 잘 정의됨을 안다. \qed
+
+\section{3.4.1.}
+\subsection{1. $(g \circ f)((m, n)) = (m, n)$}
+$$f(m, n) = \dfrac{1}{2} \left[ (m+n)^2 + 3m + n\right]$$
+이고,
+$$ \frac{1}{2}(m+n)(m+n+1) \le f(m, n) < \frac{1}{2}(m+n+1)(m+n+2) $$
+이므로, 
+\begin{align*}
+&g(f(m, n))  
+\\ =&\bigg( f(m, n) - \frac{1}{2} (m+n)(m+n+1), 
+\\ &(m+n) - \left[ f(m, n) - \frac{1}{2}(m+n)(m+n+1)\right] \bigg)
+\\ =&\left( \frac{1}{2}(2m), (m+n) - \frac{1}{2}(2m) \right)
+\\ =&(m, n)
+\end{align*}이다.
+\subsection{2. $(f \circ g)(y) = y$}
+자연수 $y$에 대해, $x \in \mathbb{N}$를 다음과 같이 잡자.
+$$ \frac{1}{2}(x)(x+1) \le y < \frac{1}{2}(x+1)(x+2) $$
+그러면,
+$$g(y) = \left( y - \frac{1}{2}x(x+1), x-\left[y-\frac{1}{2}x(x+1)\right]\right)$$
+\begin{align*}
+f(g(y)) =& f\left(\left( y - \frac{1}{2}x(x+1), x-\left[y-\frac{1}{2}x(x+1)\right]\right)\right)
+\\ =& \frac{1}{2}\left[x^2 + x + 2y - x(x+1)\right]
+\\ =& y
+\end{align*}이다.
+
+따라서, $f$와 $g$는 서로 역함수 관계이다.
+
+\section{3.5.3.}
+$g(\mathbb{N}) = \mathbb{N} \setminus \left\{0, 1\right\}$이므로,
+$$C_0 = \left\{0, 1\right\}, \quad D_0 = \left\{1, 2\right\}$$
+$$C_1 = \left\{3, 4\right\}, \quad D_1 = \left\{4, 5\right\}$$
+$$C_2 = \left\{6, 7\right\}, \quad D_2 = \left\{7, 8\right\}$$
+꼴로 이루어지므로,
+$$C = \mathbb{N} \setminus \left\{3k + 2 \mid k \in \mathbb{N} \right\}$$
+이다. 이를 이용하여 $h : \mathbb{N} \rightarrow \mathbb{N}$를 정의하면,
+$$
+h(x) = \left\{\begin{matrix}
+x+1 & x \in C
+\\ x-2 & x \in A\setminus C
+\end{matrix}\right.
+$$이고, 다시 써보면
+$$
+h(x) = \left\{\begin{matrix}
+x+1 & x \in \left\{0, 1, 3, 4, 6, 7, \cdots \right\}
+\\ x-2 & x \in \left\{2, 5, 8, 11, 14, \cdots \right\}
+\end{matrix}\right.
+$$ 꼴의 함수임을 살펴 볼 수 있다.
+
+\section{3.5.4.}
+$$a = \text{card}(A), \quad b = \text{card}(B), \quad c = \text{card}(C), \quad d = \text{card}(D)$$
+을 만족하는 집합 $A, B, C, D$을 생각하자.
+
+$0 < a \le c$이므로, $A \neq \varnothing, C \neq \varnothing$임을 안다.
+
+그리고, $a \le c$이므로, 단사함수 $$f : A \rightarrow C$$가 존재하고,
+$b \le d$이므로, 단사함수 $$g : B \rightarrow D$$가 존재한다.
+
+3.에서 $g$의 역함수를 이용하려 하는데, 보다 엄밀한 정의를 위해 다음 함수를 정의하자.
+$$g_+ : B \rightarrow g[B]$$
+이 함수는, $g$에서 공역을 치역인 $g[B]$로 바꾼 함수이다. 따라서, 전단사함수가 되고 역함수
+$$g_+^{-1} : g[B] \rightarrow B$$가 존재한다.
+
+\subsection{1. $a+b \le c+d$}
+함수
+$$h_1 : A \sqcup B \rightarrow C \sqcup D$$
+를
+$$
+h_1(x) = \left\{ 
+\begin{matrix}
+f(x) & x \in A
+\\g(x) & x \in B
+\end{matrix}
+\right.
+$$
+와 같이 정의하면 $h_1$은 두 단사함수를 disjoint하게 합친 함수이므로, 단사함수가 된다. 보다 자세히 설명하면,
+\begin{align*}
+h_1(x) = h_1(y) \implies &
+\left\{
+\begin{matrix}
+f(x) = f(y) & x, y \in A
+\\ g(x) = g(y) & x, y \in B
+\end{matrix}
+\right.
+\\ \implies & x = y
+\end{align*}이므로, 단사함수이다.
+
+따라서, $a+b \le c+d$임을 알 수 있다.
+
+\subsection{2. $ab \le cd$}
+함수
+$$h_2 : A \times B \rightarrow C \times D$$
+를
+$$
+h_2( (a, b) ) = \left(f(a), g(b) \right)
+$$
+와 같이 정의하면 $h_2$은 각각의 인자를 단사함수에 대입한 함수이므로, 단사함수가 된다. 보다 자세히 설명하면
+\begin{align*}
+h_2((a, b)) = h_2((c, d)) \implies & \left(f(a), g(b)\right) = \left(f(c), g(d)\right)
+\\ \implies & \left(f(a) = f(c)\right) \wedge \left(g(b) = g(d)\right)
+\\ \implies & \left(a=c\right) \wedge \left(b=d\right)
+\\ \implies & (a, b) = (c, d)
+\end{align*}이므로, 단사함수이다.
+
+따라서, $ab \le cd$임을 알 수 있다.
+
+\subsection{3. $a^b \le c^d$}
+함수
+$$h_3 : A^B \rightarrow C^D$$
+를
+$n : B \rightarrow A$에 대해 $m : D \rightarrow C$을 정의해보려 한다. 일단, $C \neq \varnothing$이므로, $\exists k \in C$를 하나 잡자.
+\begin{align*}
+m(d) = \left\{ \begin{matrix}
+k & d \in D \setminus g[B]
+\\ f(n(g_+^{-1}(d))) & d \in g[B]
+\end{matrix} \right.
+\end{align*}
+이제, $h_3$를
+$$
+h_3( n : B \rightarrow A ) = ( m : D \rightarrow C)
+$$
+꼴로 정의하자. 이제 단사함수임을 보이려 한다.
+\begin{align*}
+h_3(n_1) = h_3(n_2) \implies & m_1 = m_2
+\\ \implies & f(n_1(g_+^{-1}(d))) = f(n_2(g_+^{-1}(d))) \tag{$d \in g[B]$}
+\\ \implies & f(n_1(b)) = f(n_2(b)) \tag{$b \in B$}
+\\ \implies & n_1(b) = n_2(b) \tag{$f$는 단사함수}
+\\ \implies & n_1 = n_2
+\end{align*}이므로, $h_3$은 단사함수이다.
+
+따라서, $a^b \le c^d$임을 알 수 있다.
+
+
+\section{3.5.6.}
+\subsection{1. 단사함수 $f : 2^{\mathbb{N}} \rightarrow \mathbb{R}$ 존재}
+$$f(a : \mathbb{N} \rightarrow \left\{0, 1\right\}) = \sum_{i\in \mathbb{N}} {\frac{a(i)}{3^i}}$$
+라 하자. 일단 $\sum_{i\in \mathbb{N}} {\dfrac{a(i)}{3^i}} \in \mathbb{R}$을 보이자.
+
+\textbf{pf.} 
+$$\alpha(k) = \sum_{i \in 0}^{k} {\frac{a(i)}{3^i}}$$라 하면, 임의의 유리수 $e > 0$에 대해, 
+$$\exists n \in \mathbb{N} \setminus \left\{0\right\} \bigg| e > \frac{1.5}{3^n}$$라 하자.
+그러면, $N = n$이라고 하면
+$$i, j \le N = n \implies \left|\alpha(i) - \alpha(j)\right| < \frac{1.5}{3^n} < e$$
+이므로, $\alpha$는 코시수열이고, 실수이다.
+
+이제,
+\begin{align*}
+f(a) = f(b) \implies& [f(a) \times 3^i] \equiv [f(b) \times 3^i] \mod 3 \tag{$i \in \mathbb{N}$} 
+\\ \implies& a(i) = b(i) \tag{$ i \in \mathbb{N}$}
+\\ \implies& a = b
+\end{align*}
+이므로, $f$는 단사함수 임을 알 수 있다.
+
+\subsection{2. 단사함수 $g : \mathbb{R} \rightarrow 2^{\mathbb{N}}$ 존재}
+집합 $A = \left\{q \in \mathbb{Q} \bigg| 0 < q < 1 \right\}$라 하자.
+함수
+$$p : \mathbb{R} \rightarrow A$$
+를 $$p(x) = \frac{1}{1 + 2^x}$$라고 정의하자. 
+\begin{align*}
+p(x) = p(y) \implies& \frac{1}{1 + 2^x} = \frac{1}{1 + 2^y}
+\\ \implies& 1 + 2^x = 1 + 2^y
+\\ \implies& 2^x = 2^y
+\\ \implies& x = y
+\end{align*}이므로 단사함수이다.
+
+함수
+$$h : A \rightarrow 2^{\mathbb{N}}$$
+를 $$i \in \mathbb{N}, \quad (h(x))(i) = [x \times 2^{i+1}] \mod 2$$라 정의하자.
+
+이제, $x \neq y \implies h(x) \neq h(y)$임을 보이자.
+
+\textbf{pf.} 일반성을 잃지 않고 $x < y$라 하자. 그러면
+$$\exists n \in \mathbb{N} \setminus \left\{0\right\} \bigg| \frac{1}{2^n} < \frac{1}{k} < y-x$$
+이다.
+
+이제 $$(h(x))(i) = (h(y))(i), \quad i \le n-1, i \in \mathbb{N} $$일 수 없음을 보이자.
+
+\textbf{pf. [귀류법]} $$(h(x))(i) = (h(y))(i), \quad i \le n-1, i \in \mathbb{N} $$라 하자. 
+그러면, 
+
+\begin{align*}
+y-x =& \sum_{i\in\mathbb{N}}{ \left(([y \times 2^{i+1}] \mod 2) \times \frac{1}{2^{i+1}} \right)}
+\\ &- \sum_{i\in\mathbb{N}}{ \left(([x \times 2^{i+1}] \mod 2) \times \frac{1}{2^{i+1}} \right)} 
+\\ =& \sum_{i \ge n}{ \left(([y \times 2^{i+1}] \mod 2) \times \frac{1}{2^{i+1}} \right)}
+\\ &- \sum_{i \ge n}{ \left(([x \times 2^{i+1}] \mod 2) \times \frac{1}{2^{i+1}} \right)} 
+\\ =& \sum_{i \ge n+1}{ \left(([y \times 2^i] \mod 2) \times \frac{1}{2^i} \right)}
+\\ &- \sum_{i \ge n+1}{ \left(([x \times 2^i] \mod 2) \times \frac{1}{2^i} \right)} 
+\\ &\le \frac{1}{2^n}
+\end{align*}
+이므로, $\dfrac{1}{2^n}< y-x$임에 모순이다. \qed
+
+따라서, $x \neq y \implies h(x) \neq h(y)$이고, 이는 $h$가 단사함수임을 의미한다.
+
+함수 $g : \mathbb{R} \rightarrow 2^{\mathbb{N}}$를 $$g = p \circ h$$로 정의하면, 두 단사함수의 합성이므로 $g$ 역시 단사함수이다.
+
+\textbf{결론.} 1., 2.에 의해 $2^{\mathbb{N}}$와 $\mathbb{R}$사이의 단사함수 $f, g$가 존재하므로, 3.5.2. 베른슈타인 정리에 의해서 
+$$2^{\mathbb{N}} \approx \mathbb{R}$$
+임을 알 수 있고, 이는 
+$$2^{\aleph_0} = \mathfrak{c} $$
+을 의미한다.
+
+
+\section{3.5.7.}
+\subsection{(가) $\aleph_0$}
+유한부분집합 전체의 집합은 $k \in 2^\mathbb{N}$의 원소($k$)중에서
+$$k(n) = 1 \quad n \in \mathbb{N}$$을 만족하는 $n$이 유한개인 원소들을 모아놓은 집합과 같다.
+
+위 집합을 $X$라 하자. $X$의 임의의 원소는 어떤 자연수 $m$의 이진수 표현 일대일 대응이라는 것을 알 수 있다. 예를 들어,
+$$k(0) = 1, k(1) = 0, k(2) = 1, k(3 \le i) = 0 \implies 101_{(2)}$$
+$$k(0) = 1, k(1) = 1, k(2) = 0, k(3) = 1 k(4 \le i) = 0 \implies 1011_{(2)}$$
+등과 대응할 수 있다. 이 사실을 상기하여, 함수
+$$f : \mathbb{N} \rightarrow X$$
+를 $$f(n) = (\text{$n$의 이진수 표현에 대응 되는 $2^\mathbb{N}$의 원소})$$
+라 하고, 함수
+$$g : X \rightarrow \mathbb{N}$$을
+$$g(x) = (\text{함수 $x$로 표현되는 이진수의 자연수 값})$$으로 정의하면,
+$$f \circ g, \quad g \circ f$$는 항등함수이고, $f$와 $g$는 서로 역함수 관계임을 안다.
+
+따라서, 위 집합의 기수는 $\aleph_0$이다.
+\subsection{(나) $2^{\aleph_0}$}
+(가)와 비슷하게, 무한부분집합 전체의 집합은 $k \in 2^\mathbb{N}$의 원소($k$)중에서
+$$k(n) = 1 \quad n \in \mathbb{N}$$을 만족하는 $n$이 무한개인 원소들을 모아놓은 집합과 같다.
+
+위 집합을 $Y$라 하고, 이 집합의 기수를 $y$라 하자. 그러면,
+$$X \cup Y = 2^\mathbb{N}, \quad X \cap Y = \varnothing$$
+임을 안다. 이를 이용하면,
+$$\text{card}(X) + \text{card}(Y) = \text{card}(2^{\mathbb{N}})$$
+$$\aleph_0 + y = 2^{\aleph_0}$$
+이다. 여기서, $y \le \aleph_0$라 하면,
+$$\aleph_0 = \aleph_0 + y = 2^{\aleph_0}$$인데, $$\aleph_0 \neq 2^{\aleph_0}$$이므로 모순이다. 
+따라서, $\aleph_0 < y$임을 안다.
+
+이를 이용하면,
+$$y = \aleph_0 + y = 2^{\aleph_0}$$
+이므로, 위 집합의 기수는 $2^{\aleph_0}$임을 알 수 있다.
+
+\subsection{(다) $2^{\aleph_0}$}
+$\mathbb{N}$사이에 정의된 순증가함수 전체의 집합($A$라 하자.)과 $\mathbb{N}$ 사이에 정의된 함수 전체의 집합은 대등함을 보이자.
+
+먼저, $$f : A \rightarrow \mathbb{N}^{\mathbb{N}}$$를 항등함수로 정의하면 단사함수이다.
+이제, 함수
+$$g : \mathbb{N}^{\mathbb{N}} \rightarrow A$$를 단사함수로 정의하려한다.
+
+$a \in \mathbb{N}^{\mathbb{N}}$에 대해,
+$$(g(a))(0) = a(0)$$
+$$(g(a))(i) = (g(a))(i-1) + a(i) + 1, \quad 1 \le i$$라 하면,
+$g(a)$는 순증가함수이다. 또한,
+\begin{align*}
+g(a) = g(b) \implies& (a(0) = b(0)) \wedge \tag{$1 \le i$}
+\\ & (g(a)(i) - g(a)(i-1) = g(b)(i) - g(b)(i-1))
+\\ \implies& (a(0) = b(0)) \wedge (a(i)+1 = b(i)+1) \tag{$1 \le i$}
+\\ \implies& (a(0) = b(0)) \wedge (a(i) = b(i)) \tag{$1 \le i$}
+\\ \implies& a = b
+\end{align*}이므로, $g$는 단사함수이다.
+
+$f, g$가 단사함수이므로, 베른슈타인 정리에 의해,
+$$ A \approx  \mathbb{N}^{\mathbb{N}}$$
+이고, (마)에 의해 $A$의 기수는 $2^{\aleph_0}$이다.
+
+\subsection{(라) $2^{\aleph_0}$}
+$\mathbb{N}$사이에 정의된 전단사함수 전체의 집합($B$라 하자.)과 $\mathbb{N}$ 사이에 정의된 함수 전체의 집합은 대등함을 보이자.
+
+먼저, $$f : B \rightarrow \mathbb{N}^{\mathbb{N}}$$를 항등함수로 정의하면 단사함수이다.
+이제, 함수
+$$g : \mathbb{N}^{\mathbb{N}} \rightarrow B$$를 단사함수로 정의하려한다.
+
+$a \in \mathbb{N}^{\mathbb{N}}$에 대해,
+$$(g(a))(0) = a(0)$$
+\begin{align*}
+(g(a))(i) =& \left( \mathbb{N} - \left\{(g(a))(j) \bigg| j < i, j \in \mathbb{N}  \right\} \right) \text{의}
+\\ &\text{$a(i)+1$ 번째 원소} \tag{$1 \le i$}
+\end{align*}
+라 할 수 있다. 왜냐하면, 위의 집합이 유한집합이 아닌 정렬집합이므로, 자연수 번째의 원소를 고를 수 있기 때문이다.
+
+정의에 의해 $g(a)$는 전단사함수이다. 또한,
+\begin{align*}
+g(a) = g(b) \implies& (a(0) = b(0)) 
+\end{align*}이고, $a(i) = b(i), \quad i \le k$이면 $g$의 정의에 의해
+$a(k+1) = b(k+1)$을 얻을 수 있다. 즉, 수학적 귀납법에 의해 
+$$a(i) = b(i), \quad i \in \mathbb{N}$$임을 알 수 있으므로,
+$$g(a) = g(b) \implies a = b$$를 얻고, $g$는 단사함수임을 안다.
+
+$f, g$가 단사함수이므로, 베른슈타인 정리에 의해,
+$$ B \approx  \mathbb{N}^{\mathbb{N}}$$
+이고, (마)에 의해 $A$의 기수는 $2^{\aleph_0}$이다.
+
+
+\subsection{(마) $2^{\aleph_0}$}
+집합 $\mathbb{N}$ 사이에 정의된 함수 전체의 집합은
+$$\mathbb{N}^\mathbb{N}$$과 같고, 기수의 정의에 의해 이 집합의 기수는
+$$\aleph_0 ^ {\aleph_0}$$이다. 더 서술해보면,
+$$2 ^ {\aleph_0} \le \aleph_0 ^ {\aleph_0} $$이고,
+$$\aleph_0 ^ {\aleph_0} \le (2^{\aleph_0}) ^ {\aleph_0} = 2^{{\aleph_0} \times {\aleph_0}} = 2^{\aleph_0}$$
+이므로,
+$$\aleph_0 ^ {\aleph_0} = 2^{\aleph_0}$$이다.
+
+따라서, 위 집합의 기수는 $2^{\aleph_0}$이다.
+
+\section{3.5.8.}
+(마), (라), ((가), (나), (다)) 순서로 보는 것을 추천한다.
+
+\subsection{(가), (나), (다) $\mathfrak{c}$}
+각각에서 정의한 집합을 $K$라 하고, (라)에서 정의한 연속함수의 집합을 $A$라 하자.
+
+각각에서 정의한 집합은 모두 연속함수이므로, $K \subset A$임을 안다.
+
+\subsubsection{1. $\text{card}(\mathbb{R}) \le \text{card}(K)$}
+함수 $f$를
+$$f : \mathbb{R} \rightarrow K$$
+$$(f(x))(y) = x$$
+로 정의하면 상수함수이므로 연속함수이고, 
+$$f(x) = f(y) \implies f(x)(0) = f(y)(0) \implies x = y$$이므로 단사함수이다.
+
+따라서, $$\text{card}(\mathbb{R}) \le \text{card}(K)$$이다. \qed
+
+\subsubsection{2. $\text{card}(K) \le \text{card}(A)$}
+함수 $g$를
+$$g : K \rightarrow A$$
+를 항등함수로 정의하면
+$$g(x) = g(y) \implies x = y$$이므로 단사함수이다.
+
+따라서, $$\text{card}(K) \le \text{card}(A)$$이다. \qed
+
+\textbf{결론.} 1., 2., (라)의 결론에 의해
+$$\mathfrak{c} = \text{card}(\mathbb{R}) \le \text{card}(K) \le \text{card}(A) = \mathfrak{c}$$
+이므로,
+$$\mathfrak{c} = \text{card}(K)$$이다.
+
+
+\subsection{(라) $\mathfrak{c}$}
+
+$\mathbb{R}$사이에 정의된 연속함수 전체의 집합을 $A$라 하자. 
+\subsubsection{1. $\mathfrak{c} = \text{card}(\mathbb{R}) = \text{card}(\mathbb{R}^{\mathbb{Q}})$}
+\textbf{pf.}
+\begin{align*}
+\text{card}(\mathbb{R}^{\mathbb{Q}}) =& \text{card}(\mathbb{R})^{\text{card}(\mathbb{Q})}
+\\ =& \mathfrak{c} ^ {\aleph_0} = (2^{\aleph_0}) ^ {\aleph_0}
+\\ =& 2^{\aleph_0 \times \aleph_0} = 2^{\aleph_0}
+\\ =& \mathfrak{c} = \text{card}(\mathbb{R})
+\end{align*} \qed
+
+
+\subsubsection{2. $\text{card}(\mathbb{R}) \le \text{card}(A)$}
+함수 $f$를
+$$f : \mathbb{R} \rightarrow A$$
+$$(f(x))(y) = x$$
+로 정의하면 상수함수이므로 연속함수이고, 
+$$f(x) = f(y) \implies f(x)(0) = f(y)(0) \implies x = y$$이므로 단사함수이다.
+
+따라서, $$\text{card}(\mathbb{R}) \le \text{card}(A)$$이다. \qed
+
+\subsubsection{3. $\text{card}(A) \le \text{card}(\mathbb{R}^{\mathbb{Q}})$}
+함를 $g$를
+$$g : A \rightarrow \mathbb{R}^{\mathbb{Q}}$$
+$$(g(a))(q) = a(q), \quad q \in \mathbb{Q}$$로 정의하자.
+
+이제 단사함수임을 보여야한다.
+먼저 $$g(a) = g(b) \implies (g(a))(q) = (g(b))(q), \quad (q \in \mathbb{Q})$$이다.
+임의의 실수 $r \in \mathbb{R}$를 잡으면, 실수가 코시수열의 동치류로 생각하고 $r$에 대응하는 코시수열 $\alpha$를 생각하자. 유리수를 실수로 확장해서 생각하면, (완3)에 의해서 코시수열 $\alpha$는 실수에서 수렴한다. (그 값은 $r$일 것이다.)
+
+해석학에서 함수 $f$가 연속함수이면, $r$로 수렴하는 수열 $n(i)$에 대해서, 수열 $m(i) = f(n(i))$은 $f(r)$로 수렴함을 안다.
+
+따라서, 수열 $\beta$를 $\beta(i) = f(\alpha(i))$로 잡으면 수렴하고, 정리 2.4.1.에의해 수렴하는 수열은 코시수열이므로 $\beta$는 코시수열이다.
+
+이제 다시 돌아와서, $\beta_a(i) = a(\alpha(i))$라 하고, $\beta_b(i) = b(\alpha(i))$라 하면, $(g(a))(q) = (g(b))(q), \quad (q \in \mathbb{Q})$이므로 $$\beta_a = \beta_b$$이고, 둘은 같은 값으로 수렴한다. 
+
+즉, $\forall r \in \mathbb{R} \bigg| a(r) = b(r)$임을 알 수 있다.
+
+따라서, $g$는 단사함수이고 이는
+
+ $$\text{card}(A) \le \text{card}(\mathbb{R}^{\mathbb{Q}})$$을 의미한다. \qed
+
+\textbf{결론.} 1., 2., 3.에 의해
+$$\mathfrak{c} = \text{card}(\mathbb{R}) \le \text{card}(A) \le \text{card}(\mathbb{R}^{\mathbb{Q}}) = \mathfrak{c}$$임을 알 수 있으므로,
+$$\mathfrak{c} = \text{card}(A)$$이다.
+
+\subsection{(마) $2^{\mathfrak{c}}$}
+집합 $\mathbb{R}$ 사이에 정의된 함수 전체의 집합은
+$$\mathbb{R}^\mathbb{R}$$과 같고, 기수의 정의에 의해 이 집합의 기수는
+$$\mathfrak{c}^{\mathfrak{c}} = \left(2^\aleph_0  \right) ^ { 2^{\aleph_0}}$$이다. 더 서술해보면,
+$$2 ^ {\mathfrak{c}} = 2 ^ { 2^{\aleph_0}} \le \left(2^{\aleph_0}  \right) ^ { 2^{\aleph_0}} $$이고,
+$$\mathfrak{c} ^ {\mathfrak{c}} \le (2^{\mathfrak{c}}) ^ {\mathfrak{c}} = 2^{{\mathfrak{c}} \times {\mathfrak{c}}} = 2^{\mathfrak{c}}$$
+이므로,
+$$\mathfrak{c} ^ {\mathfrak{c}} = 2^{\mathfrak{c}}$$이다.
+
+따라서, 위 집합의 기수는 $2^{\mathfrak{c}}$이다.
+
+\section{3.6.1.}
+\subsection{(가)}
+\subsubsection{1. $\alpha^+$는 서수이다.}
+$$\xi \in \alpha^+ \setminus \left\{\alpha \right\} \implies \xi \in \alpha \implies S_{\xi} = \xi$$
+이고,
+$$\left( \xi \in \left\{\alpha \right\} \implies  S_{\xi} = \xi \right) \iff  S_\alpha = \alpha$$
+이다. $S_\alpha = \alpha$를 증명하자.
+
+\textbf{pf.}
+$$x \in S_\alpha \iff x < \alpha \iff x \in \alpha$$
+이므로 $S_\alpha = \alpha$이다. \qed
+
+따라서, $\alpha^+$에 대해
+$$\xi \in \alpha^+  \implies  S_{\xi} = \xi$$
+가 성립하으로 $\alpha^+$는 서수이다.
+
+
+\subsubsection{2. $\alpha^+ = \alpha + 1$이다.}
+$$\text{ord}(\left\{\alpha\right\}) = \text{ord}(\left\{0\right\}) = 1$$
+이므로,
+$$\alpha^+ = \text{ord}(\alpha \cup \left\{\alpha\right\}) = \text{ord}(\alpha) + \text{ord}(\left\{\alpha\right\}) = \alpha + 1$$이다.
+
+\subsection{(나)}
+
+절편의 정의에 의해 
+$$x \in S_\beta \implies x \in A$$이므로
+$$S_\beta \subset \alpha$$이다. 이를 이용하면
+$$\xi \in S_\beta \implies \xi \in \alpha  \implies  S_{\xi} = \xi$$
+이므로, $S_\beta$는 서수이다.
+
+그리고, (가)의 정리에 의해 $\beta = S_\beta$이므로, $\beta$도 서수이다.
+
+
+\section{3.6.5.}
+대우명제를 보이자.
+\begin{align*}
+\alpha \ge \beta \implies& \alpha \supset \beta
+\\ \implies& \text{$\beta$에서 $\alpha$로 가는 단사함수 존재}
+\\ \implies& \beta \preceq \alpha
+\\ \iff& \text{card}(\alpha) \ge \text{card}(\beta)
+\end{align*}
+
+\section{3.6.6.}
+$$\omega \approx \omega$$이다.
+$$\omega^2 \approx \omega$$이다.
+$$\omega^k \approx \omega, \quad 2 \le k$$라 하면,
+$$\omega^{k+1} \approx \omega \times \omega \approx \omega$$이므로,
+수학적 귀납법에 의해 모든 자연수 $1 \le n$에 대해
+$$\omega^n \approx \omega$$이다.
+
+위와 열거한 서수들 중 어느 부분부터 $\mathbb{N}$과 대등하지 않은지는 모르겠다.
+
+\section{3.6.7.}
+\subsection{1. $\implies$}
+임의의 무한 기수, 즉 시작서수를 $A$라 하자. $A$는 극한서수임을 다음과 같이 보일 수 있다.
+
+\textbf{pf. [귀류법]} $A$가 극한서수가 아니라고 모순을 보이자. 즉, 어떤 서수 $B$가 존재하여, $$B = A + 1$$이다.
+
+일단 무한 기수이므로, $w \subset A$이다.
+
+함수
+$$f : B \rightarrow A$$를
+$$
+f(n) = 
+\left\{
+\begin{matrix}
+n+1 & n \in \mathbb{N}
+\\ 0 & n \in B \setminus A
+\\ n & n \in A \setminus \mathbb{N}
+\end{matrix}
+\right.
+$$ 는 전단사함수이다. 따라서, $B$와 $A$가 대등하고 이는 
+$A$가 대등한 기수들중 가장 작은 기수라는 것에 모순이다. \qed
+
+따라서, $A$는 극한서수이다.
+
+\subsection{2. $\impliedby$는 성립하지 않는다.}
+$\omega \cdot 2$는 극한 서수이지만, 시작서수는 아니다.
+
+왜냐하면 $\text{card} (\omega \cdot 2) = \omega$이기 때문이다. 
+
+\section{3.6.8.}
+문제에서 주어진 집합을
+$$A = \left\{ \xi : \xi \approx \aleph_0 \right\}$$
+라 하자.
+
+정의에 의해서
+$$\aleph_0 < \text{card}(\aleph_1) \le 2^{\aleph_0}$$
+이다.
+\begin{align*}
+x \in A \implies& x \approx \aleph_0 \implies \text{card}(x) = \aleph_0
+\\ \implies& \text{card}(x) = \aleph_0 < \text{card}(\aleph_1)
+\\ \implies& x < \aleph_1 \tag{문제 3.6.5.}
+\end{align*}
+이므로, $\aleph_1$는 $A$의 상계이다.
+
+이제 상한임을 보이자. 임의의 서수 $a < \aleph_1$에 대해
+$$\text{card}(a) \le \aleph_0$$이다. 
+
+또한, $a \approx a^+$이므로, 
+$$\text{card}(a^+) \le \aleph_0$$이다. 
+
+즉, $a < a^+$인데 $a^+ \in A$이므로, $a$는 $A$의 상계가 아니다.
+
+따라서, $\aleph_1$는 $A$의 상한이다. \qed
+
+%왜냐하면, 이게 아니라고하면 $\aleph_1$이 정의에 의해 
+%$$\left\{ \xi : \aleph_0 < \text{card}(\xi) \le 2^{\aleph_0} \right\}$$
+%의 가장 작은 원소인데, $a < \aleph_1
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
