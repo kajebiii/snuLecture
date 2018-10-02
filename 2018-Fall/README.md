@@ -31,5 +31,5 @@
 
 # Exam List
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
-- 10/23 [IE-MID]
+- 10/23 [IE-MID]()
 
