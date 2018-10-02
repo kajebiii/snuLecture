@@ -1,4 +1,4 @@
-## 2018-Spring
+## 2018-Fall
 
 # Course
 - [알고리즘](http://etl.snu.ac.kr/course/view.php?id=146806)
@@ -10,7 +10,15 @@
 
 # Assignment List
 - 09/14-23:59:59 [PL 1](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw1.pdf)
+  - 50/50
 - 09/21-23:59:59 [PL 2](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw2.pdf)
+  - 70/70
+- 09/27-23:59:59 [MC 1](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1542019)
+  - Submitted
+- 10/04-23:59:59 [PP 1](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw1)
+  - Did
+- 10-10 13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
+  - Did
 - 10/19-23:59:59 [PL 3](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw3.pdf)
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
@@ -18,7 +26,10 @@
 - 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
 - 12/14-23:59:59 [PL 8](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw8.pdf)
 
+
 # Quiz List
 
 # Exam List
+- 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
+- 10/23 [IE-MID]
 
