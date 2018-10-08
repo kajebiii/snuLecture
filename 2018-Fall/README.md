@@ -35,6 +35,7 @@
 # Quiz List
 
 # Exam List
+- 10/23 [PP-MID](https://github.com/snu-sf-class/pp201802)
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
 - 10/23 [AT-MID]()
