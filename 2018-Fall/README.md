@@ -17,9 +17,9 @@
   - Submitted
 - 10/04-23:59:59 [PP 1](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw1)
   - 600/600
-- 10-10 13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
-  - TODO
-- 10-16 23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)
+- 10/10-13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
+  - Submitted
+- 10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)
   - TODO
 - 10/18-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1542019)
   - TODO
@@ -39,4 +39,6 @@
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
 - 10/23 [AT-MID]()
+- 10/24 [EH-MID]()
+- 10/31 [AG-MID]()
 
