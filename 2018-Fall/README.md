@@ -44,7 +44,7 @@
   - 8장 + 보충자료까지 시험범위
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
 - 10/23 [AT-MID]()
-  - 
+  - 3.4.까지
 - 10/24 [EH-MID]()
 - 10/31 [AG-MID]()
 
