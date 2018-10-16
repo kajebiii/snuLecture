@@ -20,13 +20,13 @@
 - 10/10-13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
   - Submitted
 - 10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)
-  - TODO
+  - Submitted
 - 10/18-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1542019)
   - TODO
 - 10/19-23:59:59 [PL 3](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw3.pdf)
   - DONE
 - 10/24-23:59:59 [PP 2](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw2)
-  - TODO
+  - DONE
 - 10/26-23:59:59 [AG 2](http://etl.snu.ac.kr/mod/assign/index.php?id=146806)
   - TODO
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
