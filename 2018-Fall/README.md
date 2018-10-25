@@ -2,7 +2,7 @@
 
 # Course
 - [알고리즘](http://etl.snu.ac.kr/course/view.php?id=146806)
-- --[오토마타](http://theory.snu.ac.kr/?page_id=1388)--
+- ~~[오토마타](http://theory.snu.ac.kr/?page_id=1388)~~
 - [멀티코어](http://etl.snu.ac.kr/course/view.php?id=148565)
 - [프로그래밍언어](http://ropas.snu.ac.kr/~kwang/4190.310/18/)
 - [프로그래밍원리](https://github.com/snu-sf-class/pp201802)
@@ -19,7 +19,7 @@
   - 600/600
 - 10/10-13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
   - 110/110
-- --10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)--
+- ~~10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)~~
   - Submitted
 - 10/18-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1542019)
   - Submitted
@@ -46,7 +46,7 @@
   - 8장 + 보충자료까지 시험범위
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
   - 망한거 같다.
-- --10/23 [AT-MID]()--
+- ~~10/23 [AT-MID]()~~
   - 3.4.까지
 - 10/24 [EH-MID]()
   - 
