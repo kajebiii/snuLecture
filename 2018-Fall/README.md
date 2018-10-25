@@ -2,7 +2,7 @@
 
 # Course
 - [알고리즘](http://etl.snu.ac.kr/course/view.php?id=146806)
-- [오토마타](http://theory.snu.ac.kr/?page_id=1388)
+- --[오토마타](http://theory.snu.ac.kr/?page_id=1388)--
 - [멀티코어](http://etl.snu.ac.kr/course/view.php?id=148565)
 - [프로그래밍언어](http://ropas.snu.ac.kr/~kwang/4190.310/18/)
 - [프로그래밍원리](https://github.com/snu-sf-class/pp201802)
@@ -18,17 +18,17 @@
 - 10/04-23:59:59 [PP 1](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw1)
   - 600/600
 - 10/10-13:50:00 [AG 1](http://etl.snu.ac.kr/mod/assign/view.php?id=760297)
-  - Submitted
-- 10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)
+  - 110/110
+- --10/16-23:59:59 [AT 1](http://theory.snu.ac.kr/?page_id=1388&uid=377&mod=document)--
   - Submitted
 - 10/18-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1542019)
   - Submitted
 - 10/19-23:59:59 [PL 3](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw3.pdf)
-  - Submitted
+  - 60/60
 - 10/24-23:59:59 [PP 2](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw2)
-  - Submitted
+  - 400/400
 - 10/26-23:59:59 [AG 2](http://etl.snu.ac.kr/mod/assign/index.php?id=146806)
-  - TODO 시간복잡도 주석달고 time 테스트 해보기
+  - Submitted
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
   - TODO
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
@@ -41,11 +41,15 @@
 
 # Exam List
 - 10/21-14:00:00 [PP-MID](https://github.com/snu-sf-class/pp201802)
+  - 100/100 + bonus
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
   - 8장 + 보충자료까지 시험범위
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
-- 10/23 [AT-MID]()
+  - 망한거 같다.
+- --10/23 [AT-MID]()--
   - 3.4.까지
 - 10/24 [EH-MID]()
+  - 
+  - 32.75 / 50
 - 10/31 [AG-MID]()
 
