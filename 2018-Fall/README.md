@@ -7,6 +7,7 @@
 - [프로그래밍언어](http://ropas.snu.ac.kr/~kwang/4190.310/18/)
 - [프로그래밍원리](https://github.com/snu-sf-class/pp201802)
 - [산업공학개론](http://etl.snu.ac.kr/course/view.php?id=150381)
+- [진화와인간사회](http://etl.snu.ac.kr/course/view.php?id=145487)
 
 # Assignment List
 - 09/14-23:59:59 [PL 1](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw1.pdf)
@@ -28,10 +29,13 @@
 - 10/24-23:59:59 [PP 2](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw2)
   - 400/400
 - 10/26-23:59:59 [AG 2](http://etl.snu.ac.kr/mod/assign/index.php?id=146806)
-  - Submitted
+  - 500/500
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
+  - Submitted
+- 11/08-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1583968)
   - TODO
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
+  - TODO
 - 11/23-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
 - 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
 - 12/14-23:59:59 [PL 8](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw8.pdf)
@@ -44,11 +48,13 @@
   - 100/100 + bonus
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
   - 8장 + 보충자료까지 시험범위
+  - Submitted
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
-  - 망한거 같다.
+  - 79 / 190
 - ~~10/23 [AT-MID]()~~
   - 3.4.까지
 - 10/24 [EH-MID]()
   - 32.75 / 50
 - 10/31 [AG-MID]()
+  - Submitted
 
