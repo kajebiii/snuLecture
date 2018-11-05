@@ -31,10 +31,12 @@
 - 10/26-23:59:59 [AG 2](http://etl.snu.ac.kr/mod/assign/index.php?id=146806)
   - 500/500
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
-  - Submitted
+  - Submitted(Report) | 60/60
 - 11/08-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1583968)
   - TODO
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
+  - TODO
+- 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
   - TODO
 - 11/23-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
 - 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
