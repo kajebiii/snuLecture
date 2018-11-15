@@ -32,14 +32,15 @@
   - 500/500
 - 10/26-23:59:59 [PL 4](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw4.pdf)
   - Submitted(Report) | 60/60
-- 11/08-23:59:59 [MC 2](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1583968)
-  - TODO
+- 11/08-23:59:59 [MC 3](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1583968)
+  - Submitted
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
-  - TODO
-- 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
   - 5.1. for 관련 syntax 확인해보기
-  - 5.2. TODO
+  - Submitted
+- 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
+  - TODO
 - 11/23-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
+  - TODO
 - 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
 - 12/14-23:59:59 [PL 8](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw8.pdf)
 
@@ -51,7 +52,9 @@
   - 100/100 + bonus
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
   - 8장 + 보충자료까지 시험범위
-  - Submitted
+  - 37.4/50.0 
+  - 중앙값	36.4, 1분위수	39.5, 3분위수	31.325, 평균	34.3080188679245, 표준편차	7.58044519609958
+
 - 10/23 [MC-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722860&bwid=1544164)
   - 79 / 190
 - ~~10/23 [AT-MID]()~~
