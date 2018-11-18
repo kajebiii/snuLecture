@@ -38,8 +38,12 @@
   - 5.1. for 관련 syntax 확인해보기
   - Submitted
 - 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
-  - TODO
+  - Submitted
 - 11/23-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
+  - TODO
+- 11/23-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1600823)
+  - TODO
+- 11/30-23:59:59 [AG 3](http://etl.snu.ac.kr/course/view.php?id=146806)
   - TODO
 - 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
 - 12/14-23:59:59 [PL 8](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw8.pdf)
@@ -62,5 +66,5 @@
 - 10/24 [EH-MID]()
   - 32.75 / 50
 - 10/31 [AG-MID]()
-  - Submitted
+  - 100/110
 
