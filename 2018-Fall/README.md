@@ -35,23 +35,38 @@
 - 11/08-23:59:59 [MC 3](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1583968)
   - Submitted
 - 11/16-23:59:59 [PL 5](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw5.pdf)
-  - 5.1. for 관련 syntax 확인해보기
-  - Submitted
+  - 80/80
 - 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
+  - 385/400
+- 11/28-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
   - Submitted
-- 11/23-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
-  - TODO
-- 11/23-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1600823)
-  - TODO
+- 11/23-23:59:59 [MC 4](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1600823)
+  - Submitted
 - 11/30-23:59:59 [AG 3](http://etl.snu.ac.kr/course/view.php?id=146806)
+  - Submitted
+- 12/02-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
   - TODO
-- 12/03-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
-- 12/14-23:59:59 [PL 8](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw8.pdf)
+- 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
+  - TODO
+- 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
+  - TODO
+- 12/18-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
+  - no grace day
+  - TODO
 
 
 # Quiz List
+  - 12/11 [IE] 휴강
 
 # Exam List
+- 12/14 18-21 [PP-FINAL](https://github.com/snu-sf-class/pp201802/issues/33)
+- 12/13 [IE-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1614709)
+  - 시험범위: 중간고사 이후 (9장 통계적 분석) ~ 16장 기술 자원 관리 (14장 재무 자원 관리 제외)
+  - 계산기
+- 12/12 [EH-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=746085&bwid=1614154)
+- 12/05 [AG-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=721819&bwid=1611362)
+  - 302-409
+
 - 10/21-14:00:00 [PP-MID](https://github.com/snu-sf-class/pp201802)
   - 100/100 + bonus
 - 10/23 [IE-MID](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1555861)
@@ -66,5 +81,5 @@
 - 10/24 [EH-MID]()
   - 32.75 / 50
 - 10/31 [AG-MID]()
-  - 100/110
+  - 110/110
 
