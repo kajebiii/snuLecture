@@ -44,7 +44,7 @@
   - Submitted
 - 11/30-23:59:59 [AG 3](http://etl.snu.ac.kr/course/view.php?id=146806)
   - Submitted
-- 12/02-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
+- 12/06(+3)-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
   - TODO
 - 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
   - TODO
