@@ -57,6 +57,8 @@
 - 12/18-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
   - no grace day
   - TODO
+- 12/20-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
+  - TODO
 
 
 # Quiz List
