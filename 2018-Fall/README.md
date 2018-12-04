@@ -49,7 +49,7 @@
 - 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
   - TODO
 - 12/11-23:59:59 [EH-REPORT](http://etl.snu.ac.kr/course/view.php?id=145487)
-  - TODO
+  - Success
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
   - TODO
 - 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
