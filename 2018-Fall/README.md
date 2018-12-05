@@ -49,7 +49,7 @@
 - 12/11-23:59:59 [EH-REPORT](http://etl.snu.ac.kr/course/view.php?id=145487)
   - Success
 - 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
-  - TODO
+  - Will submit
 - 12/13(+2)-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1621378)
   - TODO
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
