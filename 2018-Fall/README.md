@@ -44,18 +44,19 @@
   - Submitted
 - 11/30-23:59:59 [AG 3](http://etl.snu.ac.kr/course/view.php?id=146806)
   - Submitted
-- 12/06(+3)-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
-  - TODO
-- 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
-  - TODO
+- 12/04(+1)-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
+  - Submitted
 - 12/11-23:59:59 [EH-REPORT](http://etl.snu.ac.kr/course/view.php?id=145487)
   - Success
+- 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
+  - TODO
+- 12/13(+2)-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1621378)
+  - TODO
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
   - TODO
 - 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
   - TODO
 - 12/18-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
-  - no grace day
   - TODO
 - 12/20-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
   - TODO
