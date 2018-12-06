@@ -50,6 +50,7 @@
   - Success
 - 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
   - Will submit
+- 12/13 ~10:59:59 [IE Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1592431)
 - 12/13(+2)-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1621378)
   - TODO
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
