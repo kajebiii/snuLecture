@@ -56,7 +56,7 @@
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
   - TODO
 - 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
-  - TODO
+  - Will submit
 - 12/18-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
   - TODO
 - 12/20-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
