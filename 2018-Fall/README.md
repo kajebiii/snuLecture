@@ -52,16 +52,15 @@
   - Will submit
 - 12/13 ~10:59:59 [IE Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1592431)
 - 12/13(+2)-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1621378)
-  - TODO
+  - Submitted
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
-  - Will submit
-  - 1번 틀린거랑 2번 이름 바꾸는 거 고치면 좋음
+  - Submitted
 - 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
   - Will submit
   - 3번 깃험 이슈확인하고 제출하기
-- 12/18-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
+- 12/21-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
   - TODO
-- 12/20-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
+- 12/21-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
   - TODO
 
 
