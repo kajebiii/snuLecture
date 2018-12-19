@@ -39,29 +39,29 @@
 - 11/18 23:59:59 [PP 3](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw3)
   - 385/400
 - 11/28-23:59:59 [PL 6](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw6.pdf)
-  - Submitted
+  - 170/170
 - 11/23-23:59:59 [MC 4](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1600823)
   - Submitted
 - 11/30-23:59:59 [AG 3](http://etl.snu.ac.kr/course/view.php?id=146806)
-  - Submitted
+  - 100/100
 - 12/04(+1)-23:59:59 [MC 5](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1611740)
   - Submitted
 - 12/11-23:59:59 [EH-REPORT](http://etl.snu.ac.kr/course/view.php?id=145487)
   - Success
 - 12/10-13:50:00 [AG 4](http://etl.snu.ac.kr/course/view.php?id=146806)
-  - Will submit
+  - 93.75/100
 - 12/13 ~10:59:59 [IE Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1592431)
 - 12/13(+2)-23:59:59 [MC 6](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1621378)
   - Submitted
 - 12/14-23:59:59 [PL 7](http://ropas.snu.ac.kr/~kwang/4190.310/18/hw7.pdf)
-  - Submitted
+  - 140/140
 - 12/16-23:59:59 [PP 4](https://github.com/snu-sf-class/pp201802/tree/master/assignments/hw4)
-  - Will submit
-  - 3번 깃험 이슈확인하고 제출하기
+  - 300/300
 - 12/21-23:59:59 [MC Project](http://etl.snu.ac.kr/mod/ubboard/article.php?id=722862&bwid=1604985)
   - TODO
 - 12/21-23:59:59 [PP Project](https://github.com/snu-sf-class/pp201802/tree/master/Project)
-  - TODO
+  - Lazy Val을 scala의 lazy val를 이용하여 짜기
+  - myparser 짜기
 
 
 # Quiz List
@@ -69,12 +69,16 @@
 
 # Exam List
 - 12/14 18-21 [PP-FINAL](https://github.com/snu-sf-class/pp201802/issues/33)
+  - 100/100
 - 12/13 [IE-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=724648&bwid=1614709)
+  - Project 7.5/10
+  - Exam ??/??
   - 시험범위: 중간고사 이후 (9장 통계적 분석) ~ 16장 기술 자원 관리 (14장 재무 자원 관리 제외)
   - 계산기
 - 12/12 [EH-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=746085&bwid=1614154)
+  - ??/??
 - 12/05 [AG-FINAL](http://etl.snu.ac.kr/mod/ubboard/article.php?id=721819&bwid=1611362)
-  - 302-409
+  - 100/115
 
 - 10/21-14:00:00 [PP-MID](https://github.com/snu-sf-class/pp201802)
   - 100/100 + bonus
